@@ -1,0 +1,19 @@
+<div class='c-widget'>
+  <h3 class='c-widget__title'>Newsletter</h3>
+
+  {% include ["partials/sidebar/subscribe.twig"] %}
+</div>
+
+<div class='c-widget'>
+  <h3 class='c-widget__title'>Follow</h3>
+
+  {% include ["partials/sidebar/social-list.twig"] %}
+</div>
+
+<div class='c-widget'>
+  <h3 class='c-widget__title'>Recent Stories</h3>
+
+  {% for post in related %}
+    {% include ["partials/sidebar/post-card.twig"] %}
+  {% endfor %}
+</div>

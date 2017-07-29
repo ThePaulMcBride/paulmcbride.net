@@ -1,0 +1,18 @@
+/*------------------------------------*\
+  Components > Header
+\*------------------------------------*/
+
+.c-header {
+  height: quadruple($base-spacing-unit);
+  padding: $base-spacing-unit 0;
+  background-color: $bg-white;
+  border-bottom: 1px solid $color-border;
+
+  .page-template-tags & {
+    border-bottom: 1px solid $color-border;
+  }
+
+  &--has-cover {
+    border-bottom: 0;
+  }
+}

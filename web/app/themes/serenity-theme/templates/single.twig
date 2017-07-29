@@ -1,0 +1,67 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+  {% if post.get_thumbnail %}
+    <div class='c-post-hero' style="background-image: url({{post.get_thumbnail.src}})"></div>
+  {% else %}
+    <div class='c-post-hero' style="background-image: url('{{theme.link}}/assets/img/abstract.jpg')"></div>
+  {% endif %}
+
+  <div class="o-wrapper">
+    <div class='o-grid'>
+      <div class='o-grid__col o-grid__col--2-3-m'>
+        <article class="c-{{post_class}}">
+
+          <h2 class="c-post__title">{{ post.title }}</h2>
+          <span class="c-post__date">{{ post.post_date|date }}</span>
+
+          <div class="c-content">
+            {{ post.content }}
+          </div>
+
+          <div class="c-tags">
+            {% for tag in post.tags %}
+              <a href="{{ tag.link }}">{{ tag.title }}</a>
+            {% endfor %}
+          </div>
+
+          <hr>
+          {% include ["partials/post-subscribe.twig"] %}
+
+
+          <div class='o-grid'>
+            <div class='o-grid__col o-grid__col--full'>
+
+            </div>
+          </div>
+
+          <hr>
+
+        </article>
+      </div>
+
+      <div class="o-grid__col o-grid__col--1-3-m">
+        {{ sidebar }}
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--full'>
+      <div class='c-related'>
+        <div class='o-grid'>
+          <div class='o-grid__col o-grid__col--full'>
+            <h5 class='c-related__title'>You Might Be Interested In</h5>
+          </div>
+          {% for post in related_posts %}
+            {% include ["partials/post-card.twig"] %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

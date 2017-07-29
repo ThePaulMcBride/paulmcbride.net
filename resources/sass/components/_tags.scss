@@ -1,0 +1,32 @@
+/*------------------------------------*\
+  Components > Tags
+\*------------------------------------*/
+
+.c-tags {
+  margin-bottom: $base-spacing-unit - half($base-spacing-unit);
+
+  a {
+    display: inline-block;
+    padding: quarter($base-spacing-unit) $base-spacing-unit;
+    margin: 0 half($base-spacing-unit) quarter($base-spacing-unit) 0;
+
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    font-family: $font-sans-serif;
+    line-height: $line-height-small;
+
+    color: $color-gray;
+    border-radius: 3px;
+    background-color: $bg-gray;
+    transition: $global-transition;
+
+    @include mq($until: tablet) {
+      margin-bottom: $base-spacing-unit - half(quarter($base-spacing-unit));
+    }
+
+    @include attention() {
+      color: $color-black;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,332 @@
+# Translation of Themes - Forever in English (UK)
+# This file is distributed under the same license as the Themes - Forever package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-10-08 01:38:34+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Themes - Forever\n"
+
+#. Description of the plugin/theme
+msgid "The Forever theme makes it easy to wrap your wedding up in a neat little package with WordPress. You can show off every one of your best photos and highlight each important detail leading up to the big day and beyond."
+msgstr "The Forever theme makes it easy to wrap your wedding up in a neat little package with WordPress. You can show off every one of your best photos and highlight each important detail leading up to the big day and beyond."
+
+#. Theme Name of the plugin/theme
+msgid "Forever"
+msgstr "Forever"
+
+#. Template Name of the plugin/theme
+msgid "Full Width, No Sidebar"
+msgstr "Full Width, No Sidebar"
+
+#. Template Name of the plugin/theme
+msgid "Guestbook"
+msgstr "Guestbook"
+
+#: tag.php:18
+msgid "Tag Archives: %s"
+msgstr "Tag Archives: %s"
+
+#: sidebar.php:25
+msgid "Meta"
+msgstr "Meta"
+
+#: searchform.php:10 searchform.php:11 searchform.php:12
+msgid "Search"
+msgstr "Search"
+
+#: search.php:39
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+
+#: search.php:17
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#: masthead.php:26
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: masthead.php:25
+msgid "Main menu"
+msgstr "Main menu"
+
+#: inc/theme-options.php:126
+msgid "%s Theme Options"
+msgstr "%s Theme Options"
+
+#: inc/theme-options.php:115
+msgid "Show four of your latest posts in columns on your blog page."
+msgstr "Show four of your latest posts in columns on your blog page."
+
+#: inc/theme-options.php:103
+msgid "Default color: %s"
+msgstr "Default colour: %s"
+
+#: inc/theme-options.php:100
+msgid "Select a Color"
+msgstr "Select a Colour"
+
+#: inc/theme-options.php:61 inc/theme-options.php:62
+msgid "Theme Options"
+msgstr "Theme Options"
+
+#: inc/theme-options.php:44
+msgid "Posts In Columns"
+msgstr "Posts In Columns"
+
+#: inc/theme-options.php:43
+msgid "Link Color"
+msgstr "Link Colour"
+
+#: image.php:38
+msgid "Next &rarr;"
+msgstr "Next &rarr;"
+
+#: image.php:37
+msgid "&larr; Previous"
+msgstr "&larr; Previous"
+
+#: image.php:23
+msgid "Published <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "Published <span class=\"entry-date\"><abbr class=\"published\">%2$s</abbr></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+
+#: functions.php:624
+msgid "Page %s"
+msgstr "Page %s"
+
+#: functions.php:384
+msgid "View all posts by %s"
+msgstr "View all posts by %s"
+
+#: functions.php:378
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "<span class=\"sep\">Posted on </span><a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" rel=\"author\">%7$s</a></span></span>"
+
+#. translators: 1: date, 2: time
+#: functions.php:351
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#: functions.php:343
+msgid "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting moderation."
+
+#: functions.php:324
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:299
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:295
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Older posts"
+
+#: functions.php:290
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: functions.php:289
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: functions.php:285
+msgid "Post navigation"
+msgstr "Post navigation"
+
+#: functions.php:263
+msgid "Footer Widget Area Four"
+msgstr "Footer Widget Area Four"
+
+#: functions.php:253
+msgid "Footer Widget Area Three"
+msgstr "Footer Widget Area Three"
+
+#: functions.php:243
+msgid "Footer Widget Area Two"
+msgstr "Footer Widget Area Two"
+
+#: functions.php:234 functions.php:244 functions.php:254 functions.php:264
+msgid "An optional footer widget area."
+msgstr "An optional footer widget area."
+
+#: functions.php:233
+msgid "Footer Widget Area One"
+msgstr "Footer Widget Area One"
+
+#: functions.php:224
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:46
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: content-single.php:23 content.php:29 footer.php:38 functions.php:188
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-gallery.php:115 content-image.php:96 content-page.php:20
+#: content-single.php:59 content.php:65 functions.php:324 functions.php:353
+#: image.php:33
+msgid "Edit"
+msgstr "Edit"
+
+#: content-gallery.php:110 content-image.php:91 content-single.php:54
+#: content.php:60
+msgid "Tagged %1$s"
+msgstr "Tagged %1$s"
+
+#: content-gallery.php:102 content-image.php:83 content-single.php:45
+#: content.php:52
+msgid "Posted in %1$s"
+msgstr "Posted in %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: content-gallery.php:88 content-gallery.php:91 content-image.php:67
+#: content-image.php:70 content-single.php:29 content-single.php:32
+#: content.php:36 content.php:39
+msgid ", "
+msgstr ", "
+
+#: content-gallery.php:70 content-gallery.php:73 content-image.php:52
+#: content-page.php:17 content-single.php:24 content.php:31 image.php:85
+msgid "Pages:"
+msgstr "Pages:"
+
+#: content-gallery.php:60 content-image.php:15 index.php:72 recent-posts.php:38
+msgid "Permalink to %s"
+msgstr "Permalink to %s"
+
+#: content-gallery.php:59
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "This gallery contains <a %1$s>%2$s photo</a>."
+msgstr[1] "This gallery contains <a %1$s>%2$s photos</a>."
+
+#: content-gallery.php:20 content-image.php:44 content-single.php:18
+#: content.php:18
+msgid "%"
+msgstr "%"
+
+#: content-gallery.php:20 content-image.php:44 content-single.php:18
+#: content.php:18
+msgid "1"
+msgstr "1"
+
+#: content-gallery.php:20 content-image.php:44 content-single.php:18
+#: content.php:18
+msgid "0"
+msgstr "0"
+
+#: comments.php:86
+msgid "Sign Our Guestbook"
+msgstr "Sign Our Guestbook"
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: comments.php:41 comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "Newer Comments &rarr;"
+
+#: comments.php:40 comments.php:60
+msgid "&larr; Older Comments"
+msgstr "&larr; Older Comments"
+
+#: comments.php:39 comments.php:59
+msgid "Comment navigation"
+msgstr "Comment navigation"
+
+#: comments.php:32
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "One thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:16
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "This post is password protected. Enter the password to view any comments."
+
+#: colophon.php:17
+msgid "Theme: %1$s by %2$s."
+msgstr "Theme: %1$s by %2$s."
+
+#: colophon.php:16
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#: colophon.php:16
+msgid "A Semantic Personal Publishing Platform"
+msgstr "A Semantic Personal Publishing Platform"
+
+#: category.php:18
+msgid "Category Archives: %s"
+msgstr "Category Archives: %s"
+
+#: author.php:27
+msgid "Author Archives: %s"
+msgstr "Author Archives: %s"
+
+#: archive.php:64 author.php:63 category.php:53 index.php:197 tag.php:55
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+
+#: archive.php:60 author.php:59 category.php:49 index.php:193 search.php:35
+#: tag.php:51
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#: archive.php:31 sidebar.php:18
+msgid "Archives"
+msgstr "Archives"
+
+#: archive.php:29
+msgid "Yearly Archives: %s"
+msgstr "Yearly Archives: %s"
+
+#: archive.php:27
+msgid "Monthly Archives: %s"
+msgstr "Monthly Archives: %s"
+
+#: archive.php:25
+msgid "Daily Archives: %s"
+msgstr "Daily Archives: %s"
+
+#. translators: %1$s: smilie
+#: 404.php:35
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Try looking in the monthly archives. %1$s"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Most Used Categories"
+
+#: 404.php:20
+msgid "It looks like nothing was found at this location. Perhaps it <em>was</em> there but now it&rsquo;s gone. Maybe try one of the links below or a search?"
+msgstr "It looks like nothing was found at this location. Perhaps it <em>was</em> there but now it&rsquo;s gone. Maybe try one of the links below, or a search?"
+
+#: 404.php:16
+msgid "Hi there. You seem to be lost."
+msgstr "Hi there. You seem to be lost."
+
+#. Author URI of the plugin/theme
+msgid "https://wordpress.com/themes/"
+msgstr "https://en-gb.wordpress.com/themes/"
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Theme URI of the plugin/theme
+msgid "https://wordpress.com/themes/forever/"
+msgstr "https://wordpress.com/themes/forever/"

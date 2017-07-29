@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  Components > Site Navigation
+\*------------------------------------*/
+
+.c-nav {
+  @include mq($from: desktop) {
+    text-align: center;
+  }
+
+  &__item {
+    font-size: $font-size-medium;
+
+    @include mq($from: desktop) {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: $base-spacing-unit;
+      }
+    }
+
+    @include mq($until: desktop) {
+      display: block;
+    }
+  }
+
+  &__link {
+    display: block;
+    transition: $global-transition;
+
+    @include mq($until: desktop) {
+      margin-bottom: half($base-spacing-unit);
+      padding: quarter($base-spacing-unit) 0;
+    }
+
+    &--current {
+      color: $color-brand;
+
+      .home-template &:not(:hover) {
+        color: $color-link;
+      }
+    }
+
+    @include attention() {
+      color: $color-brand;
+    }
+  }
+}

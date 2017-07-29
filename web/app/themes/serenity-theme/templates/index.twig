@@ -1,0 +1,17 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+<div class='o-wrapper'>
+  <div class='o-grid js-grid'>
+    {% for key, post in posts %}
+      {% include ["partials/post-card.twig"] %}
+    {% endfor %}
+  </div>
+
+  <div class='o-grid'>
+    {% include ["partials/pagination.twig"] %}
+  </div>
+</div>
+
+{% endblock %}

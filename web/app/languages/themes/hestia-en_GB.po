@@ -1,0 +1,929 @@
+# Translation of Themes - Hestia in English (UK)
+# This file is distributed under the same license as the Themes - Hestia package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-06-10 05:42:37+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Themes - Hestia\n"
+
+#. #-#-#-#-#  hestia.pot (Hestia 1.1.30)  #-#-#-#-#
+#. Description of the plugin/theme
+#: inc/features/feature-about-page.php:27
+msgid "Hestia is a modern WordPress theme for professionals. It fits creative business, small businesses (restaurants, wedding planners, sport/medical shops), startups, corporate businesses, online agencies and firms, portfolios, ecommerce (WooCommerce), and freelancers. It has a multipurpose one-page design, widgetized footer, blog/news page and a clean look, is compatible with: Flat Parallax Slider, Photo Gallery, Travel Map and Elementor Page Builder . The theme is responsive, WPML, Retina ready, SEO friendly, and uses Material Kit for design."
+msgstr "Hestia is a modern WordPress theme for professionals. It fits creative businesses, small businesses (restaurants, wedding planners, sport/medical shops), startups, corporate businesses, online agencies and firms, portfolios, ecommerce (WooCommerce), and freelancers. It has a multipurpose one-page design, widgetised footer, blog/news page and a clean look. It is compatible with Flat Parallax Slider, Photo Gallery, Travel Map and Elementor Page Builder. The theme is responsive, WPML and Retina ready, SEO friendly, and uses Material Kit for design."
+
+#: inc/features/feature-big-title-section.php:97
+msgid "Change this subtitle in the customizer."
+msgstr "Change this subtitle in the Customiser."
+
+#: inc/customizer-theme-info/class-hestia-control-upsell-theme-info.php:68
+msgid "PRO"
+msgstr "PRO"
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:114
+msgid "The ability to reorganize your Frontpage sections more easily and quickly."
+msgstr "The ability to reorganise your Frontpage sections more easily and quickly."
+
+#: inc/customizer.php:82
+msgid "Drag and drop panels to change the order of sections."
+msgstr "Drag and drop panels to change the order of sections."
+
+#: inc/features/feature-about-page.php:120
+#: inc/features/feature-about-page.php:122
+msgid "Go to the Customizer"
+msgstr "Go to the Customiser"
+
+#: inc/features/feature-about-page.php:163
+#: inc/features/feature-theme-info-section.php:55
+msgid "The ability to reorganize your Frontpage Sections more easily and quickly."
+msgstr "The ability to reorganise your Frontpage Sections more easily and quickly."
+
+#: inc/features/feature-big-title-section.php:96
+#: inc/features/feature-big-title-section.php:98
+#: inc/sections/hestia-big-title-section.php:27
+msgid "Change in the Customizer"
+msgstr "Change in the Customiser"
+
+#: inc/sections/hestia-big-title-section.php:24
+#: inc/sections/hestia-big-title-section.php:26
+msgid "Customizer"
+msgstr "Customiser"
+
+#: functions.php:206
+msgid "WooCommerce Sidebar"
+msgstr "WooCommerce Sidebar"
+
+#: inc/features/feature-general-settings.php:51
+msgid "Page Sidebar Layout"
+msgstr "Page Sidebar Layout"
+
+#: inc/features/feature-general-settings.php:57
+#: inc/features/feature-general-settings.php:83
+msgid "Full Width"
+msgstr "Full Width"
+
+#: inc/features/feature-general-settings.php:61
+#: inc/features/feature-general-settings.php:87
+msgid "Left Sidebar"
+msgstr "Left Sidebar"
+
+#: inc/features/feature-general-settings.php:65
+#: inc/features/feature-general-settings.php:91
+msgid "Right Sidebar"
+msgstr "Right Sidebar"
+
+#: inc/features/feature-general-settings.php:77
+msgid "Blog Sidebar Layout"
+msgstr "Blog Sidebar Layout"
+
+#: inc/template-tags.php:587
+msgid "This sidebar is active but empty. In order to use this layout, please add widgets in the sidebar"
+msgstr "This sidebar is active but empty. In order to use this layout, please add widgets in the sidebar"
+
+#. Template Name of the plugin/theme
+msgid "Page Builder Full Width"
+msgstr "Page Builder Full Width"
+
+#. Template Name of the plugin/theme
+msgid "Page Builder Blank"
+msgstr "Page Builder Blank"
+
+#. translators: %1$s is Author name, %2$s is Date
+#. translators: %1$s is Author name wrapped, %2$s is Date
+#: attachment.php:19 single.php:18
+msgid "Published by %1$s on %2$s"
+msgstr "Published by %1$s on %2$s"
+
+#. translators: %s is Image sizes for attachment single page.
+#: attachment.php:61
+msgid "Size: %s"
+msgstr "Size: %s"
+
+#. translators: %s: post title
+#: comments.php:31
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr "One thought on &ldquo;%s&rdquo;"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:35
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:58
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: functions.php:107 functions.php:580
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: functions.php:108
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+#: functions.php:152
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:161
+msgid "Subscribe Section"
+msgstr "Subscribe Section"
+
+#: functions.php:170
+msgid "Blog Subscribe Section"
+msgstr "Blog Subscribe Section"
+
+#: functions.php:179
+msgid "Footer One"
+msgstr "Footer One"
+
+#: functions.php:188
+msgid "Footer Two"
+msgstr "Footer Two"
+
+#: functions.php:197
+msgid "Footer Three"
+msgstr "Footer Three"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Roboto or Roboto Slab, translate this to 'off'. Do not translate into
+#. your own language.
+#: functions.php:230
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:231
+msgctxt "Roboto Slab font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:282
+msgid "View cart"
+msgstr "View basket"
+
+#: functions.php:334
+msgid "Read more&hellip;"
+msgstr "Read more&hellip;"
+
+#: functions.php:513
+msgid "Button Text"
+msgstr "Button Text"
+
+#. translators: %s is Path in plugin wrapped
+#: inc/customizer-contact-info/class-hestia-contact-info.php:27
+msgid "You should be able to see the form on your front-page. You can configure settings from %s, in your WordPress dashboard."
+msgstr "You should be able to see the form on your Frontpage. You can configure settings from %s in your WordPress dashboard."
+
+#. translators: %s is Path in plugin
+#: inc/customizer-contact-info/class-hestia-contact-info.php:29
+msgid "Settings > Pirate Forms"
+msgstr "Settings > Pirate Forms"
+
+#. translators: %s is Plugin name wrapped
+#: inc/customizer-contact-info/class-hestia-contact-info.php:33
+msgid "In order to add a contact form to this section, you need need to install the %s plugin."
+msgstr "In order to add a contact form to this section, you need to install the %s plugin."
+
+#. translators: %1$s is Plugin wrap
+#: inc/customizer-info/class/class-hestia-customizer-info-singleton.php:88
+msgid "To have access to a shop section please install and configure %1$s."
+msgstr "To have access to a shop section please install and configure %1$s."
+
+#. translators: %s is Plugin name
+#: inc/customizer-info/class/class-hestia-customizer-info-singleton.php:91
+msgid "WooCommerce plugin"
+msgstr "WooCommerce plugin"
+
+#: inc/customizer-page-editor/class/class-hestia-page-editor.php:81
+#: inc/features/feature-about-section.php:70
+msgid "About background"
+msgstr "About background"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:28
+msgid "Add new field"
+msgstr "Add new field"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:33
+msgid "Customizer Repeater"
+msgstr "Customiser Repeater"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:215
+#: inc/customizer-repeater/class/customizer-repeater-control.php:294
+msgid "Color"
+msgstr "Colour"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:223
+#: inc/customizer-repeater/class/customizer-repeater-control.php:302
+#: inc/features/feature-big-title-section.php:47
+msgid "Title"
+msgstr "Title"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:230
+#: inc/customizer-repeater/class/customizer-repeater-control.php:309
+msgid "Subtitle"
+msgstr "Subtitle"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:237
+#: inc/customizer-repeater/class/customizer-repeater-control.php:316
+#: inc/features/feature-big-title-section.php:61
+msgid "Text"
+msgstr "Text"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:244
+#: inc/customizer-repeater/class/customizer-repeater-control.php:323
+#: inc/customizer-repeater/class/customizer-repeater-control.php:431
+#: inc/customizer-repeater/class/customizer-repeater-control.php:453
+msgid "Link"
+msgstr "Link"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:252
+#: inc/customizer-repeater/class/customizer-repeater-control.php:330
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:267
+#: inc/customizer-repeater/class/customizer-repeater-control.php:340
+msgid "Delete field"
+msgstr "Delete field"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:371
+#: inc/customizer-repeater/class/customizer-repeater-control.php:407
+msgid "Icon"
+msgstr "Icon"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:376
+msgid "Note: Some icons may not be displayed here. You can see the full list of icons at %1$s."
+msgstr "Note: Some icons may not be displayed here. You can see the full list of icons at %1$s."
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:377
+msgid "http://fontawesome.io/icons/"
+msgstr "http://fontawesome.io/icons/"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:394
+#: inc/customizer-repeater/class/customizer-repeater-control.php:408
+msgid "Image"
+msgstr "Image"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:397
+msgid "Upload Image"
+msgstr "Upload Image"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:404
+msgid "Image type"
+msgstr "Image type"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:409
+msgid "None"
+msgstr "None"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:417
+msgid "Social icons"
+msgstr "Social icons"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:434
+#: inc/customizer-repeater/class/customizer-repeater-control.php:464
+msgid "Remove Icon"
+msgstr "Remove Icon"
+
+#: inc/customizer-repeater/class/customizer-repeater-control.php:439
+#: inc/customizer-repeater/class/customizer-repeater-control.php:472
+msgid "Add Icon"
+msgstr "Add Icon"
+
+#. translators: %s is Path
+#: inc/customizer-subscribe-info/class-hestia-subscribe-info.php:51
+msgid "Customize > Widgets > Subscribe Section"
+msgstr "Customise > Widgets > Subscribe Section"
+
+#. translators: %s is Path
+#: inc/customizer-subscribe-info/class-hestia-subscribe-info.php:59
+msgid "Customize > Widgets > Blog Subscribe Section"
+msgstr "Customise > Widgets > Blog Subscribe Section"
+
+#. translators: %1$s is Path wrapped in <b>, %2$s is Plugin link
+#: inc/customizer-subscribe-info/class-hestia-subscribe-info.php:64
+msgid "The main content of this section is customizable in: %1$s. There you must add the \"SendinBlue Newsletter\" widget. But first you will need to install %2$s."
+msgstr "The main content of this section is customisable in: %1$s. There you must add the \"SendinBlue Newsletter\" widget. But first you will need to install %2$s."
+
+#. translators: %s is Plugin name
+#: inc/customizer-subscribe-info/class-hestia-subscribe-info.php:68
+msgid "SendinBlue plugin"
+msgstr "SendinBlue plugin"
+
+#. translators: %s Path in plugin wrapped
+#: inc/customizer-subscribe-info/class-hestia-subscribe-info.php:73
+msgid "After installing the plugin, you need to navigate to %s and configure the plugin."
+msgstr "After installing the plugin, you need to navigate to %s and configure the plugin."
+
+#. translators: %s Path in plugin
+#: inc/customizer-subscribe-info/class-hestia-subscribe-info.php:80
+msgid "And then you need to navigate to its Settings, and use the following in the Subscription form:"
+msgstr "And then you need to navigate to its Settings, and use the following in the Subscription form:"
+
+#. #-#-#-#-#  hestia.pot (Hestia 1.1.30)  #-#-#-#-#
+#. translators: %s is Theme name
+#. #-#-#-#-#  hestia.pot (Hestia 1.1.30)  #-#-#-#-#
+#. Theme Name of the plugin/theme
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:89
+#: inc/template-tags.php:478
+msgid "Hestia"
+msgstr "Hestia"
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:91
+#: inc/features/feature-about-page.php:54
+#: inc/features/feature-about-page.php:113
+msgid "Documentation"
+msgstr "Documentation"
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:104
+#: inc/features/feature-about-page.php:180
+#: inc/features/feature-theme-info-section.php:45
+msgid "Jetpack Portfolio"
+msgstr "Jetpack Portfolio"
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:105
+#: inc/features/feature-about-page.php:186
+#: inc/features/feature-theme-info-section.php:46
+msgid "Pricing Plans Section"
+msgstr "Pricing Plans Section"
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:106
+#: inc/features/feature-about-page.php:162
+#: inc/features/feature-theme-info-section.php:47
+msgid "Section Reordering"
+msgstr "Section Reordering"
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:110
+#: inc/features/feature-theme-info-section.php:59
+msgid "Get the PRO version!"
+msgstr "Get the PRO version!"
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:112
+#: inc/features/feature-about-page.php:181
+#: inc/features/feature-theme-info-section.php:53
+msgid "Portfolio section with two possible layouts."
+msgstr "Portfolio section with two possible layouts."
+
+#: inc/customizer-theme-info/class-hestia-customizer-theme-info.php:113
+#: inc/features/feature-about-page.php:187
+#: inc/features/feature-theme-info-section.php:54
+msgid "A fully customizable pricing plans section."
+msgstr "A fully customisable pricing plans section."
+
+#: inc/customizer.php:76
+msgid "Appearance Settings"
+msgstr "Appearance Settings"
+
+#: inc/customizer.php:81 inc/features/feature-about-page.php:150
+msgid "Frontpage Sections"
+msgstr "Frontpage Sections"
+
+#: inc/customizer.php:87
+msgid "Blog Settings"
+msgstr "Blog Settings"
+
+#: inc/features/feature-about-page.php:20
+#: inc/features/feature-about-page.php:22
+msgid "About Hestia"
+msgstr "About Hestia"
+
+#. translators: s - theme name
+#: inc/features/feature-about-page.php:25
+msgid "Welcome to %s! - Version "
+msgstr "Welcome to %s! - Version "
+
+#: inc/features/feature-about-page.php:35
+msgid "Getting Started"
+msgstr "Getting Started"
+
+#: inc/features/feature-about-page.php:36
+#: inc/features/feature-about-page.php:267
+msgid "Recommended Actions"
+msgstr "Recommended Actions"
+
+#: inc/features/feature-about-page.php:37
+msgid "Useful Plugins"
+msgstr "Useful Plugins"
+
+#: inc/features/feature-about-page.php:38
+msgid "Support"
+msgstr "Support"
+
+#: inc/features/feature-about-page.php:39
+#: inc/features/feature-about-page.php:63
+#: inc/features/feature-about-page.php:66
+msgid "Changelog"
+msgstr "Changelog"
+
+#: inc/features/feature-about-page.php:40
+msgid "Free vs PRO"
+msgstr "Free vs PRO"
+
+#: inc/features/feature-about-page.php:45
+#: inc/features/feature-about-page.php:48
+msgid "Contact Support"
+msgstr "Contact Support"
+
+#: inc/features/feature-about-page.php:47
+msgid "We want to make sure you have the best experience using Hestia, and that is why we have gathered all the necessary information here for you. We hope you will enjoy using Hestia as much as we enjoy creating great products."
+msgstr "We want to make sure you have the best experience using Hestia, and that is why we have gathered all the necessary information here for you. We hope you will enjoy using Hestia as much as we enjoy creating great products."
+
+#: inc/features/feature-about-page.php:56
+#: inc/features/feature-about-page.php:112
+msgid "Need more details? Please check our full documentation for detailed information on how to use Hestia."
+msgstr "Need more details? Please check our full documentation for detailed information on how to use Hestia."
+
+#: inc/features/feature-about-page.php:57
+#: inc/features/feature-about-page.php:111
+msgid "Read full documentation"
+msgstr "Read full documentation"
+
+#: inc/features/feature-about-page.php:65
+msgid "Want to get the gist on the latest theme changes? Just consult our changelog below to get a taste of the recent fixes and features implemented."
+msgstr "Want to get the gist on the latest theme changes? Just consult our changelog below to get a taste of the recent fixes and features implemented."
+
+#: inc/features/feature-about-page.php:72
+msgid "Create a child theme"
+msgstr "Create a child theme"
+
+#: inc/features/feature-about-page.php:74
+msgid "If you want to make changes to the theme's files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below."
+msgstr "If you want to make changes to the theme's files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below."
+
+#: inc/features/feature-about-page.php:75
+#: inc/features/feature-about-page.php:84
+#: inc/features/feature-about-page.php:93
+msgid "View how to do this"
+msgstr "View how to do this"
+
+#: inc/features/feature-about-page.php:81
+msgid "Speed up your site"
+msgstr "Speed up your site"
+
+#: inc/features/feature-about-page.php:83
+msgid "If you find yourself in a situation where everything on your site is running very slowly, you might consider having a look at the documentation below where you will find the most common issues causing this and possible solutions for each of the issues."
+msgstr "If you find yourself in a situation where everything on your site is running very slowly, you might consider having a look at the documentation below where you will find the most common issues causing this and possible solutions for each of the issues."
+
+#: inc/features/feature-about-page.php:90
+msgid "Build a landing page with a drag-and-drop content builder"
+msgstr "Build a landing page with a drag-and-drop content builder"
+
+#: inc/features/feature-about-page.php:92
+msgid "In the documentation below you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin."
+msgstr "In the documentation below you will find an easy way to build a great looking landing page using a drag-and-drop content builder plugin."
+
+#: inc/features/feature-about-page.php:102
+#: inc/features/feature-about-page.php:104
+msgid "Recommended actions"
+msgstr "Recommended actions"
+
+#: inc/features/feature-about-page.php:103
+msgid "We have compiled a list of steps for you to take so we can ensure that the experience you have using one of our products is very easy to follow."
+msgstr "We have compiled a list of steps for you to take so we can ensure that the experience you have using one of our products is very easy to follow."
+
+#: inc/features/feature-about-page.php:121
+msgid "Using the WordPress Customizer you can easily customize every aspect of the theme."
+msgstr "Using the WordPress Customiser you can easily customise every aspect of the theme."
+
+#. translators: s - theme name
+#: inc/features/feature-about-page.php:135
+msgid "Get %s now!"
+msgstr "Get %s now!"
+
+#: inc/features/feature-about-page.php:138
+msgid "Mobile friendly"
+msgstr "Mobile friendly"
+
+#: inc/features/feature-about-page.php:139
+msgid "Responsive layout. Works on every device."
+msgstr "Responsive layout. Works on every device."
+
+#: inc/features/feature-about-page.php:144
+msgid "WooCommerce Compatible"
+msgstr "WooCommerce Compatible"
+
+#: inc/features/feature-about-page.php:145
+msgid "Ready for e-commerce. You can build an online store here."
+msgstr "Ready for e-commerce. You can build an online store here."
+
+#: inc/features/feature-about-page.php:151
+msgid "Big title, Features, About, Team, Testimonials, Subscribe, Blog, Contact"
+msgstr "Big title, Features, About, Team, Testimonials, Subscribe, Blog, Contact"
+
+#: inc/features/feature-about-page.php:156
+msgid "Background image"
+msgstr "Background image"
+
+#: inc/features/feature-about-page.php:157
+msgid "You can use any background image you want."
+msgstr "You can use any background image you want."
+
+#: inc/features/feature-about-page.php:168
+#: inc/features/feature-theme-info-section.php:43
+msgid "Header Slider"
+msgstr "Header Slider"
+
+#: inc/features/feature-about-page.php:169
+#: inc/features/feature-theme-info-section.php:51
+msgid "You will be able to add more content to your site header with an awesome slider."
+msgstr "You will be able to add more content to your site header with an awesome slider."
+
+#: inc/features/feature-about-page.php:174
+#: inc/features/feature-theme-info-section.php:44
+msgid "Fully Customizable Colors"
+msgstr "Fully Customisable Colours"
+
+#: inc/features/feature-about-page.php:175
+#: inc/features/feature-theme-info-section.php:52
+msgid "Change colors for the header overlay, header text and navbar."
+msgstr "Change colours for the header overlay, header text and navbar."
+
+#: inc/features/feature-about-page.php:192
+#: inc/features/feature-theme-info-section.php:48
+msgid "Quality Support"
+msgstr "Quality Support"
+
+#: inc/features/feature-about-page.php:193
+#: inc/features/feature-theme-info-section.php:56
+msgid "24/7 HelpDesk Professional Support"
+msgstr "24/7 HelpDesk Professional Support"
+
+#: inc/features/feature-about-page.php:201
+msgid "Already activated"
+msgstr "Already activated"
+
+#: inc/features/feature-about-page.php:202
+msgid "Version: "
+msgstr "Version: "
+
+#: inc/features/feature-about-page.php:203
+#: inc/features/feature-about-page.php:229
+#: inc/features/feature-about-page.php:269
+msgid "Install and Activate"
+msgstr "Install and Activate"
+
+#: inc/features/feature-about-page.php:204
+#: inc/features/feature-about-page.php:230
+#: inc/features/feature-about-page.php:270
+msgid "Activate"
+msgstr "Activate"
+
+#: inc/features/feature-about-page.php:205
+#: inc/features/feature-about-page.php:231
+#: inc/features/feature-about-page.php:271
+msgid "Deactivate"
+msgstr "Deactivate"
+
+#: inc/features/feature-about-page.php:235
+msgid "It is highly recommended that you install the companion plugin to have access to the Frontpage features, Team and Testimonials sections."
+msgstr "It is highly recommended that you install the companion plugin to have access to the Frontpage features, Team and Testimonials sections."
+
+#: inc/features/feature-about-page.php:242
+msgid "Makes your Contact section more engaging by creating a good-looking contact form. Interaction with your visitors has never been easier."
+msgstr "Makes your Contact section more engaging by creating a good-looking contact form. Interaction with your visitors has never been easier."
+
+#. translators: s - ThemeIsle Companion
+#: inc/features/feature-about-page.php:263
+msgid "If you want to take full advantage of the options this theme has to offer, please install and activate %s."
+msgstr "If you want to take full advantage of the options this theme has to offer, please install and activate %s."
+
+#: inc/features/feature-about-page.php:268
+msgid "Recommended Plugins"
+msgstr "Recommended Plugins"
+
+#: inc/features/feature-about-section.php:23
+msgid "About"
+msgstr "About"
+
+#: inc/features/feature-about-section.php:35
+#: inc/features/feature-blog-section.php:31
+#: inc/features/feature-contact-section.php:37
+#: inc/features/feature-shop-section.php:33
+#: inc/features/feature-subscribe-section.php:37
+msgid "Disable section"
+msgstr "Disable section"
+
+#: inc/features/feature-about-section.php:51
+msgid "About Content"
+msgstr "About Content"
+
+#: inc/features/feature-big-title-section.php:19
+msgid "Big Title Section"
+msgstr "Big Title Section"
+
+#: inc/features/feature-big-title-section.php:33
+msgid "Big Title Background"
+msgstr "Big Title Background"
+
+#: inc/features/feature-big-title-section.php:74
+msgid "Button text"
+msgstr "Button text"
+
+#: inc/features/feature-big-title-section.php:87
+msgid "Button URL"
+msgstr "Button URL"
+
+#: inc/features/feature-blog-section.php:19
+#: inc/features/feature-blog-section.php:37
+#: inc/sections/hestia-blog-section.php:27
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/features/feature-blog-section.php:43
+#: inc/features/feature-contact-section.php:61
+#: inc/features/feature-shop-section.php:45
+#: inc/features/feature-subscribe-section.php:61
+msgid "Section Title"
+msgstr "Section Title"
+
+#: inc/features/feature-blog-section.php:49
+#: inc/features/feature-contact-section.php:67
+#: inc/features/feature-shop-section.php:51
+#: inc/features/feature-subscribe-section.php:67
+msgid "Change this subtitle in the Customizer"
+msgstr "Change this subtitle in the Customiser"
+
+#: inc/features/feature-blog-section.php:55
+#: inc/features/feature-contact-section.php:73
+#: inc/features/feature-shop-section.php:57
+#: inc/features/feature-subscribe-section.php:73
+msgid "Section Subtitle"
+msgstr "Section Subtitle"
+
+#: inc/features/feature-blog-section.php:66
+#: inc/features/feature-shop-section.php:68
+msgid "Number of Items"
+msgstr "Number of Items"
+
+#: inc/features/feature-color-settings.php:35
+msgid "Accent Color"
+msgstr "Accent Colour"
+
+#: inc/features/feature-contact-section.php:25
+msgid "Contact"
+msgstr "Contact"
+
+#: inc/features/feature-contact-section.php:49
+#: inc/features/feature-subscribe-section.php:49
+msgid "Background Image"
+msgstr "Background Image"
+
+#: inc/features/feature-contact-section.php:55
+#: inc/sections/hestia-contact-section.php:27
+msgid "Get in Touch"
+msgstr "Get in Touch"
+
+#: inc/features/feature-contact-section.php:79
+#: inc/sections/hestia-contact-section.php:28
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: inc/features/feature-contact-section.php:85
+msgid "Form Title"
+msgstr "Form Title"
+
+#: inc/features/feature-contact-section.php:95
+#: inc/features/feature-subscribe-section.php:83
+msgid "Instructions"
+msgstr "Instructions"
+
+#: inc/features/feature-contact-section.php:107
+msgid "Contact Content"
+msgstr "Contact Content"
+
+#: inc/features/feature-general-settings.php:23
+msgid "General Settings"
+msgstr "General Settings"
+
+#: inc/features/feature-general-settings.php:36
+msgid "Boxed Layout"
+msgstr "Boxed Layout"
+
+#: inc/features/feature-general-settings.php:37
+msgid "If enabled, the theme will use a boxed layout."
+msgstr "If enabled, the theme will use a boxed layout."
+
+#: inc/features/feature-shop-section.php:17
+msgid "Shop"
+msgstr "Shop"
+
+#: inc/features/feature-shop-section.php:39
+#: inc/sections/hestia-shop-section.php:29
+msgid "Products"
+msgstr "Products"
+
+#: inc/features/feature-subscribe-section.php:25
+msgid "Subscribe"
+msgstr "Subscribe"
+
+#: inc/features/feature-subscribe-section.php:55
+#: inc/sections/hestia-subscribe-section.php:28
+msgid "Subscribe to our Newsletter"
+msgstr "Subscribe to our Newsletter"
+
+#: inc/features/feature-theme-info-section.php:31
+msgid "View PRO Features"
+msgstr "View PRO Features"
+
+#. translators: 1 - link to customizer setting. 2 - 'customizer'
+#: inc/sections/hestia-big-title-section.php:24
+msgid "Change in %s"
+msgstr "Change in %s"
+
+#. translators: 1 - link to customizer setting. 2 - 'customizer'
+#: inc/sections/hestia-big-title-section.php:26
+#: inc/sections/hestia-blog-section.php:23
+#: inc/sections/hestia-contact-section.php:23
+#: inc/sections/hestia-shop-section.php:24
+#: inc/sections/hestia-subscribe-section.php:23
+msgid "Change this subtitle in %s."
+msgstr "Change this subtitle in %s."
+
+#: inc/sections/hestia-blog-section.php:23
+#: inc/sections/hestia-contact-section.php:23
+#: inc/sections/hestia-shop-section.php:24
+#: inc/sections/hestia-subscribe-section.php:23
+msgid "customizer"
+msgstr "customizer"
+
+#: inc/sections/hestia-slider-section.php:92
+#: inc/sections/hestia-slider-section.php:100
+#: inc/sections/hestia-slider-section.php:108
+msgid "Lorem Ipsum"
+msgstr "Lorem Ipsum"
+
+#: inc/sections/hestia-slider-section.php:93
+#: inc/sections/hestia-slider-section.php:101
+#: inc/sections/hestia-slider-section.php:109
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+#: inc/sections/hestia-slider-section.php:94
+#: inc/sections/hestia-slider-section.php:102
+#: inc/sections/hestia-slider-section.php:110
+msgid "Button"
+msgstr "Button"
+
+#. translators: %s is Category name
+#: inc/template-tags.php:66
+msgid "View all posts in %s"
+msgstr "View all posts in %s"
+
+#: inc/template-tags.php:138
+msgid "Next page"
+msgstr "Next page"
+
+#: inc/template-tags.php:139
+msgid "Previous page"
+msgstr "Previous page"
+
+#. translators: %1$s is Date, %2$s is Time
+#: inc/template-tags.php:234
+msgid "&#183; %1$s at %2$s"
+msgstr "&#183; %1$s at %2$s"
+
+#: inc/template-tags.php:238
+msgid "(Edit)"
+msgstr "(Edit)"
+
+#: inc/template-tags.php:249
+msgid "Reply"
+msgstr "Reply"
+
+#. translators: %s is Link to login
+#: inc/template-tags.php:282
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "You must be <a href=\"%s\">logged in</a> to post a comment."
+
+#: inc/template-tags.php:288
+msgid "Name"
+msgstr "Name"
+
+#: inc/template-tags.php:289
+msgid "Email"
+msgstr "Email"
+
+#: inc/template-tags.php:290
+msgid "Website"
+msgstr "Website"
+
+#: inc/template-tags.php:292
+msgid "What's on your mind?"
+msgstr "What's on your mind?"
+
+#: inc/template-tags.php:344
+msgid "Related Posts"
+msgstr "Related Posts"
+
+#: inc/template-tags.php:386
+msgid "Share on Facebook"
+msgstr "Share on Facebook"
+
+#: inc/template-tags.php:387
+msgid "Share on Twitter"
+msgstr "Share on Twitter"
+
+#: inc/template-tags.php:388
+msgid "Share on Google+"
+msgstr "Share on Google+"
+
+#. translators: %1$s is Theme Name, %2$s is WordPress
+#: inc/template-tags.php:475
+msgid "%1$s | Powered by %2$s"
+msgstr "%1$s | Powered by %2$s"
+
+#: inc/template-tags.php:483
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/template-tags.php:552
+msgid "Toggle Navigation"
+msgstr "Toggle Navigation"
+
+#: inc/woocommerce/functions.php:59 inc/woocommerce/functions.php:92
+msgid "View your shopping cart"
+msgstr "View your shopping basket"
+
+#. translators: %d is number of items
+#: inc/woocommerce/functions.php:64
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d item"
+msgstr[1] "%d items"
+
+#. translators: %s is Search query
+#: search.php:34
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#. translators: %1$s is Author name wrapped, %2$s is Time
+#: template-parts/content-alternative.php:37 template-parts/content.php:48
+msgid "By %1$s, %2$s"
+msgstr "By %1$s, %2$s"
+
+#. translators: %1$s is Time since post, %2$s is author Close tag
+#: template-parts/content-alternative.php:44 template-parts/content.php:55
+msgid "%1$s ago %2$s"
+msgstr "%1$s ago %2$s"
+
+#. translators: %s is Link to new post
+#: template-parts/content-none.php:19
+msgid "Ready to publish your first post? %s."
+msgstr "Ready to publish your first post? %s."
+
+#. translators: %1$s is Link to new post, %2$s is Get started here
+#: template-parts/content-none.php:23
+msgid "Get started here"
+msgstr "Get started here"
+
+#: template-parts/content-none.php:28
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+
+#: template-parts/content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+
+#: template-parts/content-single.php:35
+msgid "Categories:"
+msgstr "Categories:"
+
+#: template-parts/content-single.php:43
+msgid "Tags: "
+msgstr "Tags: "
+
+#: ti-about-page/class-themeisle-about-page.php:1064
+#: ti-customizer-notify/class-themeisle-customizer-notify.php:169
+msgid "Activating"
+msgstr "Activating"
+
+#. Template Name of the plugin/theme
+msgid "Fullwidth Template"
+msgstr "Fullwidth Template"
+
+#. translators: %s is WordPress
+#: inc/template-tags.php:482
+msgid "http://wordpress.org"
+msgstr "http://wordpress.org"
+
+#. Theme URI of the plugin/theme
+msgid "https://themeisle.com/themes/hestia/"
+msgstr "https://themeisle.com/themes/hestia/"
+
+#. Author of the plugin/theme
+msgid "ThemeIsle"
+msgstr "ThemeIsle"
+
+#. Author URI of the plugin/theme
+msgid "https://themeisle.com"
+msgstr "https://themeisle.com"

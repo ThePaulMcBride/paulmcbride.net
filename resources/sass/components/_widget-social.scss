@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  Components > Social Widge
+\*------------------------------------*/
+
+.c-social-widget {
+  &__item {
+    text-align: center;
+    display: inline-block;
+  }
+
+  &__link {
+    display: block;
+    padding: 0 quarter($base-spacing-unit);
+    transition: $global-transition;
+
+    @include attention() {
+      background-color: $bg-gray;
+    }
+  }
+
+  &__icon {
+    vertical-align: middle;
+    fill: $color-gray;
+    transition: $global-transition;
+
+    @include attention() {
+      fill: $color-brand;
+    }
+  }
+}

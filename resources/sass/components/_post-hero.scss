@@ -1,0 +1,17 @@
+/*------------------------------------*\
+  Components > Post Hero
+\*------------------------------------*/
+
+.c-post-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $bg-gray;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-bottom: 45%;
+  }
+}

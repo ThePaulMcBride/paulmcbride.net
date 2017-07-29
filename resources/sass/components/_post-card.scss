@@ -1,0 +1,186 @@
+/*------------------------------------*\
+  Components > Post Card
+\*------------------------------------*/
+
+.c-post-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: $base-spacing-unit + half($base-spacing-unit);
+  padding-bottom: $base-spacing-unit + half($base-spacing-unit);
+  border-bottom: 1px solid $color-border;
+
+  &-wrap {
+    display: flex;
+  }
+
+  &-wrap--first {
+    width: 100%;
+  }
+
+  &__image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $bg-gray;
+    margin-bottom: $base-spacing-unit;
+
+    @include mq($from: tablet) {
+      &.js-fadein {
+        opacity: 0;
+
+        @media screen and ( -webkit-min-device-pixel-ratio: 0 ) {
+          opacity: 1;
+        }
+      }
+
+      transition: opacity $global-transition ease-in-out;
+
+      &.is-inview {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      transition: $global-transition;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-color: $color-black;
+      opacity: 0;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      width: 100%;
+      padding-bottom: 56.25%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    // line-height: $line-height-medium;
+    transition: $global-transition;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &--featured {
+    &__icon {
+      position: absolute;
+      bottom: quarter($line-height-base);
+      left: quarter($line-height-base);
+      fill: $color-white;
+    }
+  }
+
+  &__author {
+    color: $color-gray;
+    font-size: $font-size-small;
+
+    @include attention() {
+      text-decoration: none;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    color: $color-gray;
+    font-size: $font-size-small;
+  }
+
+  @include attention() {
+    .c-post-card__image:before {
+      opacity: .1;
+    }
+
+    .c-post-card__title {
+      color: $color-gray;
+    }
+
+    .c-post-card__link {
+      color: $color-brand;
+    }
+  }
+}
+
+// Home Page First Wide Post Card
+
+.c-post-card--first {
+
+  @include mq($from: tablet) {
+    .c-post-card__image {
+      margin-bottom: 0;
+      outline: 2px solid rgba($color-white, .5);
+      outline-offset: - (half($base-spacing-unit) + half(quarter($base-spacing-unit)));
+
+      &:before {
+        opacity: .3;
+      }
+    }
+
+    .c-post-card__meta {
+      display: table;
+      position: absolute;
+      top: 50%;
+      width: 70%;
+      z-index: 100;
+      left: $line-height-base * 3;
+      transform: translate(0, -50%);
+      font-weight: $font-weight-regular;
+
+      @include mq($from: desktop) {
+        width: 50%;
+      }
+    }
+
+    .c-post-card__title {
+      display: table-header-group;
+      font-size: double($font-size-small);
+      line-height: initial;
+
+      @include mq($from: desktop) {
+        font-size: double($font-size-base);
+      }
+    }
+
+    .c-post-card__link {
+      display: block;
+      color: $color-white;
+    }
+
+    .c-post-card__author,
+    .c-post-card__date {
+      color: $color-white;
+    }
+
+    .c-post-card--featured__icon {
+      bottom: half($line-height-base);
+      left: half($line-height-base);
+    }
+
+    @include attention() {
+      .c-post-card__title a {
+        color: $color-white;
+      }
+
+      .c-post-card__image {
+        outline: 2px solid rgba($color-white, .6);
+
+        &:before {
+          opacity: .2;
+        }
+      }
+    }
+  }
+
+}

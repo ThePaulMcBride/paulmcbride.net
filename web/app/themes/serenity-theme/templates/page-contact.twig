@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+{% if post.get_thumbnail %}
+  <div class='c-post-hero' style="background-image: url({{post.get_thumbnail.src}})"></div>
+{% else %}
+  <div class='c-post-hero c-post-hero--small particles' style="background-image: url('{{theme.link}}/assets/img/background.jpg')"></div>
+{% endif %}
+
+<div class='o-wrapper'>
+
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--center o-grid__col--2-3-m'>
+      <article class='c-{{ post_class }}'>
+
+        <h2 class='c-post__title'>{{ post.title }}</h2>
+
+        <div class='c-content'>
+          {{ post.content }}
+
+          {{ '[contact-form-7 id="64" title="Main Contact Form"]'|shortcodes  }}
+        </div>
+
+      </article>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

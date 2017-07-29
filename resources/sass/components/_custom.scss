@@ -1,0 +1,27 @@
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+  background: #272822!important;
+}
+
+.c-social-nav__icon {
+  fill: #323232!important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    fill: #1f5f8b!important;
+  }
+}
+
+.c-social-widget__icon {
+  fill: #78909c!important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    fill: #1f5f8b!important;
+  }
+}

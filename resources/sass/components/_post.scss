@@ -1,0 +1,19 @@
+/*------------------------------------*\
+  Components > Post
+\*------------------------------------*/
+
+.c-post {
+  &__date {
+    color: $color-gray;
+    font-size: $font-size-small;
+  }
+
+  &__title {
+    font-weight: $font-weight-regular;
+    line-height: initial;
+
+    @include mq($from: desktop) {
+      font-size: $font-size-h1;
+    }
+  }
+}

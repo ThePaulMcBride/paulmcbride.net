@@ -1,0 +1,38 @@
+/*------------------------------------*\
+  Trumbs > Typography
+\*------------------------------------*/
+
+.u-font-serif {
+  font-family: $font-serif;
+}
+
+.u-font-sans-serif {
+  font-family: $font-sans-serif;
+}
+
+.u-font-medium  {
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+}
+
+.u-font-small {
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+}
+
+.u-font-tiny {
+  font-size: $font-size-tiny;
+  line-height: $line-height-tiny;
+}
+
+.u-font-light {
+  font-weight: $font-weight-light;
+}
+
+.u-font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.u-font-bold {
+  font-weight: $font-weight-bold;
+}

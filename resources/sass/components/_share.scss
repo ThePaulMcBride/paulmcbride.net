@@ -1,0 +1,34 @@
+/*------------------------------------*\
+  Components > Share Icons
+\*------------------------------------*/
+
+.c-share {
+  display: flex;
+  margin-top: $base-spacing-unit;
+  border: 1px solid $color-border;
+
+  &__item {
+    flex: 1;
+    text-align: center;
+
+    &:not(:last-child) {
+      border-right: 1px solid $color-border;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: quarter($base-spacing-unit);
+    background-color: $bg-white;
+    transition: $global-transition;
+
+    @include attention() {
+      background-color: $bg-gray;
+    }
+  }
+
+  &__icon {
+    vertical-align: middle;
+    fill: $color-gray;
+  }
+}

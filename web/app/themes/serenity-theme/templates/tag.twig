@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+<div class='o-wrapper'>
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--full'>
+      <div class='c-archive'>
+        <h4 class='c-archive__title'>{{tag.name}}</h4>
+        <p class='c-archive__description'>{{tag.description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class='o-grid'>
+    {% for key, post in posts %}
+      {% include ["partials/post-card.twig"] %}
+    {% endfor %}
+  </div>
+
+  <div class='o-grid'>
+    {% include ["partials/pagination.twig"] %}
+  </div>
+</div>
+
+{% endblock %}

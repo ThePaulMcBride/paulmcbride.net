@@ -1,0 +1,14 @@
+/*------------------------------------*\
+  Components > Logo
+\*------------------------------------*/
+
+.c-logo {
+  &__link {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+  }
+
+  &__img {
+    max-height: double($base-spacing-unit);
+  }
+}

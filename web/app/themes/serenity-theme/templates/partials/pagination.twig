@@ -1,0 +1,17 @@
+{% if posts.pagination.prev %}
+  <div class='o-grid__col o-grid__col--2-4-s'>
+    <a class='c-pagination' href='{{posts.pagination.prev.link}}'>
+      <div class='c-pagination__icon c-pagination__icon--prev' data-icon='ei-chevron-left'></div>
+      <span class='c-pagination__text c-pagination__text--prev'>Previous</span>
+    </a>
+  </div>
+{% endif %}
+
+{% if posts.pagination.next %}
+  <div class='o-grid__col o-grid__col--end o-grid__col--2-4-s u-text-right'>
+    <a class='c-pagination' href='{{posts.pagination.next.link}}'>
+      <span class='c-pagination__text c-pagination__text--next'>Next</span>
+      <div class='c-pagination__icon c-pagination__icon--next' data-icon='ei-chevron-right'></div>
+    </a>
+  </div>
+{% endif %}

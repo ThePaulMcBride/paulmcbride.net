@@ -1,0 +1,26 @@
+{
+  "name": "enprova-new",
+  "version": "1.0.0",
+  "description": "[![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock) [![Build Status](https://img.shields.io/travis/roots/bedrock.svg?style=flat-square)](https://travis-ci.org/roots/bedrock)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "http-server ./frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/ardmoredigital/enprova-new.git"
+  },
+  "author": "Ardmore Digital",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/ardmoredigital/enprova-new#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "laravel-elixir": "^6.0.0-15"
+  },
+  "dependencies": {
+    "evil-icons": "^1.9.0",
+    "gulp": "^3.9.1",
+    "prismjs": "^1.6.0"
+  }
+}

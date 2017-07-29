@@ -1,0 +1,105 @@
+/*------------------------------------*\
+  Components > Post Card Recent
+\*------------------------------------*/
+
+.c-post-card-recent {
+  &:not(:last-child) {
+    margin-bottom: $base-spacing-unit + half($base-spacing-unit);
+    padding-bottom: $base-spacing-unit + quarter($base-spacing-unit);
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $bg-gray;
+    margin-bottom: half($base-spacing-unit);
+
+    @include mq($from: tablet) {
+      &.js-fadein {
+        opacity: 0;
+
+        @media screen and ( -webkit-min-device-pixel-ratio: 0 ) {
+          opacity: 1;
+        }
+      }
+
+      transition: opacity $global-transition ease-in-out;
+
+      &.is-inview {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      transition: $global-transition;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-color: $color-black;
+      opacity: 0;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      width: 100%;
+      padding-bottom: 56.25%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+    transition: $global-transition;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &--featured {
+    &__icon {
+      position: absolute;
+      bottom: quarter($line-height-base);
+      left: quarter($line-height-base);
+      fill: $color-white;
+    }
+  }
+
+  &__author {
+    color: $color-gray;
+    font-size: $font-size-small;
+
+    @include attention() {
+      text-decoration: none;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    color: $color-gray;
+    font-size: $font-size-small;
+  }
+
+  @include attention() {
+    .c-post-card-recent__image:before {
+      opacity: .1;
+    }
+
+    .c-post-card-recent__title {
+      color: $color-gray;
+    }
+
+    .c-post-card-recent__link {
+      color: $color-brand;
+    }
+  }
+}

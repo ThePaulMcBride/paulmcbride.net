@@ -1,0 +1,54 @@
+/*------------------------------------*\
+  Components > Content
+\*------------------------------------*/
+
+.c-content {
+  font-family: $font-serif;
+
+  @include mq($until: tablet) {
+    img {
+      position: relative;
+      left: 50%;
+      max-width: 115%;
+      transform: translate(-50%);
+    }
+  }
+
+  a:not(.c-btn) {
+    text-shadow: 0.04545em  0           0 $color-white,
+                 0.09091em  0           0 $color-white,
+                 0.13636em  0           0 $color-white,
+                 -0.04545em 0           0 $color-white,
+                 -0.09091em 0           0 $color-white,
+                 -0.13636em 0           0 $color-white,
+                 0          0.04545em   0 $color-white,
+                 0          0.09091em   0 $color-white,
+                 0          -0.04545em  0 $color-white,
+                 0          -0.09091em  0 $color-white;
+
+    text-decoration: none;
+    background-size: 1px 1px;
+    background-position: 0 98%;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to bottom, $color-text, $color-text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-sans-serif;
+    font-weight: $font-weight-regular;
+  }
+
+  dd,
+  ol,
+  ul {
+    // Target Safari Only
+    &:not(:root:root) {
+      -webkit-padding-start: half($base-spacing-unit);
+    }
+  }
+}
