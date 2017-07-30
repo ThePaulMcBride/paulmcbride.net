@@ -24,6 +24,7 @@ $grid-gutter: $base-spacing-unit;
 .o-grid__col {
   padding-right: $grid-gutter;
   padding-left: $grid-gutter;
+  max-width: 100%;
 
   &--1-3-s {
     width: percentage(1 / 3);
