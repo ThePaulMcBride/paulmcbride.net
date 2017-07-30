@@ -49,7 +49,8 @@
     "wpackagist-plugin/amazon-s3-and-cloudfront": "*",
     "wpackagist-plugin/amazon-web-services": "*",
     "wpackagist-plugin/postmark-approved-wordpress-plugin": "*",
-    "wpackagist-plugin/wordpress-seo": "*"
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1",
