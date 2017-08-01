@@ -2,15 +2,12 @@
   <div class="o-grid">
     <div class="o-grid__col o-grid__col o-grid__col--3-4-m o-grid__col--3-4-l o-grid__col--center">
       <h5>Join the Newsletter to Receive the Latest Updates in Your Inbox.</h5>
-      <form method="post" action="/subscribe/" class="c-subscribe-form">
-          <input class="confirm" type="hidden" name="confirm">
-          <input class="location" type="hidden" name="location" value="http://aspire.aspirethemes.com/if-you-have-an-opportunity-to-use-your-voice-you-should-use-it-all-the-time/">
-          <input class="referrer" type="hidden" name="referrer" value="http://aspire.aspirethemes.com/">
-
-          <div class="form-group">
-            <input class="c-subscribe-form__input" type="email" name="email" placeholder="Email">
-          </div>
-          <button class="c-subscribe-form__btn c-btn c-btn--full" type="submit">Subscribe</button>
+      <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="c-subscribe-form">
+      	<input class="c-subscribe-form__input" type="text" placeholder="Name" name="name"/><br/>
+      	<input class="c-subscribe-form__input" type="text" placeholder="Email Address" name="email"/><br/>
+      	<input type="hidden" name="campaign_token" value="TsOkh" />
+        <input type="hidden" name="thankyou_url" value="https://paulmcbride.net/thank-you"/>
+      	<button class="c-subscribe-form__btn c-btn c-btn--full c-btn--small" type="submit">Subscribe</button>
       </form>
     </div>
   </div>

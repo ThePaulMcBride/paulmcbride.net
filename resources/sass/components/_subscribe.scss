@@ -12,10 +12,8 @@
   }
 }
 
-@include mq($until: desktop) {
-  .c-subscribe-form__input {
-    margin-bottom: $base-spacing-unit;
-  }
+.c-subscribe-form__input {
+  margin-bottom: $base-spacing-unit;
 }
 
 @include mq($from: desktop) {

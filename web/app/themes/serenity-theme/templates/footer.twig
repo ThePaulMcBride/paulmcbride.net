@@ -46,15 +46,12 @@
 
     <div class='o-grid__col o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-4-l'>
       <p class='u-font-medium'>Newsletter</p>
-      <form method="post" action="/subscribe/" class="c-subscribe-form">
-        <input class="confirm" type="hidden" name="confirm">
-        <input class="location" type="hidden" name="location">
-        <input class="referrer" type="hidden" name="referrer">
-
-        <div class="form-group">
-          <input class="c-subscribe-form__input" type="email" name="email" placeholder="Email">
-        </div>
-        <button class="c-subscribe-form__btn c-btn c-btn--small c-btn--full" type="submit">Subscribe</button>
+      <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="c-subscribe-form">
+      	<input class="c-subscribe-form__input" type="text" placeholder="Name" name="name"/><br/>
+      	<input class="c-subscribe-form__input" type="text" placeholder="Email Address" name="email"/><br/>
+      	<input type="hidden" name="campaign_token" value="TsOkh" />
+        <input type="hidden" name="thankyou_url" value="https://paulmcbride.net/thank-you"/>
+      	<button class="c-subscribe-form__btn c-btn c-btn--full c-btn--small" type="submit">Subscribe</button>
       </form>
     </div>
 

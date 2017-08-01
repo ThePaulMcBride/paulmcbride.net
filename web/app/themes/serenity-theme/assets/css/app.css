@@ -2262,10 +2262,8 @@ body {
   }
 }
 
-@media (max-width: 63.99em) {
-  .c-subscribe-form__input {
-    margin-bottom: 16px;
-  }
+.c-subscribe-form__input {
+  margin-bottom: 16px;
 }
 
 @media (min-width: 64em) {
