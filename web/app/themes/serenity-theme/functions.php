@@ -83,6 +83,7 @@ function enqueue_scripts()
     wp_enqueue_script('prism-script', 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js');
     wp_enqueue_script('prism-php', 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-php.min.js');
     wp_enqueue_script('evil-icons-script', 'https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js');
+    wp_enqueue_script('convertkit', 'https://assets.convertkit.com/assets/CKJS4.js?v=21');
     wp_enqueue_script('app-script', THEME_URI.'/assets/js/app.js');
 }
 
