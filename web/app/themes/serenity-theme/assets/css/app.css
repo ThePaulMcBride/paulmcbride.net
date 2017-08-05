@@ -2433,6 +2433,11 @@ pre[class*=language-] {
   margin: 0.5em 0 1rem !important;
 }
 
+.hide-title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
 /*------------------------------------*  Trumbs > Hide
 \*------------------------------------*/
 /**
