@@ -50,12 +50,12 @@
     "wpackagist-plugin/amazon-web-services": "*",
     "wpackagist-plugin/postmark-approved-wordpress-plugin": "*",
     "wpackagist-plugin/wordpress-seo": "*",
-    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*"
+    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*",
+    "heroku/heroku-buildpack-php": "^124.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1",
-    "laravel/homestead": "^5.4",
-    "heroku/heroku-buildpack-php": "^124.0"
+    "laravel/homestead": "^5.4"
   },
   "extra": {
     "installer-paths": {
