@@ -81,11 +81,6 @@ define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 define('DISALLOW_FILE_EDIT', true);
 
-define('FORCE_SSL_ADMIN', true);
-define('FORCE_SSL_LOGIN', true);
-if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
-$_SERVER['HTTPS']='on';
-
 /**
  * Bootstrap WordPress
  */

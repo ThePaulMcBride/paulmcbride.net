@@ -1,5 +1,7 @@
 <?php
 
+flush_rewrite_rules();
+
 // check if timber exists before continuing
 if (!class_exists('Timber\Timber')) {
     die('Timber class required for this theme');
