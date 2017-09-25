@@ -39,7 +39,7 @@
     "php": ">=7.0",
     "composer/installers": "~1.2.0",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.8.0",
+    "johnpbloch/wordpress": "^4.8",
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/timber-library": "1.3.*",
