@@ -7,10 +7,10 @@ keys:
     - ~/.ssh/id_rsa
 folders:
     -
-        map: ~/code/paulmcbride-wp
+        map: ./
         to: /home/vagrant/Code/
 sites:
-    - 
+    -
         map: paulmcbride.dev
         to: /home/vagrant/Code/web
 databases:
