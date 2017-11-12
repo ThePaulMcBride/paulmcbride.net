@@ -50,7 +50,9 @@
     "wpackagist-plugin/amazon-web-services": "*",
     "wpackagist-plugin/postmark-approved-wordpress-plugin": "*",
     "wpackagist-plugin/wordpress-seo": "*",
-    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*"
+    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*",
+    "wpackagist-plugin/elementor": "*",
+    "wpackagist-plugin/modal-for-elementor": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1",
