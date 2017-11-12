@@ -55,7 +55,6 @@ function add_to_context($data)
     return $data;
 }
 
-
 // Register actions
 add_action('wp_enqueue_scripts', 'enqueue_scripts'); // enqueue scripts to add js links
 add_action('wp_enqueue_scripts', 'enqueue_styles'); // enqueue styles to add css link
@@ -85,6 +84,9 @@ function enqueue_scripts()
     wp_enqueue_script('evil-icons-script', 'https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js');
     wp_enqueue_script('convertkit', 'https://assets.convertkit.com/assets/CKJS4.js?v=21');
     wp_enqueue_script('app-script', THEME_URI.'/assets/js/app.js');
+    wp_localize_script( 'app-script', 'php_vars', [
+        'heap_key' => env('HEAP_API_KEY'),
+    ] );
 }
 
 
