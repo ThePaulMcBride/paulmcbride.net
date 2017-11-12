@@ -41,7 +41,6 @@ register_nav_menus([
     'footer_menu' => 'Footer Navigation',
 ]);
 
-
 // Initialize Timber
 $timber = new \Timber\Timber();
 Timber::$dirname = 'templates';
@@ -60,6 +59,7 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts'); // enqueue scripts to add j
 add_action('wp_enqueue_scripts', 'enqueue_styles'); // enqueue styles to add css link
 add_action('init', 'register_session'); // create the PHP session
 add_filter('show_admin_bar', '__return_false'); // hide admin bar
+add_action('wp_head', 'blog_favicon');
 add_theme_support( 'post-thumbnails' );
 
 
@@ -72,6 +72,18 @@ function register_session()
     if (!session_id()) {
         session_start(); // so if these is no session id, then start the session
     }
+}
+
+function blog_favicon() {
+?>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= bloginfo('template_directory') ?>/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= bloginfo('template_directory') ?>/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= bloginfo('template_directory') ?>/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?= bloginfo('template_directory') ?>/assets/img/favicon/manifest.json">
+    <link rel="shortcut icon" href="<?= bloginfo('template_directory') ?>/assets/img/favicon/favicon.ico">
+    <link rel="mask-icon" href="<?= bloginfo('template_directory') ?>/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+<?php
 }
 
 /**
@@ -88,7 +100,6 @@ function enqueue_scripts()
         'heap_key' => env('HEAP_API_KEY'),
     ] );
 }
-
 
 /**
  * Enqueue the styles that need to be loaded
