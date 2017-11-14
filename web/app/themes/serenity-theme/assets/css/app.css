@@ -1620,6 +1620,29 @@ body {
   background-size: cover;
   background-color: #F9FAFB;
   margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.c-post-card__image__small {
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.c-post-card__image__sharp {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @media (min-width: 40em) {
