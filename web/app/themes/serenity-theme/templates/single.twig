@@ -3,7 +3,10 @@
 {% block body %}
 
   {% if post.get_thumbnail %}
-    <div class='c-post-hero' style="background-image: url({{post.get_thumbnail.src}})"></div>
+    <div class='c-post-hero'>
+      <div class="c-post-hero__sharp" data-image="{{post.get_thumbnail.src}}"></div>
+      <div class="c-post-hero__small" style="background-image: url({{post.get_thumbnail.src|resize(100)}})"></div>
+    </div>
   {% else %}
     <div class='c-post-hero' style="background-image: url('{{theme.link}}/assets/img/abstract.jpg')"></div>
   {% endif %}

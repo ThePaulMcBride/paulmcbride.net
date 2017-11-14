@@ -1969,6 +1969,39 @@ body {
   }
 }
 
+.c-post-hero {
+  overflow: hidden;
+}
+
+.c-post-hero:before {
+  content: '';
+  display: block;
+  padding-bottom: 45%;
+  position: relative;
+}
+
+.c-post-hero__sharp {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.c-post-hero__small {
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 /*------------------------------------*  Components > Content
 \*------------------------------------*/
 .c-content {

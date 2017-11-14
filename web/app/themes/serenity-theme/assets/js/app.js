@@ -2467,12 +2467,21 @@ $(document).ready(function() {
   heap.load(php_vars.heap_key);
 
   $('.c-post-card__image').each((index, item) => {
-    // console.log($(item).find('.c-post-card__image__sharp').data('image'));
     var sharpDiv = $(item).find('.c-post-card__image__sharp');
     var smallDiv = $(item).find('.c-post-card__image__small');
     var imageUrl = sharpDiv.data('image');
     swapBg(imageUrl, sharpDiv, smallDiv);
-  })
+  });
+
+  $('.c-post-hero').each((index, item) => {
+    console.log($(item));
+    var sharpDiv = $(item).find('.c-post-hero__sharp');
+    var smallDiv = $(item).find('.c-post-hero__small');
+    var imageUrl = sharpDiv.data('image');
+
+    console.log(sharpDiv, smallDiv, imageUrl);
+    swapBg(imageUrl, sharpDiv, smallDiv);
+  });
 });
 
 
