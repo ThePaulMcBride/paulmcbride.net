@@ -19,14 +19,6 @@
     margin-bottom: half($base-spacing-unit);
 
     @include mq($from: tablet) {
-      &.js-fadein {
-        opacity: 0;
-
-        @media screen and ( -webkit-min-device-pixel-ratio: 0 ) {
-          opacity: 1;
-        }
-      }
-
       transition: opacity $global-transition ease-in-out;
 
       &.is-inview {

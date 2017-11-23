@@ -21,6 +21,7 @@
   "dependencies": {
     "evil-icons": "^1.9.0",
     "gulp": "^3.9.1",
-    "prismjs": "^1.6.0"
+    "prismjs": "^1.6.0",
+    "waypoints": "^4.0.1"
   }
 }

@@ -1649,18 +1649,6 @@ body {
   .c-post-card__image {
     transition: opacity 500ms ease-in-out;
   }
-  .c-post-card__image.js-fadein {
-    opacity: 0;
-  }
-}
-
-@media screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 0) {
-  .c-post-card__image.js-fadein {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 40em) {
   .c-post-card__image.is-inview {
     opacity: 1;
   }
@@ -1817,18 +1805,6 @@ body {
   .c-post-card-recent__image {
     transition: opacity 500ms ease-in-out;
   }
-  .c-post-card-recent__image.js-fadein {
-    opacity: 0;
-  }
-}
-
-@media screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 0) {
-  .c-post-card-recent__image.js-fadein {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 40em) {
   .c-post-card-recent__image.is-inview {
     opacity: 1;
   }
