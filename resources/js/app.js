@@ -87,14 +87,6 @@ $(document).ready(function() {
     var sharpDiv = $(item).find('.c-post-card__image__sharp');
     var smallDiv = $(item).find('.c-post-card__image__small');
     var imageUrl = sharpDiv.data('image');
-
-    new Waypoint({
-      element: $(item),
-      handler: function(direction) {
-        alert('You have scrolled to a thing')
-      }
-    })
-
     swapBg(imageUrl, sharpDiv, smallDiv);
   });
 
