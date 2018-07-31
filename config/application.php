@@ -35,8 +35,8 @@ if (file_exists($env_config)) {
 /**
  * AWS Settings
  */
-// define('DBI_AWS_ACCESS_KEY_ID', env('AWS_ACCESS_KEY_ID'));
-// define('DBI_AWS_SECRET_ACCESS_KEY', env('AWS_SECRET_ACCESS_KEY'));
+define('DBI_AWS_ACCESS_KEY_ID', env('AWS_ACCESS_KEY_ID'));
+define('DBI_AWS_SECRET_ACCESS_KEY', env('AWS_SECRET_ACCESS_KEY'));
 
 /**
  * URLs

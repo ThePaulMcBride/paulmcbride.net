@@ -52,7 +52,8 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "*",
     "wpackagist-plugin/elementor": "*",
-    "wpackagist-plugin/modal-for-elementor": "*"
+    "wpackagist-plugin/modal-for-elementor": "*",
+    "wpackagist-plugin/convertkit":"*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1",
