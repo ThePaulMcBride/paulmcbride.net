@@ -1627,8 +1627,8 @@ body {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
   -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
   background-size: cover;
@@ -1972,8 +1972,8 @@ body {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
   -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
   background-size: cover;
