@@ -1624,6 +1624,9 @@ body {
 }
 
 .c-post-card__image__small {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
   -webkit-filter: blur(20px);
   filter: blur(20px);
   -webkit-transform: scale(1.1, 1.1);
@@ -1966,6 +1969,9 @@ body {
 }
 
 .c-post-hero__small {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
   -webkit-filter: blur(20px);
   filter: blur(20px);
   -webkit-transform: scale(1.1, 1.1);
