@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: paul
+      MYSQL_DATABASE: paul
+      MYSQL_USER: root
+      MYSQL_PASSWORD: paul
+    ports:
+      - "9906:3306"
+  web:
+    build: .
+    container_name: paul-wp
+    depends_on:
+      - db
+    volumes:
+      - .env:/var/www/.env
+      - ./config:/var/www/config
+      - ./web:/var/www/web
+      - ./vendor:/var/www/vendor
+    ports:
+      - "8001:80"
+    stdin_open: true
+    tty: true
