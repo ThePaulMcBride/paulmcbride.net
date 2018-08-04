@@ -38,6 +38,7 @@
   "require": {
     "php": ">=7.0",
     "ext-gd": "*",
+    "ext-mbstring": "*",
     "composer/installers": "~1.2.0",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "^4.8",
