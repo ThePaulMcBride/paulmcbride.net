@@ -61,6 +61,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-markdown-pages',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
