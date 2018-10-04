@@ -1,6 +1,0 @@
-.env
-.vagrant
-.bower_components
-.resources
-.env_example
-Vagrantfile
