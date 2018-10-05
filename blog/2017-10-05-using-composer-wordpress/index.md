@@ -6,14 +6,6 @@ featuredImage: "./images/using-composer-with-wordpress.jpg"
 tags: ["php"]
 ---
 
-<!-- ---
-path: "/using-composer-wordpress"
-date: "2017-10-12T09:00:00.000Z"
-title: "Using Composer with WordPress"
-featuredImage: "./images/using-composer-with-wordpress.jpg"
-tags: ["php"]
---- -->
-
 Today we're going to discuss how to use the PHP package manager, Composer with WordPress, the CMS that powers over 20% of the internet.
 
 Composer is the most popular dependency manager in the PHP ecosystem. In modern web development, it is incredibly common to write code that depends on one or more 3rd party libraries. Composer allows you to define and install these dependencies in a `composer.json` file.
