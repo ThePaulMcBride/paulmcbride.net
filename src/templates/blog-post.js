@@ -147,7 +147,7 @@ export default function Template(props) {
   );
 }
 
-export const pageQuery = graphql`
+export const query = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html

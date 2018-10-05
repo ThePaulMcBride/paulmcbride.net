@@ -3,8 +3,9 @@ const { name } = require('./package.json');
 module.exports = {
   pathPrefix: process.env.CI ? `/${name}` : `/`,
   siteMetadata: {
-    author: 'You!',
-    title: `Gatsby Default (Blog) Starter`,
+    author: 'Paul McBride',
+    title: `Paul McBride`,
+    siteUrl: `https://paulmcbride.net`,
   },
   plugins: [
     'gatsby-plugin-catch-links',
@@ -35,26 +36,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/pages/`,
-        name: `pages`,
-      }
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
             resolve: 'gatsby-remark-images'
-          }
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
+          },
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              ratio: 1.77,
+              related: false,
+              noIframeBorder: true
+            }
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -65,13 +60,14 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-        ],
-      },
+          `gatsby-remark-responsive-iframe`
+        ]
+      }
     },
-    'gatsby-plugin-markdown-pages',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-styled-components'
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-sitemap'
   ],
 }

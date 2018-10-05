@@ -254,7 +254,7 @@ class HeaderComponent extends Component {
               <Navigation>
                 <NavLink to="/" activeClassName="active">Home</NavLink>
                 <NavLink to="/about" activeClassName="active">About</NavLink>
-                <NavLink to="/courses" activeClassName="active">Courses</NavLink>
+                <NavLink as="a" href="https://paul-mcbride.teachable.com/" activeClassName="active">Courses</NavLink>
                 <NavLink to="/contact" activeClassName="active">Contact</NavLink>
               </Navigation>
 

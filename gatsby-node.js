@@ -42,11 +42,11 @@ const createTagPages = (createPage, edges) => {
     });
 };
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  return graphql(`{
+  const blogQueryResult = await graphql(`{
     allMarkdownRemark(
       filter:{fileAbsolutePath: {regex: "/blog/"}}
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -78,47 +78,46 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   }`)
-  .then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
 
-    createPaginatedPages({
-      edges: result.data.allMarkdownRemark.edges,
-      createPage: createPage,
-      pageTemplate: "src/templates/index.js",
-      pageLength: 12, // This is optional and defaults to 10 if not used
-      pathPrefix: "", // This is optional and defaults to an empty string if not used
-      context: {} // This is optional and defaults to an empty object if not used
+  if (blogQueryResult.errors) {
+    return Promise.reject(result.errors)
+  }
+
+  createPaginatedPages({
+    edges: blogQueryResult.data.allMarkdownRemark.edges,
+    createPage: createPage,
+    pageTemplate: "src/templates/index.js",
+    pageLength: 12, // This is optional and defaults to 10 if not used
+    pathPrefix: "", // This is optional and defaults to an empty string if not used
+    context: {} // This is optional and defaults to an empty object if not used
+  });
+
+  const posts = blogQueryResult.data.allMarkdownRemark.edges;
+
+  createTagPages(createPage, posts);
+
+  const newestPosts = posts.slice(0, 4)
+
+  // Create pages for each markdown file.
+  posts.forEach(({ node }, index) => {
+    const prev = index === 0 ? null : posts[index - 1].node;
+    const next = index === posts.length - 1 ? null : posts[index + 1].node;
+    const currentPageId = node.id
+
+    const recentPosts = newestPosts
+      .filter((post) => currentPageId !== post.node.id)
+      .slice(0, 3)
+
+    createPage({
+      path: node.frontmatter.path,
+      component: blogPostTemplate,
+      context: {
+        prev,
+        next,
+        recentPosts
+      }
     });
+  });
 
-    const posts = result.data.allMarkdownRemark.edges;
-
-    createTagPages(createPage, posts);
-
-    const newestPosts = posts.slice(0, 4)
-
-    // Create pages for each markdown file.
-    posts.forEach(({ node }, index) => {
-      const prev = index === 0 ? null : posts[index - 1].node;
-      const next = index === posts.length - 1 ? null : posts[index + 1].node;
-      const currentPageId = node.id
-
-      const recentPosts = newestPosts
-        .filter((post) => currentPageId !== post.node.id)
-        .slice(0, 3)
-
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {
-          prev,
-          next,
-          recentPosts
-        }
-      });
-    });
-
-    return posts;
-  })
+  return posts;
 };

@@ -22,6 +22,14 @@ const GlobalStyle = createGlobalStyle`
     padding: 3px 6px!important;
   }
 
+  pre[class*="language-"] {
+    margin: .5em 0 1em;
+  }
+
+  .embedVideoIframe {
+    width: 100%;
+  }
+
   // code.language-text {
   //   font-family: Courier, monospace;
   //   font-size: 16px;

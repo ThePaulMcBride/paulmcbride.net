@@ -110,7 +110,7 @@ class Footer extends Component {
               <Link to="/">Home</Link>
               <Link to="/contact">Contact</Link>
               <Link to="/privacy">Privacy</Link>
-              <Link to="/term-and-conditions">Terms & Conditions</Link>
+              <Link to="/terms-and-conditions">Terms & Conditions</Link>
             </FooterNav>
           </Column>
 
@@ -202,7 +202,7 @@ class Footer extends Component {
           </Column>
         </FooterColumns>
         <FooterTaglineContainer>
-          <span>&copy; 2019 Paul McBride</span>
+          <span>&copy; {(new Date()).getFullYear()} Paul McBride</span>
         </FooterTaglineContainer>
       </FooterContainer>
     );
