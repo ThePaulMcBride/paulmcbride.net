@@ -1,9 +1,9 @@
 ---
-path: "/tools-trade-frontend-developer"
-date: "2017-08-31T09:00:00.000Z"
-title: "Tools of the Trade - Front End Developer"
-featuredImage: "./images/front-end-development-tools.jpg"
-tags: ["tools", "javascript"]
+path: "/rubber-duck-debugging"
+date: "2017-08-24T09:00:00.000Z"
+title: "Rubber Duck Debugging"
+featuredImage: "./images/rubber-duck-debugging.jpg"
+tags: ["tools"]
 ---
 The work of a front-end developer is complicated. There is a lot of compiling and minifying code, moving assets around and installing dependencies! Let's not forget actually writing the code too.
 
