@@ -1,6 +1,6 @@
 ---
 path: "/5-reasons-to-learn-react"
-date: "2017-10-09T09:00:00.000Z"
+date: "2017-10-19T09:00:00.000Z"
 title: "5 Reasons to Learn React"
 featuredImage: "./images/5-reasons-to-learn-react.png"
 tags: ["javascript", "tools"]
@@ -24,7 +24,7 @@ Knowing React inside out is not necessary when getting started. If you want to b
 
 React's documentation make learning it even easier. They are well structured and easy to follow. With the release of React v16, the documentation has been overhauled. Not only is it easy to follow, it's also easy on the eye.
 
-Check the documentation out at reactjs.org.
+Check the documentation out at [reactjs.org](https://reactjs.org).
 
 ## 4. React Native
 
@@ -36,7 +36,7 @@ React Native makes it trivial to write native apps. It only requires a single co
 
 ## 5. The React Community
 
-Finally, one of the most compelling reasons to learn React is the community. The React community is vibrant and welcoming. The official community page is located at reactjs.org/community/support.html. Here you will find links to discussion forums, tutorials and the GitHub repo etc.
+Finally, one of the most compelling reasons to learn React is the community. The React community is vibrant and welcoming. The official community page is located at [reactjs.org/community/support.html](https://reactjs.org/community/support.html). Here you will find links to discussion forums, tutorials and the GitHub repo etc.
 
 The large React community have already come up against any issue you are likely to run into. As a result, there are tens of thousands of 3rd party components available for use on GitHub.
 

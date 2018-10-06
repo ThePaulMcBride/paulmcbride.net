@@ -72,14 +72,14 @@ fetch('https://jsonplaceholder.typicode.com/posts/1' {
 })
 ```
 
-This is a post request with will be sent with the 'Accept' header. There are a lot more configuration options. You can read about them all on the MDN fetch documents.
+This is a post request with will be sent with the 'Accept' header. There are a lot more configuration options. You can read about them all on the [MDN fetch documents](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
 ### Concerns
 
 One of the major drawbacks with the fetch API is that once a request is initiated, it cannot be cancelled. For a lot of people, this is a deal breaker. However, there are discussions happening in the JavaScript community around making this happen.
 
-Another possible issue with the fetch API is that is reasonably new, so although it is supported by all modern browsers, if you have to support older browsers, it won't work without a polyfill.
+Another possible issue with the fetch API is that is reasonably new, so although it is supported by all modern browsers, if you have to support older browsers, it won't work without a [polyfill](https://github.com/github/fetch).
 
 ## Conclusion
 
-Fetch is a welcome new API for making requests. It is easier to read and serves the purpose that XMLHttpRequest always tried to. If you are not using it yet, you are missing out on a simple, concise way of making HTTP requests from the browser. If you are interested in learning about how to use the fetch with Async/Await, check out my previous article. - Asycn/Await Javascript Functions.
+Fetch is a welcome new API for making requests. It is easier to read and serves the purpose that XMLHttpRequest always tried to. If you are not using it yet, you are missing out on a simple, concise way of making HTTP requests from the browser. If you are interested in learning about how to use the fetch with Async/Await, check out my previous article. - [Asycn/Await Javascript Functions](https://paulmcbride.net/async-await/).

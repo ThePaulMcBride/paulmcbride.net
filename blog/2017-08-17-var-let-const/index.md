@@ -1,6 +1,6 @@
 ---
 path: "/var-let-const"
-date: "2017-08-17T09:00:00.000Z"
+date: "2017-07-25T09:00:00.000Z"
 title: "Var, Let and Const - The Differences"
 featuredImage: "./images/var-let-const.jpg"
 tags: ["javascript", "code"]

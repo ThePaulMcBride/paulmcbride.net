@@ -26,7 +26,7 @@ As mentioned earlier, git has fantastic support for teams. It allows for branchi
 
 As a result of the full history being kept, it makes performing a rollback of your code trivial.
 
-To read more about git, check out the git website. https://git-scm.com/
+To read more about git, check out the [git website](https://git-scm.com/).
 
 ## How does GitHub fit into all of this?
 

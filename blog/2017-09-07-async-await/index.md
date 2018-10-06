@@ -1,14 +1,14 @@
 ---
 path: "/async-await"
 date: "2017-09-07T09:00:00.000Z"
-title: "JavaScript Fetch API"
+title: "Async/Await – Wait, What?"
 featuredImage: "./images/async-await.jpg"
 tags: ["code", "javascript"]
 ---
 
 With the release of the Async/Await syntax in JavaScript we now have a succinct and highly legible way of writing asynchronous code. In this article, I'll cover how to use Async/Await functions and why they are better than promises.
 
-Let's start by using the Fetch API to make a request to an imaginary end point which returns a response, then we'll then log the response to the console.
+Let's start by using the [Fetch API](https://paulmcbride.net/javascript-fetch-api/) to make a request to an imaginary end point which returns a response, then we'll then log the response to the console.
 
 ```javascript
 const getData = () => {

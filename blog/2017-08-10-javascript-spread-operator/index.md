@@ -8,7 +8,7 @@ tags: ["javascript", "code"]
 
 The Javascript spread operator is something I use on a daily basis. If you use Redux, or need to write any kind of functional JavaScript then you need to know how to use the spread operator.
 
-So what is the spread operator and how is it used? Lets see what the MDN has to say.
+So what is the spread operator and how is it used? Lets see what the [MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator) has to say.
 
 > Spread syntax allows an iterable such as an array expression to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 

@@ -12,13 +12,13 @@ Composer is the most popular dependency manager in the PHP ecosystem. In modern 
 
 Composer offers many of the same benefits as npm. You can keep your dependencies out of version control, install or update them. programmatically and make your whole project more portable.
 
-To get started with composer, visit getcomposer.org
+To get started with composer, visit [getcomposer.org](https://getcomposer.org)
 
 ## Why use Composer With WordPress
 
 The first thing that comes to mind when talking about the dependencies of a WordPress site is usually plugins. You don't get far with WordPress without the help of plugins. However, WordPress itself can be thought of as a dependency.
 
-This is where https://roots.io/bedrock/ comes in. Bedrock is a project designed to help you build WordPress websites that are better structured and more secure.
+This is where [Bedrock](https://roots.io/bedrock/) comes in. Bedrock is a project designed to help you build WordPress websites that are better structured and more secure.
 
 If you have ever worked on a Laravel project, Bedrock won't look too unfamiliar. This is how a project is generally structured.
 
@@ -52,6 +52,6 @@ This structure brings with it a few advantages.
 
 ## Conclusion
 
-I've been using Bedrock for my WordPress builds for years and cannot sing its praises highly enough. If you have never used composer before, there may be a slight learning curve, but I promise you it will be worth it. Composer is also an integral part of pretty much every big PHP framework, so learning how to use it is essential if you plan on working with PHP.
+I've been using Bedrock for my WordPress builds for years and cannot sing its praises highly enough. If you have never used composer before, there may be a slight learning curve, but I promise you it will be worth it. Composer is also an integral part of pretty much every big PHP framework, so learning how to use it is essential if you plan on working with [PHP](https://paulmcbride.net/whats-new-in-php7/).
 
 If you are using WordPress and Composer in another way then get in touch, I'd love to hear about it.

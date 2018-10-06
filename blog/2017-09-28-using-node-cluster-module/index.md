@@ -1,9 +1,9 @@
 ---
 path: "/using-node-cluster-module"
-date: "2017-09-27T09:00:00.000Z"
+date: "2017-09-28T09:00:00.000Z"
 title: "Using the Node.js Cluster Module"
 featuredImage: "./images/node-cluster-module.jpg"
-tags: ["javascript"]
+tags: ["javascript", "code"]
 ---
 
 As we know, Node.js is a single threaded JavaScript runtime. A node process can only use a maximum of 1 CPU core and around 1.5GB of RAM. In this article, I will show you how we can use the Node.js cluster module to node processes to allow your app to take full advantage of the resources available.
