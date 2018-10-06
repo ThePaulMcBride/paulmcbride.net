@@ -35,6 +35,10 @@ const PageWrapper = styled('div')`
 const ContentWrapper = styled('main')`
   padding: 0 16px;
   flex: 2;
+
+  @media (min-width: 40em) {
+    max-width: 66.66666667%
+  }
 `;
 
 const SidebarWrapper = styled('div')`
@@ -43,6 +47,7 @@ const SidebarWrapper = styled('div')`
 
   @media (min-width: 40em) {
     margin-top: 3rem;
+    max-width: 33.33333334%
   }
 `;
 
