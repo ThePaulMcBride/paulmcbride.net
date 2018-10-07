@@ -2,6 +2,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import config from '../../config';
 import Footer from '../components/Footer';
 import GlobalStyles from '../components/GlobalStyles';
 import Header from '../components/Header';
@@ -22,11 +23,8 @@ export default class Template extends React.Component {
     return (
       <React.Fragment>
         <Helmet
-          title="Gatsby Default (Blog) Starter"
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
+          titleTemplate="%s | Paul McBride"
+          defaultTitle={config.title}
         >
           <html lang="en" />
         </Helmet>

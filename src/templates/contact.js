@@ -1,9 +1,10 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-import Button from '../../components/Button';
-import Layout from '../../components/Layout';
-import background from './images/background.jpg';
+import Button from '../components/Button';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 const PageWrapper = styled('div')`
   max-width: 1100px;
@@ -73,20 +74,25 @@ const Input = styled('input')`
 `;
 
 export default function Template(props) {
-  console.log(props)
+  const { page } = props.data
+  const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src
+  const { id } = page
 
   return (
     <Layout {...props}>
-      <Helmet title={`Page`} />
+      <SEO
+        key={`seo-${id}`}
+        postImage={postImage}
+        postData={page}
+      />
+      <Helmet title={page.frontmatter.title} />
       <ImageContainer
-        imageSrc={background}
+        imageSrc={postImage}
       />
       <PageWrapper>
         <ContentWrapper>
-          <h1>Contact</h1>
-          <p>Get in touch, I’d love to hear from you! Whether it be a question about something I’ve written, or you’d like to work together, let me know.</p>
-          <p>You can also tweet me <a href="https://twitter.com/thepaulmcbride" target="_blank" rel="noopener noreferrer">@thepaulmcbride</a></p>
-
+          <h1>{page.frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: page.html }} />
           <Spacer />
 
           <form method="post">
@@ -112,3 +118,24 @@ export default function Template(props) {
     </Layout>
   );
 }
+
+export const query = graphql`
+  query AboutPageQuery($path: String!) {
+    page: markdownRemark(frontmatter: { path: { eq: $path } }) {
+      frontmatter {
+        featuredImage {
+          childImageSharp {
+            resize(width: 1500, cropFocus: CENTER) {
+              src
+            }
+          }
+        }
+        title
+        path
+      }
+      id
+      html
+      excerpt(pruneLength: 250)
+    }
+  }
+`;

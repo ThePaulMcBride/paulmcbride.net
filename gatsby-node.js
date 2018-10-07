@@ -46,9 +46,23 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  const blogQueryResult = await graphql(`{
-    allMarkdownRemark(
-      filter:{fileAbsolutePath: {regex: "/blog/"}}
+  const query = await graphql(`{
+    pages: allMarkdownRemark(
+      filter: {fileAbsolutePath: { regex: "/pages/" }}
+    ) {
+      edges {
+        node {
+          html
+          id
+          frontmatter {
+            path
+            templatePath
+          }
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      filter:{fileAbsolutePath: { regex: "/blog/" }}
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 1000
     ) {
@@ -79,12 +93,12 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   }`)
 
-  if (blogQueryResult.errors) {
-    return Promise.reject(result.errors)
+  if (query.errors) {
+    return Promise.reject(query.errors)
   }
 
   createPaginatedPages({
-    edges: blogQueryResult.data.allMarkdownRemark.edges,
+    edges: query.data.posts.edges,
     createPage: createPage,
     pageTemplate: "src/templates/index.js",
     pageLength: 12, // This is optional and defaults to 10 if not used
@@ -92,11 +106,12 @@ exports.createPages = async ({ actions, graphql }) => {
     context: {} // This is optional and defaults to an empty object if not used
   });
 
-  const posts = blogQueryResult.data.allMarkdownRemark.edges;
+  const posts = query.data.posts.edges;
+  const pages = query.data.pages.edges;
 
   createTagPages(createPage, posts);
 
-  const newestPosts = posts.slice(0, 4)
+  const newestPosts = posts.slice(0, 4);
 
   // Create pages for each markdown file.
   posts.forEach(({ node }, index) => {
@@ -118,6 +133,16 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     });
   });
+
+  pages.forEach(({ node }) => {
+    const templatePath = node.frontmatter.templatePath;
+    const template = path.resolve(`src/templates/${templatePath}.js`);
+
+    createPage({
+      path: node.frontmatter.path,
+      component: template,
+    });
+  })
 
   return posts;
 };

@@ -109,7 +109,7 @@ class Footer extends Component {
             <FooterNav>
               <Link to="/">Home</Link>
               <Link to="/contact">Contact</Link>
-              <Link to="/privacy">Privacy</Link>
+              <Link to="/privacy-policy">Privacy</Link>
               <Link to="/terms-and-conditions">Terms & Conditions</Link>
             </FooterNav>
           </Column>

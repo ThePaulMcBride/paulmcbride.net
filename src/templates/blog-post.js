@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Button from '../components/Button';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import Sidebar from '../components/Sidebar';
 import Tags from '../components/Tags';
 
@@ -104,15 +105,22 @@ const Form = styled('form')`
 `;
 
 export default function Template(props) {
-  const { data, pageContext } = props;
-  const { markdownRemark: post } = data;
+  const { post } = props.data
+  const postImage = post.frontmatter.featuredImage.childImageSharp.resize.src
+  const { id } = post
+
+  const { pageContext } = props;
   const { recentPosts } = pageContext;
   return (
     <Layout {...props}>
-      <Helmet title={`Gatsby Blog - ${post.frontmatter.title}`} />
-      <ImageContainer
-        imageSrc={post.frontmatter.featuredImage.childImageSharp.resize.src}
+      <Helmet title={post.frontmatter.title} />
+      <SEO
+        key={`seo-${id}`}
+        postImage={postImage}
+        postData={post}
+        isBlogPost
       />
+      <ImageContainer imageSrc={postImage} />
       <PageWrapper>
         <ContentWrapper>
           <h1>{post.frontmatter.title}</h1>
@@ -154,10 +162,12 @@ export default function Template(props) {
 
 export const query = graphql`
   query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt(pruneLength: 250)
       frontmatter {
         date(formatString: "DD MMMM YYYY")
+        datePublished: date(formatString: "YYYY-MM-DDTHH:mm:ssZ")
         path
         tags
         title

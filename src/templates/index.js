@@ -1,6 +1,8 @@
 import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import config from '../../config';
 import Layout from '../components/Layout';
 
 const Container = styled('div')`
@@ -14,10 +16,18 @@ const Container = styled('div')`
   }
 `
 
+const ControlsContainer = styled('div')`
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 16px 16px;
+  display: flex;
+`
+
 const ItemWrapper = styled('div')`
   padding: 0 16px;
   flex: 1;
-  flex: 0 0 33%;
+  flex: 0 0 33.333333334%;
   margin-bottom: 24px;
 
   ${props => props.index === 0 && `
@@ -138,6 +148,21 @@ const PostTitle = styled('h3')`
   }
 `
 
+const PageLink = styled(GatsbyLink)`
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  flex: 1;
+`
+
+const BackLink = styled(PageLink)`
+  text-align: left;
+`
+
+const NextLink = styled(PageLink)`
+  text-align: right;
+`
+
 const renderCard = (post, index) => {
   const coverImage = post.frontmatter.featuredImage.childImageSharp.hires.src;
 
@@ -161,13 +186,27 @@ const renderCard = (post, index) => {
 
 export default function Index(props) {
   const posts = props.pageContext.group
+  const pageNumber = props.pageContext.index
+  const pageCount = props.pageContext.pageCount
+  const prevPageLink = pageNumber > 1 && (pageNumber === 2 ? '/' : `/${pageNumber - 1}`)
+  const nextPageLink = pageNumber < pageCount && `/${pageNumber + 1}`
+
   return (
-    <Layout {...props}>
+    <Layout>
+      <Helmet title={config.title} />
       <Container>
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }, index) => renderCard(post, index))}
       </Container>
+      <ControlsContainer>
+        {prevPageLink && (
+          <BackLink to={prevPageLink}>Previous</BackLink>
+        )}
+        {nextPageLink && (
+          <NextLink to={nextPageLink}>Next</NextLink>
+        )}
+      </ControlsContainer>
     </Layout>
   );
 }

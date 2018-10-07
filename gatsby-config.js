@@ -1,11 +1,13 @@
 const { name } = require('./package.json');
+const config = require('./config')
 
 module.exports = {
   pathPrefix: process.env.CI ? `/${name}` : `/`,
   siteMetadata: {
     author: 'Paul McBride',
-    title: `Paul McBride`,
-    siteUrl: `https://paulmcbride.net`,
+    title: config.title,
+    tagline: config.tagline,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     'gatsby-plugin-catch-links',
@@ -33,6 +35,13 @@ module.exports = {
       options: {
         path: `${__dirname}/blog`,
         name: 'blog',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/pages`,
+        name: 'pages',
       },
     },
     {
