@@ -95,7 +95,8 @@ export default function Template(props) {
           <div dangerouslySetInnerHTML={{ __html: page.html }} />
           <Spacer />
 
-          <form method="post">
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="bot-field" />
             <InputWrapper>
               <Label htmlFor="name">Name</Label>
               <Input type="text" id="name" name="name" aria-required="true" />
