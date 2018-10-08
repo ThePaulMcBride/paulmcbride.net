@@ -108,7 +108,6 @@ const PostTitle = styled('h3')`
 `
 
 const NotFound = (props) => {
-  console.log(props)
   const posts = props.data.posts.edges;
   return (
     <Layout title={'Page Not Found'}>
@@ -121,7 +120,6 @@ const NotFound = (props) => {
       </TitleWrapper>
       <Container>
         {posts.map(({node: post}) => {
-          console.log(post)
           const coverImage = post.frontmatter.featuredImage.childImageSharp.hires.src;
           return (
             <ItemWrapper key={post.id}>
