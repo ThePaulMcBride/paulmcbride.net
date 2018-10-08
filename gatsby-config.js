@@ -21,8 +21,21 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'assets/logo.jpg',
+        icon: 'assets/favicon.png',
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-52944793-3",
+        cookieDomain: "paulmcbride.net",
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-heap',
+      options: {
+        appId: '3164637077',
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,

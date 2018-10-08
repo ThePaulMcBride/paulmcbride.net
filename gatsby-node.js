@@ -19,14 +19,6 @@ const createTagPages = (createPage, edges) => {
       }
     });
 
-  createPage({
-    path: '/tag',
-    component: tagTemplate,
-    context: {
-      posts
-    }
-  });
-
   Object.keys(posts)
     .forEach(tagName => {
       const post = posts[tagName];
