@@ -106,15 +106,20 @@ class Template extends Component {
   }
 
   componentDidMount = () => {
-    // this.setState({emailSent: false, emailError: false})
+    this.setState({emailSent: false, emailError: false})
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   handleSubmit = e => {
+    e.preventDefault();
     const { name, email, message } = this.state;
 
-    this.setState({emailSent: false, emailError: false})
+    this.setState({ emailSent: false, emailError: false })
+
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      return this.setState({emailError: true})
+    }
 
     fetch("/", {
       method: "POST",
@@ -126,10 +131,17 @@ class Template extends Component {
         message
       })
     })
-      .then(res => res.ok && this.setState({emailSent: true}))
+      .then(res => {
+        if (res.ok) {
+          this.setState({
+            emailSent: true,
+            name: '',
+            email: '',
+            message: '',
+          })
+        }
+      })
       .catch(() => this.setState({emailError: true}));
-
-    e.preventDefault();
   };
 
   render() {
@@ -171,17 +183,17 @@ class Template extends Component {
               <input type="hidden" name="bot-field" />
               <InputWrapper>
                 <Label htmlFor="name">Name</Label>
-                <Input type="text" id="name" name="name" aria-required="true" onChange={this.handleChange} value={name} />
+                <Input type="text" id="name" name="name" required aria-required="true" onChange={this.handleChange} value={name} />
               </InputWrapper>
 
               <InputWrapper>
                 <Label htmlFor="email">Email</Label>
-                <Input type="email" id="email" name="email" aria-required="true" onChange={this.handleChange} value={email} />
+                <Input type="email" id="email" name="email" required aria-required="true" onChange={this.handleChange} value={email} />
               </InputWrapper>
 
               <InputWrapper>
                 <Label htmlFor="message">Message</Label>
-                <Input as="textarea" name="message" id="message" rows="10" onChange={this.handleChange} value={message} />
+                <Input as="textarea" name="message" id="message" required rows="10" onChange={this.handleChange} value={message} />
               </InputWrapper>
 
               <Button>Submit</Button>
