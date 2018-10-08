@@ -76,7 +76,7 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
 
   const title = postMeta.title || config.title;
   const description = postMeta.description || postData.excerpt || config.description;
-  const image = `${config.url}${postImage}` || config.image;
+  const image = postImage ? `${config.url}${postImage}` : config.image;
   const url = postMeta.path ? `${config.url}${postMeta.path}`: config.url;
   const datePublished = isBlogPost ? postMeta.datePublished : false;
 
@@ -132,6 +132,10 @@ SEO.propTypes = {
 SEO.defaultProps = {
   isBlogPost: false,
   postImage: null,
+  postData: {
+    frontmatter: {},
+    excerpt: ''
+  }
 };
 
 export default SEO;

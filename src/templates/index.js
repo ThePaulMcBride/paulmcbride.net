@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import config from '../../config';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 const Container = styled('div')`
   max-width: 1100px;
@@ -194,6 +195,7 @@ export default function Index(props) {
   return (
     <Layout>
       <Helmet title={config.title} />
+      <SEO />
       <Container>
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
