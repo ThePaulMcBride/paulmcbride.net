@@ -58,7 +58,13 @@ const getSchemaOrgJSONLD = ({
           publisher: {
             '@type': 'Organization',
             url: 'https://paulmcbride.net',
-            logo: config.logo,
+            logo: {
+              "@type": "ImageObject",
+              "name": "Paul McBride Logo",
+              "width": "195",
+              "height": "60",
+              "url": config.logo
+            },
             name: 'Paul McBride',
           },
           mainEntityOfPage: {
