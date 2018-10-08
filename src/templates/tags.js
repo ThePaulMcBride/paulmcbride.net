@@ -115,7 +115,7 @@ const PostTitle = styled('h3')`
 function Tags({ post, tag }) {
   const title = tagData[tag].title || tag
   const description = tagData[tag].description
-  const path = tag
+  const path = `/${tag}`
   return (
     <>
       <Helmet title={title} />
