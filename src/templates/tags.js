@@ -1,9 +1,12 @@
 import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
-import HomeIcon from 'react-icons/lib/fa/home';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import config from '../../config';
 import Layout from '../components/Layout';
-import Link from '../components/Link';
+import SEO from '../components/SEO';
+
+const tagData = config.tags;
 
 const TitleWrapper = styled('div')`
   max-width: 1100px;
@@ -18,6 +21,11 @@ const TitleBlock = styled('div')`
 
 const PageTitle = styled('h1')`
   margin-top: 0;
+  ${'' /* font-size: 22px;
+  margin-bottom: 5px; */}
+`
+
+const StrapLine = styled('p')`
   margin-bottom: 0;
 `
 
@@ -105,53 +113,49 @@ const PostTitle = styled('h3')`
 `
 
 function Tags({ posts, post, tag }) {
-  if (tag) {
-    return (
-      <>
-        <TitleWrapper>
-          <TitleBlock>
-            <PageTitle>{post.length} post{post.length === 1 ? '' : 's'} tagged with {tag}</PageTitle>
-            {/* <StrapLine>Maybe try one of the links below?</StrapLine> */}
-          </TitleBlock>
-        </TitleWrapper>
-        <Container>
-          {post.map((post) => {
-            const coverImage = post.frontmatter.featuredImage.childImageSharp.hires.src;
-            return (
-              <ItemWrapper key={post.id}>
-                <Content>
-                  <GatsbyLink to={post.frontmatter.path}>
-                    <CoverImage coverImageUrl={coverImage} />
-                  </GatsbyLink>
-
-                  <TextWrapper>
-                    <PostDate dateTime={post.frontmatter.date} title={post.frontmatter.date}>{post.frontmatter.date}</PostDate>
-                    <PostTitle>
-                      <GatsbyLink to={post.frontmatter.path}>{post.frontmatter.title}</GatsbyLink>
-                    </PostTitle>
-                  </TextWrapper>
-                </Content>
-              </ItemWrapper>
-            )
-          })}
-        </Container>
-      </>
-    );
-  }
+  const title = tagData[tag].title || tag
+  const description = tagData[tag].description
   return (
-    <div>
-      <h1>Tags</h1>
-      <ul className="tags">
-        {Object.keys(posts).map(tagName => (
-          <li key={tagName}>
-            <GatsbyLink to={`/tags/${tagName}`}>{tagName}</GatsbyLink>
-          </li>
-        ))}
-      </ul>
-      <Link to="/">
-        <HomeIcon /> All posts
-      </Link>
-    </div>
+    <>
+      <Helmet title={title} />
+      <SEO
+        postData={{
+          frontmatter: {
+            title,
+            description
+          }
+        }}
+      />
+      <TitleWrapper>
+        <TitleBlock>
+          <PageTitle>{title}</PageTitle>
+          {description && (
+            <StrapLine>{description}</StrapLine>
+          )}
+        </TitleBlock>
+      </TitleWrapper>
+      <Container>
+        {post.map((post) => {
+          const coverImage = post.frontmatter.featuredImage.childImageSharp.hires.src;
+          return (
+            <ItemWrapper key={post.id}>
+              <Content>
+                <GatsbyLink to={post.frontmatter.path}>
+                  <CoverImage coverImageUrl={coverImage} />
+                </GatsbyLink>
+
+                <TextWrapper>
+                  <PostDate dateTime={post.frontmatter.date} title={post.frontmatter.date}>{post.frontmatter.date}</PostDate>
+                  <PostTitle>
+                    <GatsbyLink to={post.frontmatter.path}>{post.frontmatter.title}</GatsbyLink>
+                  </PostTitle>
+                </TextWrapper>
+              </Content>
+            </ItemWrapper>
+          )
+        })}
+      </Container>
+    </>
   );
 }
 
