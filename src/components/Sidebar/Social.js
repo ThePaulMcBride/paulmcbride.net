@@ -1,6 +1,8 @@
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { ItemTitle, ItemWrapper } from './SharedComponents';
+
 
 const SocialLinks = styled('div')`
   flex: 1;
@@ -30,6 +32,7 @@ class Social extends Component {
         <SocialLinks>
           <SocialLink
             href="https://facebook.com/thepaulmcbride"
+            as={OutboundLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Paul's Facebook page"
@@ -40,6 +43,7 @@ class Social extends Component {
           </SocialLink>
           <SocialLink
             href="https://twitter.com/thepaulmcbride"
+            as={OutboundLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Paul's Twitter Profile"
@@ -50,6 +54,7 @@ class Social extends Component {
           </SocialLink>
           <SocialLink
             href="https://instagram.com/thepaulmcbride"
+            as={OutboundLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Paul's Instagram page"
@@ -68,6 +73,7 @@ class Social extends Component {
           </SocialLink>
           <SocialLink
             href="https://github.com/thepaulmcbride"
+            as={OutboundLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="View Paul's GitHub account"

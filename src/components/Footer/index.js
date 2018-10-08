@@ -1,8 +1,8 @@
 import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Button from '../../components/Button';
-
 
 const FooterContainer = styled('footer')`
   padding: 32px 0 16px;
@@ -116,7 +116,7 @@ class Footer extends Component {
 
           <Column>
             <SocialLinks>
-              <a
+              <OutboundLink
                 href="https://twitter.com/thepaulmcbride"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -125,9 +125,9 @@ class Footer extends Component {
                   <path d="M26 20v-3c0-1.3.3-2 2.4-2H31v-5h-4c-5 0-7 3.3-7 7v3h-4v5h4v15h6V25h4.4l.6-5h-5z" />
                 </svg>
                 Twitter
-              </a>
+              </OutboundLink>
 
-              <a
+              <OutboundLink
                 href="https://facebook.com/thepaulmcbride"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -136,9 +136,9 @@ class Footer extends Component {
                   <path d="M39.2 16.8c-1.1.5-2.2.8-3.5 1 1.2-.8 2.2-1.9 2.7-3.3-1.2.7-2.5 1.2-3.8 1.5-1.1-1.2-2.7-1.9-4.4-1.9-3.3 0-6.1 2.7-6.1 6.1 0 .5.1.9.2 1.4-5-.2-9.5-2.7-12.5-6.3-.5.7-.8 1.7-.8 2.8 0 2.1 1.1 4 2.7 5-1 0-1.9-.3-2.7-.8v.1c0 2.9 2.1 5.4 4.9 5.9-.5.1-1 .2-1.6.2-.4 0-.8 0-1.1-.1.8 2.4 3 4.2 5.7 4.2-2.1 1.6-4.7 2.6-7.5 2.6-.5 0-1 0-1.4-.1 2.4 1.9 5.6 2.9 9 2.9 11.1 0 17.2-9.2 17.2-17.2V20c1.2-.9 2.2-1.9 3-3.2z" />
                 </svg>
                 Facebook
-              </a>
+              </OutboundLink>
 
-              <a
+              <OutboundLink
                 href="https://instagram.com/thepaulmcbride"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -156,9 +156,9 @@ class Footer extends Component {
                   </g>
                 </svg>
                 Instagram
-              </a>
+              </OutboundLink>
 
-              <a
+              <OutboundLink
                 href="https://github.com/thepaulmcbride"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -171,7 +171,7 @@ class Footer extends Component {
                   />
                 </svg>
                 Github
-              </a>
+              </OutboundLink>
             </SocialLinks>
           </Column>
 

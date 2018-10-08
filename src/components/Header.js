@@ -2,6 +2,8 @@ import { Link } from 'gatsby';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Logo from '../images/paul-mcbride-logo.png';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+
 
 const Header = styled.header`
   background-color: #ffffff;
@@ -261,6 +263,7 @@ class HeaderComponent extends Component {
               <SocialLinks>
                 <SocialLink
                   href="https://facebook.com/thepaulmcbride"
+                  as={OutboundLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="View Paul's Facebook page"
@@ -271,6 +274,7 @@ class HeaderComponent extends Component {
                 </SocialLink>
                 <SocialLink
                   href="https://twitter.com/thepaulmcbride"
+                  as={OutboundLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="View Paul's Twitter Profile"
@@ -281,6 +285,7 @@ class HeaderComponent extends Component {
                 </SocialLink>
                 <SocialLink
                   href="https://instagram.com/thepaulmcbride"
+                  as={OutboundLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="View Paul's Instagram page"
@@ -299,6 +304,7 @@ class HeaderComponent extends Component {
                 </SocialLink>
                 <SocialLink
                   href="https://github.com/thepaulmcbride"
+                  as={OutboundLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="View Paul's GitHub account"

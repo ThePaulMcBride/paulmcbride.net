@@ -7,8 +7,18 @@ import Link from '../components/Link';
 
 const TitleWrapper = styled('div')`
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 32px auto 0;
   padding: 0 16px;
+`
+
+const TitleBlock = styled('div')`
+  padding: 32px;
+  background-color: #F9FAFB;
+`
+
+const PageTitle = styled('h1')`
+  margin-top: 0;
+  margin-bottom: 0;
 `
 
 const Container = styled('div')`
@@ -99,9 +109,10 @@ function Tags({ posts, post, tag }) {
     return (
       <>
         <TitleWrapper>
-          <h1>
-            {post.length} post{post.length === 1 ? '' : 's'} tagged with {tag}
-          </h1>
+          <TitleBlock>
+            <PageTitle>{post.length} post{post.length === 1 ? '' : 's'} tagged with {tag}</PageTitle>
+            {/* <StrapLine>Maybe try one of the links below?</StrapLine> */}
+          </TitleBlock>
         </TitleWrapper>
         <Container>
           {post.map((post) => {

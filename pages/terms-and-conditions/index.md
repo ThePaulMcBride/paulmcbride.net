@@ -7,7 +7,7 @@ featuredImage: "./images/background.jpg"
 
 ## Terms
 
-By accessing the website located at [http://paulmcbride.net](http://paulmcbride.net) , you hereby agree to be bound by these Terms of Service and to comply with all applicable legislation and regulations. If you fail to comply with any of the terms or conditions contained therein, you will be prohibited from accessing the above website. All content and materials contained within this website are protected by the appropriate copyright and trademark legislation.
+By accessing the website located at [https://paulmcbride.net](/) , you hereby agree to be bound by these Terms of Service and to comply with all applicable legislation and regulations. If you fail to comply with any of the terms or conditions contained therein, you will be prohibited from accessing the above website. All content and materials contained within this website are protected by the appropriate copyright and trademark legislation.
 
 ## Use License
 

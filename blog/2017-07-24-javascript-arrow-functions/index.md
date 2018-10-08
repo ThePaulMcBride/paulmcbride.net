@@ -6,7 +6,7 @@ featuredImage: "./images/javascript-arrow-functions.png"
 tags: ["javascript", "code"]
 ---
 
-With the release of EcmaScript2015/ES6, JavaScript has undergone [major changes](https://paulmcbride.net/javascript-spread-operator/). Amongst these major changes is the addition of javascript arrow functions. In this article , am going to explain what an arrow function is and how to use it.
+With the release of EcmaScript2015/ES6, JavaScript has undergone [major changes](/javascript-spread-operator/). Amongst these major changes is the addition of javascript arrow functions. In this article , am going to explain what an arrow function is and how to use it.
 
 ## What is an arrow function?
 

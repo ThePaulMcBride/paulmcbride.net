@@ -18,7 +18,7 @@ Sublime text has been around for nearly 10 years. It is incredibly popular and h
 ### Atom
 Atom is a free and open source editor built by GitHub. It is built using web technologies like Node.js. This means it's easy to hack and customise. As Atom is so easy to customise, it also has a large number of available plugins to extend its functionality.
 
-Check out my article on [Atom Plugins](https://paulmcbride.net/6-essential-plugins-packages-for-atom-editor/).
+Check out my article on [Atom Plugins](/6-essential-plugins-packages-for-atom-editor/).
 
 ### Visual Studio Code
 VS Code is built by Microsoft and is available for free. Again, there are plenty of plugins available. Visual Studio Code is a great choice if you plan on working with Microsoft Technologies such as the .NET framework.
