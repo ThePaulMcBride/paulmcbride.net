@@ -112,9 +112,10 @@ const PostTitle = styled('h3')`
   }
 `
 
-function Tags({ posts, post, tag }) {
+function Tags({ post, tag }) {
   const title = tagData[tag].title || tag
   const description = tagData[tag].description
+  const path = tag
   return (
     <>
       <Helmet title={title} />
@@ -122,7 +123,8 @@ function Tags({ posts, post, tag }) {
         postData={{
           frontmatter: {
             title,
-            description
+            description,
+            path
           }
         }}
       />
