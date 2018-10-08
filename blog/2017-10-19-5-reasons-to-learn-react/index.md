@@ -3,6 +3,7 @@ path: "/5-reasons-to-learn-react"
 date: "2017-10-19T09:00:00.000Z"
 title: "5 Reasons to Learn React"
 featuredImage: "./images/5-reasons-to-learn-react.png"
+description: "React is a big buzzword word right now. In fact, it has been a big buzz word for a few years now. Today I'll discuss 5 reasons to learn React."
 tags: ["javascript", "tools"]
 ---
 

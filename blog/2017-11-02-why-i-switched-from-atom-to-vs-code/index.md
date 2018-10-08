@@ -3,6 +3,7 @@ path: "/switched-atom-vs-code"
 date: "2017-11-02T09:00:00.000Z"
 title: "Why I switched from Atom to VS Code"
 featuredImage: "./images/why-i-switched-to-vs-code.png"
+description: "I recently switched from Atom to VS Code. In this article, I'll talk about why I switched and what I like about VS Code, the new editor by Microsoft."
 tags: ["javascript", "tools"]
 ---
 

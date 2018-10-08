@@ -3,6 +3,7 @@ path: "/var-let-const"
 date: "2017-07-25T09:00:00.000Z"
 title: "Var, Let and Const - The Differences"
 featuredImage: "./images/var-let-const.jpg"
+description: "With the release of ES2015, we now have three ways of defining variables in JavaScript. `var`, `let` and `const`. Let me explain the difference."
 tags: ["javascript", "code"]
 ---
 

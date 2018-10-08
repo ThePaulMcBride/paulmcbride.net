@@ -3,6 +3,7 @@ path: "/javascript-arrow-functions"
 date: "2017-07-24T09:00:00.000Z"
 title: "JavaScript Arrow Functions"
 featuredImage: "./images/javascript-arrow-functions.png"
+description: "Do you want to write beautiful JavaScript? Learn about JavaScript Arrow functions and how to use them."
 tags: ["javascript", "code"]
 ---
 

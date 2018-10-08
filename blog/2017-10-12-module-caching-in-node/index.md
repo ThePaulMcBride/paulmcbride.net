@@ -3,6 +3,7 @@ path: "/module-caching-node"
 date: "2017-10-12T09:00:00.000Z"
 title: "Module Caching in Node"
 featuredImage: "./images/module-caching-in-node.jpg"
+description: "In Node.js we use the CommonJS module pattern for sharing code between files. In this article, I'll explain what module caching is and how it works."
 tags: ["javascript", "tools"]
 ---
 

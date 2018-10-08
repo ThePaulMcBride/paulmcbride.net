@@ -3,6 +3,7 @@ path: "/using-composer-wordpress"
 date: "2017-10-05T09:00:00.000Z"
 title: "Using Composer with WordPress"
 featuredImage: "./images/using-composer-with-wordpress.jpg"
+description: "Today we're going to discuss how to use the PHP package manager, Composer with WordPress, the CMS that powers over 20% of the internet."
 tags: ["php"]
 ---
 

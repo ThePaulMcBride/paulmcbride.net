@@ -3,6 +3,7 @@ path: "/map-function-javascript"
 date: "2017-11-09T09:00:00.000Z"
 title: "The Map Function - Functional Programming in JavaScript"
 featuredImage: "./images/map.jpg"
+description: "Check out the first episode in this series of screencasts on functional programming in JavaScript. In this episode, we'll look at the Map function."
 tags: ["javascript", "tools", "screencast", "code"]
 ---
 

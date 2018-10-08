@@ -3,6 +3,7 @@ path: "/using-node-cluster-module"
 date: "2017-09-28T09:00:00.000Z"
 title: "Using the Node.js Cluster Module"
 featuredImage: "./images/node-cluster-module.jpg"
+description: "Using the Node.js Cluster module is an easy way to achieve significant performance gains for your app. Find out how to use it in this article."
 tags: ["javascript", "code"]
 ---
 

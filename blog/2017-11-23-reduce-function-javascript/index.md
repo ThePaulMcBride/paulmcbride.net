@@ -3,6 +3,7 @@ path: "/reduce-function-javascript"
 date: "2017-11-23T09:00:00.000Z"
 title: "Reduce – Functional Programming in JavaScript"
 featuredImage: "./images/reduce-function.jpg"
+description: "In this episode, we look at the reduce function and how to use it. We will use it to transform an array into an object and use it to recreate the filter."
 tags: ["javascript", "tools", "screencast", "code"]
 ---
 

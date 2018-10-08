@@ -168,6 +168,7 @@ export const query = graphql`
       frontmatter {
         date(formatString: "DD MMMM YYYY")
         datePublished: date(formatString: "YYYY-MM-DDTHH:mm:ssZ")
+        description
         path
         tags
         title

@@ -3,6 +3,7 @@ path: "/what-new-in-php7"
 date: "2017-04-15T09:00:00.000Z"
 title: "What's new in PHP7"
 featuredImage: "./images/php-code.jpg"
+description: "PHP7 has been out for a while now. If you've not upgraded yet, now would be a good time. In this post, I'll be covering what's new in PHP7."
 tags: ["code", "php"]
 ---
 

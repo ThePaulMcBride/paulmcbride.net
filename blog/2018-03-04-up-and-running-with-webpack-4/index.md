@@ -3,6 +3,7 @@ path: "/webpack-4"
 date: "2018-03-04T09:00:00.000Z"
 title: "Up and Running with Webpack 4"
 featuredImage: "./images/webpack-4.jpg"
+description: "Webpack 4 has finally been released and it is pretty great! If you are looking for zero config JavaScript bundling, then Webpack 4 is the tool for you!"
 tags: ["tools"]
 ---
 

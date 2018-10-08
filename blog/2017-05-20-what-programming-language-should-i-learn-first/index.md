@@ -3,6 +3,7 @@ path: "/what-programming-language-should-i-learn-first"
 date: "2017-05-20T09:00:00.000Z"
 title: "What programming language should I learn first?"
 featuredImage: "./images/study.jpg"
+description: "Picking which programming language to learn first? Find out where to start by getting an idea of how each language is used and why you should use it."
 tags: ["javascript", "php"]
 ---
 
