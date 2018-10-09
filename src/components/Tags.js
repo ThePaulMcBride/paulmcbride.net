@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const TagsContainer = styled('div')`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 `
 
