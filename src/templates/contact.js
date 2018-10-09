@@ -41,37 +41,37 @@ const Spacer = styled('hr')`
   height: 1px;
   margin: 32px 0;
   border: 0;
-  background-color: #ECF0F1;
-`
+  background-color: #ecf0f1;
+`;
 
 const SuccessWraper = styled('div')`
   padding: 32px;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   margin-bottom: 32px;
   border-left: 5px solid #77dd77;
-`
+`;
 
 const Message = styled('p')`
   margin-top: 0;
   margin-bottom: 0;
-`
+`;
 
 const ErrorWraper = styled('div')`
   padding: 32px;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   margin-bottom: 32px;
   border-left: 5px solid #ff6961;
-`
+`;
 
 const InputWrapper = styled('fieldset')`
   border: none;
   margin-bottom: 1rem;
-`
+`;
 
 const Label = styled('label')`
   display: block;
   margin-bottom: 5px;
-`
+`;
 
 const Input = styled('input')`
   width: 100%;
@@ -92,9 +92,10 @@ const Input = styled('input')`
   }
 `;
 
-const encode = (data) =>  Object.keys(data)
-  .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-  .join("&")
+const encode = data =>
+  Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
 
 class Template extends Component {
   state = {
@@ -102,12 +103,12 @@ class Template extends Component {
     email: '',
     message: '',
     emailSent: false,
-    emailError: false
-  }
+    emailError: false,
+  };
 
   componentDidMount = () => {
-    this.setState({emailSent: false, emailError: false})
-  }
+    this.setState({ emailSent: false, emailError: false });
+  };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
@@ -115,21 +116,21 @@ class Template extends Component {
     e.preventDefault();
     const { name, email, message } = this.state;
 
-    this.setState({ emailSent: false, emailError: false })
+    this.setState({ emailSent: false, emailError: false });
 
     if (!name.trim() || !email.trim() || !message.trim()) {
-      return this.setState({emailError: true})
+      return this.setState({ emailError: true });
     }
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": "contact",
+        'form-name': 'contact',
         name,
         email,
-        message
-      })
+        message,
+      }),
     })
       .then(res => {
         if (res.ok) {
@@ -138,29 +139,23 @@ class Template extends Component {
             name: '',
             email: '',
             message: '',
-          })
+          });
         }
       })
-      .catch(() => this.setState({emailError: true}));
+      .catch(() => this.setState({ emailError: true }));
   };
 
   render() {
-    const { page } = this.props.data
-    const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src
-    const { id } = page
+    const { page } = this.props.data;
+    const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src;
+    const { id } = page;
     const { name, email, message, emailSent, emailError } = this.state;
 
     return (
       <Layout {...this.props}>
-        <SEO
-          key={`seo-${id}`}
-          postImage={postImage}
-          postData={page}
-        />
+        <SEO key={`seo-${id}`} postImage={postImage} postData={page} />
         <Helmet title={page.frontmatter.title} />
-        <ImageContainer
-          imageSrc={postImage}
-        />
+        <ImageContainer imageSrc={postImage} />
         <PageWrapper>
           <ContentWrapper>
             <h1>{page.frontmatter.title}</h1>
@@ -169,31 +164,66 @@ class Template extends Component {
 
             {emailSent && (
               <SuccessWraper>
-                <Message>Thanks for getting in touch. I'll get back to you soon!</Message>
+                <Message>
+                  Thanks for getting in touch. I'll get back to you soon!
+                </Message>
               </SuccessWraper>
             )}
 
             {emailError && (
               <ErrorWraper>
-                <Message>There was a problem sending your message. Make sure you've filled in all of the fields and try again.</Message>
+                <Message>
+                  There was a problem sending your message. Make sure you've
+                  filled in all of the fields and try again.
+                </Message>
               </ErrorWraper>
             )}
 
-            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={this.handleSubmit}
+            >
               <input type="hidden" name="bot-field" />
               <InputWrapper>
                 <Label htmlFor="name">Name</Label>
-                <Input type="text" id="name" name="name" required aria-required="true" onChange={this.handleChange} value={name} />
+                <Input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  aria-required="true"
+                  onChange={this.handleChange}
+                  value={name}
+                />
               </InputWrapper>
 
               <InputWrapper>
                 <Label htmlFor="email">Email</Label>
-                <Input type="email" id="email" name="email" required aria-required="true" onChange={this.handleChange} value={email} />
+                <Input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  aria-required="true"
+                  onChange={this.handleChange}
+                  value={email}
+                />
               </InputWrapper>
 
               <InputWrapper>
                 <Label htmlFor="message">Message</Label>
-                <Input as="textarea" name="message" id="message" required rows="10" onChange={this.handleChange} value={message} />
+                <Input
+                  as="textarea"
+                  name="message"
+                  id="message"
+                  required
+                  rows="10"
+                  onChange={this.handleChange}
+                  value={message}
+                />
               </InputWrapper>
 
               <Button>Submit</Button>
@@ -226,4 +256,4 @@ export const query = graphql`
   }
 `;
 
-export default Template
+export default Template;

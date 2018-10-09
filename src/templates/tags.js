@@ -12,22 +12,22 @@ const TitleWrapper = styled('div')`
   max-width: 1100px;
   margin: 32px auto 0;
   padding: 0 16px;
-`
+`;
 
 const TitleBlock = styled('div')`
   padding: 32px;
-  background-color: #F9FAFB;
-`
+  background-color: #f9fafb;
+`;
 
 const PageTitle = styled('h1')`
   margin-top: 0;
   ${'' /* font-size: 22px;
-  margin-bottom: 5px; */}
-`
+  margin-bottom: 5px; */};
+`;
 
 const StrapLine = styled('p')`
   margin-bottom: 0;
-`
+`;
 
 const Container = styled('div')`
   max-width: 1100px;
@@ -38,7 +38,7 @@ const Container = styled('div')`
   @media (min-width: 40em) {
     display: flex;
   }
-`
+`;
 
 const ItemWrapper = styled('div')`
   padding: 0 16px;
@@ -46,25 +46,31 @@ const ItemWrapper = styled('div')`
   flex: 0 0 33%;
   margin-bottom: 24px;
 
-  ${props => props.index === 0 && `
+  ${props =>
+    props.index === 0 &&
+    `
     flex: 0 0 100%;
   `}
 
-  ${props => props.index === 1 && `
+  ${props =>
+    props.index === 1 &&
+    `
     flex: 0 0 50%;
   `}
 
-  ${props => props.index === 2 && `
+  ${props =>
+    props.index === 2 &&
+    `
     flex: 0 0 50%;
   `}
-`
+`;
 
 const Content = styled('div')`
   position: relative;
   height: 100%;
   margin-bottom: 24px;
-  border-bottom: 1px solid #ECF0F1;
-`
+  border-bottom: 1px solid #ecf0f1;
+`;
 
 const TextWrapper = styled('div')`
   margin-bottom: 24px;
@@ -72,7 +78,7 @@ const TextWrapper = styled('div')`
   @media (min-width: 40em) {
     margin-bottom: 0;
   }
-`
+`;
 
 const CoverImage = styled('div')`
   &:after {
@@ -85,12 +91,12 @@ const CoverImage = styled('div')`
     padding-bottom: 56.25%;
     margin-bottom: 24px;
   }
-`
+`;
 
 const PostDate = styled('time')`
-  color: #78909C;
+  color: #78909c;
   font-size: 14px;
-`
+`;
 
 const PostTitle = styled('h3')`
   margin-bottom: 0;
@@ -105,17 +111,16 @@ const PostTitle = styled('h3')`
     color: #323232;
     transition: 500ms;
 
-
     &:hover {
-      color: #1F5F8B;
+      color: #1f5f8b;
     }
   }
-`
+`;
 
 function Tags({ post, tag }) {
-  const title = tagData[tag].title || tag
-  const description = tagData[tag].description
-  const path = `/${tag}`
+  const title = tagData[tag].title || tag;
+  const description = tagData[tag].description;
+  const path = `/${tag}`;
   return (
     <>
       <Helmet title={title} />
@@ -124,21 +129,20 @@ function Tags({ post, tag }) {
           frontmatter: {
             title,
             description,
-            path
-          }
+            path,
+          },
         }}
       />
       <TitleWrapper>
         <TitleBlock>
           <PageTitle>{title}</PageTitle>
-          {description && (
-            <StrapLine>{description}</StrapLine>
-          )}
+          {description && <StrapLine>{description}</StrapLine>}
         </TitleBlock>
       </TitleWrapper>
       <Container>
-        {post.map((post) => {
-          const coverImage = post.frontmatter.featuredImage.childImageSharp.hires.src;
+        {post.map(post => {
+          const coverImage =
+            post.frontmatter.featuredImage.childImageSharp.hires.src;
           return (
             <ItemWrapper key={post.id}>
               <Content>
@@ -147,14 +151,21 @@ function Tags({ post, tag }) {
                 </GatsbyLink>
 
                 <TextWrapper>
-                  <PostDate dateTime={post.frontmatter.date} title={post.frontmatter.date}>{post.frontmatter.date}</PostDate>
+                  <PostDate
+                    dateTime={post.frontmatter.date}
+                    title={post.frontmatter.date}
+                  >
+                    {post.frontmatter.date}
+                  </PostDate>
                   <PostTitle>
-                    <GatsbyLink to={post.frontmatter.path}>{post.frontmatter.title}</GatsbyLink>
+                    <GatsbyLink to={post.frontmatter.path}>
+                      {post.frontmatter.title}
+                    </GatsbyLink>
                   </PostTitle>
                 </TextWrapper>
               </Content>
             </ItemWrapper>
-          )
+          );
         })}
       </Container>
     </>

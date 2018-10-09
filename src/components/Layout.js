@@ -22,10 +22,7 @@ export default class Template extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Helmet
-          titleTemplate="%s | Paul McBride"
-          defaultTitle={config.title}
-        >
+        <Helmet titleTemplate="%s | Paul McBride" defaultTitle={config.title}>
           <html lang="en" />
         </Helmet>
 

@@ -38,7 +38,7 @@ const ContentWrapper = styled('main')`
   flex: 2;
 
   @media (min-width: 40em) {
-    max-width: 66.66666667%
+    max-width: 66.66666667%;
   }
 `;
 
@@ -48,7 +48,7 @@ const SidebarWrapper = styled('div')`
 
   @media (min-width: 40em) {
     margin-top: 3rem;
-    max-width: 33.33333334%
+    max-width: 33.33333334%;
   }
 `;
 
@@ -61,13 +61,13 @@ const FormWrapper = styled('div')`
   padding: 32px;
   margin-bottom: 16px;
   text-align: center;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   display: none;
 
   @media (min-width: 40em) {
     display: block;
   }
-`
+`;
 
 const FormTitle = styled('h3')`
   padding-bottom: 16px;
@@ -105,21 +105,16 @@ const Form = styled('form')`
 `;
 
 export default function Template(props) {
-  const { post } = props.data
-  const postImage = post.frontmatter.featuredImage.childImageSharp.resize.src
-  const { id } = post
+  const { post } = props.data;
+  const postImage = post.frontmatter.featuredImage.childImageSharp.resize.src;
+  const { id } = post;
 
   const { pageContext } = props;
   const { recentPosts } = pageContext;
   return (
     <Layout {...props}>
       <Helmet title={post.frontmatter.title} />
-      <SEO
-        key={`seo-${id}`}
-        postImage={postImage}
-        postData={post}
-        isBlogPost
-      />
+      <SEO key={`seo-${id}`} postImage={postImage} postData={post} isBlogPost />
       <ImageContainer imageSrc={postImage} />
       <PageWrapper>
         <ContentWrapper>
@@ -128,7 +123,9 @@ export default function Template(props) {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <Tags list={post.frontmatter.tags || []} />
           <FormWrapper>
-            <FormTitle>Join my newsletter to receive blog posts 2 weeks early</FormTitle>
+            <FormTitle>
+              Join my newsletter to receive blog posts 2 weeks early
+            </FormTitle>
             <Form
               action="https://buttondown.email/api/emails/embed-subscribe/thepaulmcbride"
               method="post"

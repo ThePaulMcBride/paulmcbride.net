@@ -15,7 +15,7 @@ export default styled('button')`
   background-color: #1f5f8b;
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Montserrat',sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   width: ${props => (props.fullWidth ? '100%' : 'auto')};
 `;

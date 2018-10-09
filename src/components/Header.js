@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Logo from '../images/paul-mcbride-logo.png';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-
 const Header = styled.header`
   background-color: #ffffff;
   border-bottom: 1px solid #ecf0f1;
@@ -173,7 +172,7 @@ const NavLink = styled(Link)`
   }
 
   &.active {
-    color: #1F5F8B;
+    color: #1f5f8b;
 
     &:hover {
       color: black;
@@ -254,10 +253,22 @@ class HeaderComponent extends Component {
             <CloseIcon onClick={this.toggleNav} />
             <NavContainer>
               <Navigation>
-                <NavLink to="/" activeClassName="active">Home</NavLink>
-                <NavLink to="/about" activeClassName="active">About</NavLink>
-                <NavLink as="a" href="https://paul-mcbride.teachable.com/" activeClassName="active">Courses</NavLink>
-                <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+                <NavLink to="/" activeClassName="active">
+                  Home
+                </NavLink>
+                <NavLink to="/about" activeClassName="active">
+                  About
+                </NavLink>
+                <NavLink
+                  as="a"
+                  href="https://paul-mcbride.teachable.com/"
+                  activeClassName="active"
+                >
+                  Courses
+                </NavLink>
+                <NavLink to="/contact" activeClassName="active">
+                  Contact
+                </NavLink>
               </Navigation>
 
               <SocialLinks>

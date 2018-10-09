@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { ItemTitle, ItemWrapper } from './SharedComponents';
 
-
 const SocialLinks = styled('div')`
   flex: 1;
   display: flex;

@@ -59,11 +59,11 @@ const getSchemaOrgJSONLD = ({
             '@type': 'Organization',
             url: 'https://paulmcbride.net',
             logo: {
-              "@type": "ImageObject",
-              "name": "Paul McBride Logo",
-              "width": "195",
-              "height": "60",
-              "url": config.logo
+              '@type': 'ImageObject',
+              name: 'Paul McBride Logo',
+              width: '195',
+              height: '60',
+              url: config.logo,
             },
             name: 'Paul McBride',
           },
@@ -81,9 +81,10 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
   const postMeta = postData.frontmatter || {};
 
   const title = postMeta.title || config.title;
-  const description = postMeta.description || postData.excerpt || config.description;
+  const description =
+    postMeta.description || postData.excerpt || config.description;
   const image = postImage ? `${config.url}${postImage}` : config.image;
-  const url = postMeta.path ? `${config.url}${postMeta.path}`: config.url;
+  const url = postMeta.path ? `${config.url}${postMeta.path}` : config.url;
   const datePublished = isBlogPost ? postMeta.datePublished : false;
 
   const schemaOrgJSONLD = getSchemaOrgJSONLD({
@@ -108,9 +109,7 @@ const SEO = ({ postData, postImage, isBlogPost }) => {
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={url} />
-      {isBlogPost && (
-        <meta property="og:type" content="article" />
-      )}
+      {isBlogPost && <meta property="og:type" content="article" />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
@@ -140,8 +139,8 @@ SEO.defaultProps = {
   postImage: null,
   postData: {
     frontmatter: {},
-    excerpt: ''
-  }
+    excerpt: '',
+  },
 };
 
 export default SEO;

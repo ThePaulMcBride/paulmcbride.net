@@ -7,7 +7,7 @@ const TagsContainer = styled('div')`
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 16px;
-`
+`;
 
 const Tag = styled(Link)`
   display: inline-block;
@@ -16,16 +16,20 @@ const Tag = styled(Link)`
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  color: #78909C;
+  color: #78909c;
   border-radius: 3px;
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
   transition: 500ms;
-`
+`;
 
 export default function Tags({ list = [] }) {
   return (
     <TagsContainer>
-      {list.map(tag => <Tag key={tag} to={`/tags/${tag}`}>{tag}</Tag>)}
+      {list.map(tag => (
+        <Tag key={tag} to={`/tags/${tag}`}>
+          {tag}
+        </Tag>
+      ))}
     </TagsContainer>
   );
 }

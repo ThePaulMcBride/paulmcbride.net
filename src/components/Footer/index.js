@@ -202,7 +202,7 @@ class Footer extends Component {
           </Column>
         </FooterColumns>
         <FooterTaglineContainer>
-          <span>&copy; {(new Date()).getFullYear()} Paul McBride</span>
+          <span>&copy; {new Date().getFullYear()} Paul McBride</span>
         </FooterTaglineContainer>
       </FooterContainer>
     );

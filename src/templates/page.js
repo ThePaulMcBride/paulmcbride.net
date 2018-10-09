@@ -37,21 +37,15 @@ const ContentWrapper = styled('div')`
 `;
 
 export default function Template(props) {
-  const { page } = props.data
-  const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src
-  const { id } = page
+  const { page } = props.data;
+  const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src;
+  const { id } = page;
 
   return (
     <Layout {...props}>
-      <SEO
-        key={`seo-${id}`}
-        postImage={postImage}
-        postData={page}
-      />
+      <SEO key={`seo-${id}`} postImage={postImage} postData={page} />
       <Helmet title={page.frontmatter.title} />
-      <ImageContainer
-        imageSrc={postImage}
-      />
+      <ImageContainer imageSrc={postImage} />
       <PageWrapper>
         <ContentWrapper>
           <h1>{page.frontmatter.title}</h1>

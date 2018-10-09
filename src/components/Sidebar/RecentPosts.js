@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { ItemTitle, ItemWrapper } from './SharedComponents';
 
-const PostThumbnailLink = styled(Link)`
-`;
+const PostThumbnailLink = styled(Link)``;
 
 const PostThumbnail = styled('div')`
   background-image: url(${props => props.thumbnailUrl});
@@ -22,7 +21,7 @@ const PostThumbnail = styled('div')`
     width: 100%;
     padding-bottom: 56.25%;
   }
-`
+`;
 
 const PostWrapper = styled('div')`
   &:not(:last-of-type) {
@@ -62,7 +61,7 @@ class RecentPosts extends Component {
     return (
       <PostWrapper key={post.id}>
         <PostThumbnailLink to={post.frontmatter.path}>
-          <PostThumbnail thumbnailUrl={thumbnailUrl}/>
+          <PostThumbnail thumbnailUrl={thumbnailUrl} />
         </PostThumbnailLink>
         <PostDate title={post.frontmatter.date}>
           {post.frontmatter.date}
@@ -80,7 +79,7 @@ class RecentPosts extends Component {
     return (
       <ItemWrapper>
         <ItemTitle>Recent Posts</ItemTitle>
-        {this.props.posts.map(({ node }) => this.renderPost(node))}
+        {posts.map(({ node }) => this.renderPost(node))}
       </ItemWrapper>
     );
   }
