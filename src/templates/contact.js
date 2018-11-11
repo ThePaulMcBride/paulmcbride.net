@@ -66,6 +66,19 @@ const ErrorWraper = styled('div')`
 const InputWrapper = styled('fieldset')`
   border: none;
   margin-bottom: 1rem;
+
+  ${props =>
+    props.hide &&
+    `
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    border: 0px none;
+    padding: 0px;
+  `};
 `;
 
 const Label = styled('label')`
@@ -114,7 +127,7 @@ class Template extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { name, email, message } = this.state;
+    const { name, email, message, honey } = this.state;
 
     this.setState({ emailSent: false, emailError: false });
 
@@ -130,6 +143,7 @@ class Template extends Component {
         name,
         email,
         message,
+        honey,
       }),
     })
       .then(res => {
@@ -149,7 +163,7 @@ class Template extends Component {
     const { page } = this.props.data;
     const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src;
     const { id } = page;
-    const { name, email, message, emailSent, emailError } = this.state;
+    const { name, email, honey, message, emailSent, emailError } = this.state;
 
     return (
       <Layout {...this.props}>
@@ -183,10 +197,20 @@ class Template extends Component {
               name="contact"
               method="post"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              data-netlify-honeypot="honey"
               onSubmit={this.handleSubmit}
             >
-              <input type="hidden" name="bot-field" />
+              <InputWrapper hide={true}>
+                <Label htmlFor="honey">Please leave blank</Label>
+                <Input
+                  type="text"
+                  id="honey"
+                  name="honey"
+                  required
+                  onChange={this.handleChange}
+                  value={honey}
+                />
+              </InputWrapper>
               <InputWrapper>
                 <Label htmlFor="name">Name</Label>
                 <Input
