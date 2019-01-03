@@ -116,7 +116,7 @@ class Template extends Component {
     email: '',
     message: '',
     emailSent: false,
-    emailError: false,
+    emailError: false
   };
 
   componentDidMount = () => {
@@ -143,8 +143,8 @@ class Template extends Component {
         name,
         email,
         message,
-        honey,
-      }),
+        honey
+      })
     })
       .then(res => {
         if (res.ok) {
@@ -152,7 +152,7 @@ class Template extends Component {
             emailSent: true,
             name: '',
             email: '',
-            message: '',
+            message: ''
           });
         }
       })
@@ -248,6 +248,10 @@ class Template extends Component {
                   onChange={this.handleChange}
                   value={message}
                 />
+              </InputWrapper>
+
+              <InputWrapper>
+                <div data-netlify-recaptcha />
               </InputWrapper>
 
               <Button>Submit</Button>
