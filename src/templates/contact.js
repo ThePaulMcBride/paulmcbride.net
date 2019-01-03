@@ -211,7 +211,6 @@ class Template extends Component {
                   type="text"
                   id="honey"
                   name="honey"
-                  required
                   onChange={this.handleChange}
                   value={honey}
                 />
