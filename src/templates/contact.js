@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import Button from '../components/Button';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import ReCAPTCHA from 'react-google-recaptcha';
+
+const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
 
 const PageWrapper = styled('div')`
   max-width: 1100px;
@@ -143,7 +146,8 @@ class Template extends Component {
         name,
         email,
         message,
-        honey
+        honey,
+        'g-recaptcha-response': this.recaptcha.execute()
       })
     })
       .then(res => {
@@ -198,6 +202,7 @@ class Template extends Component {
               method="post"
               data-netlify="true"
               data-netlify-honeypot="honey"
+              data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
               <InputWrapper hide={true}>
@@ -250,9 +255,11 @@ class Template extends Component {
                 />
               </InputWrapper>
 
-              <InputWrapper>
-                <div data-netlify-recaptcha />
-              </InputWrapper>
+              <ReCAPTCHA
+                ref={node => (this.recaptcha = node)}
+                size="invisible"
+                sitekey={RECAPTCHA_KEY}
+              />
 
               <Button>Submit</Button>
             </form>
