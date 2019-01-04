@@ -146,8 +146,8 @@ class Template extends Component {
         name,
         email,
         message,
-        honey
-        // 'g-recaptcha-response': this.recaptcha.execute()
+        honey,
+        'g-recaptcha-response': this.recaptcha.execute()
       })
     })
       .then(res => {
@@ -201,8 +201,8 @@ class Template extends Component {
               name="contact"
               method="post"
               data-netlify="true"
-              data-netlify-honeypot="honey"
-              // data-netlify-recaptcha="true"
+              netlify-honeypot="honey"
+              data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
               <InputWrapper hide={true}>
@@ -254,11 +254,14 @@ class Template extends Component {
                 />
               </InputWrapper>
 
-              {/* <ReCAPTCHA
-                ref={node => (this.recaptcha = node)}
-                size="invisible"
-                sitekey={RECAPTCHA_KEY}
-              /> */}
+              <InputWrapper hide>
+                <ReCAPTCHA
+                  ref={node => (this.recaptcha = node)}
+                  size="invisible"
+                  badge="inline"
+                  sitekey={RECAPTCHA_KEY}
+                />
+              </InputWrapper>
 
               <Button>Submit</Button>
             </form>
