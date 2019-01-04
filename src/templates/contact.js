@@ -202,7 +202,7 @@ class Template extends Component {
               method="post"
               data-netlify="true"
               data-netlify-honeypot="honey"
-              data-netlify-recaptcha="true"
+              // data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
               <InputWrapper hide={true}>
@@ -254,11 +254,11 @@ class Template extends Component {
                 />
               </InputWrapper>
 
-              <ReCAPTCHA
+              {/* <ReCAPTCHA
                 ref={node => (this.recaptcha = node)}
                 size="invisible"
                 sitekey={RECAPTCHA_KEY}
-              />
+              /> */}
 
               <Button>Submit</Button>
             </form>
