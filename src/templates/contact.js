@@ -146,8 +146,8 @@ class Template extends Component {
         name,
         email,
         message,
-        honey,
-        'g-recaptcha-response': this.recaptcha.execute()
+        honey
+        // 'g-recaptcha-response': this.recaptcha.execute()
       })
     })
       .then(res => {
