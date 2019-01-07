@@ -1,5 +1,5 @@
 const { name } = require('./package.json');
-const config = require('./config')
+const config = require('./config');
 
 module.exports = {
   pathPrefix: process.env.CI ? `/${name}` : `/`,
@@ -7,11 +7,11 @@ module.exports = {
     author: 'Paul McBride',
     title: config.title,
     tagline: config.tagline,
-    siteUrl: config.siteUrl,
+    siteUrl: config.siteUrl
   },
   plugins: [
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -21,41 +21,41 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'assets/favicon.png',
+        icon: 'assets/favicon.png'
       }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-52944793-3",
-        cookieDomain: "paulmcbride.net",
-      },
+        trackingId: 'UA-52944793-3',
+        cookieDomain: 'paulmcbride.net'
+      }
     },
     {
       resolve: 'gatsby-plugin-heap',
       options: {
-        appId: '3164637077',
-      },
+        appId: '3164637077'
+      }
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        pathToConfigModule: `src/utils/typography`
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/blog`,
-        name: 'blog',
-      },
+        name: 'blog'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/pages`,
-        name: 'pages',
-      },
+        name: 'pages'
+      }
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -72,7 +72,7 @@ module.exports = {
             }
           },
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               ratio: 1.77,
               related: false,
@@ -82,12 +82,12 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
-              noInlineHighlight: false,
-            },
+              noInlineHighlight: false
+            }
           },
           `gatsby-remark-responsive-iframe`
         ]
@@ -100,5 +100,5 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-netlify'
-  ],
-}
+  ]
+};
