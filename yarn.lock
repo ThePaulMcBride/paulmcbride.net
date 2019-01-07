@@ -8823,7 +8823,7 @@ react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
 
-react-google-recaptcha@^1.0.5:
+react-google-recaptcha@^1.0.2:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-1.0.5.tgz#fc5a1c5c9fd678ccea11c9a47b22f38a8b9d3c88"
   integrity sha512-IUIIQVUIKgsG7Ok1AiqBdJZVpFRpIWOM3H/36fAJHMd52l+X0pn4sTxvm2YJEN01QXWR1jg79+93J8mQef7hfw==
@@ -8873,6 +8873,14 @@ react-is@^16.3.2:
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+
+react-netlify-form@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/react-netlify-form/-/react-netlify-form-2.1.4.tgz#674993134516d6e92014f8a07758bf612658b5ab"
+  integrity sha512-dSU0QtbGjzXQP1Wx4xJdGIbLJGAiHMvMgcBtc+22j0ccoXto37XOn+JwR+vtBQBmhVHkn8+0wMxPPYnoCoPmPw==
+  dependencies:
+    babel-runtime "^6.26.0"
+    react-google-recaptcha "^1.0.2"
 
 react-side-effect@^1.1.0:
   version "1.1.5"

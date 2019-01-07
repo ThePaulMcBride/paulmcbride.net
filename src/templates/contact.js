@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Button from '../components/Button';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import ReCAPTCHA from 'react-google-recaptcha';
+import NetlifyForm from 'react-netlify-form';
 
 const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
 
@@ -69,19 +69,6 @@ const ErrorWraper = styled('div')`
 const InputWrapper = styled('fieldset')`
   border: none;
   margin-bottom: 1rem;
-
-  ${props =>
-    props.hide &&
-    `
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0px, 0px, 0px, 0px);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    border: 0px none;
-    padding: 0px;
-  `};
 `;
 
 const Label = styled('label')`
@@ -108,66 +95,21 @@ const Input = styled('input')`
   }
 `;
 
-const encode = data =>
-  Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-
 class Template extends Component {
   state = {
     name: '',
     email: '',
     message: '',
-    emailSent: false,
-    emailError: false
-  };
-
-  componentDidMount = () => {
-    this.setState({ emailSent: false, emailError: false });
+    honey: ''
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
-
-  handleSubmit = e => {
-    e.preventDefault();
-    const { name, email, message, honey } = this.state;
-
-    this.setState({ emailSent: false, emailError: false });
-
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      return this.setState({ emailError: true });
-    }
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact',
-        name,
-        email,
-        message,
-        honey,
-        'g-recaptcha-response': this.recaptcha.execute()
-      })
-    })
-      .then(res => {
-        if (res.ok) {
-          this.setState({
-            emailSent: true,
-            name: '',
-            email: '',
-            message: ''
-          });
-        }
-      })
-      .catch(() => this.setState({ emailError: true }));
-  };
 
   render() {
     const { page } = this.props.data;
     const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src;
     const { id } = page;
-    const { name, email, honey, message, emailSent, emailError } = this.state;
+    const { name, email, honey, message } = this.state;
 
     return (
       <Layout {...this.props}>
@@ -180,22 +122,89 @@ class Template extends Component {
             <div dangerouslySetInnerHTML={{ __html: page.html }} />
             <Spacer />
 
-            {emailSent && (
-              <SuccessWraper>
-                <Message>
-                  Thanks for getting in touch. I'll get back to you soon!
-                </Message>
-              </SuccessWraper>
-            )}
+            <NetlifyForm
+              name="contact"
+              recaptcha={{
+                sitekey: RECAPTCHA_KEY,
+                size: 'invisible'
+              }}
+            >
+              {({ loading, error, recaptchaError, success, recaptcha }) => (
+                <div>
+                  {loading && <div>Loading...</div>}
+                  {(error || recaptchaError) && (
+                    <ErrorWraper>
+                      <Message>
+                        There was a problem sending your message. Make sure
+                        you've filled in all of the fields and try again.
+                      </Message>
+                    </ErrorWraper>
+                  )}
+                  {success && (
+                    <SuccessWraper>
+                      <Message>
+                        Thanks for getting in touch. I'll get back to you soon!
+                      </Message>
+                    </SuccessWraper>
+                  )}
+                  {!loading &&
+                    !success && (
+                      <div>
+                        <InputWrapper hidden>
+                          <Label htmlFor="honey">Please leave blank</Label>
+                          <Input
+                            type="text"
+                            id="__bf"
+                            name="__bf"
+                            onChange={this.handleChange}
+                            value={honey}
+                          />
+                        </InputWrapper>
+                        <InputWrapper>
+                          <Label htmlFor="name">Name</Label>
+                          <Input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            aria-required="true"
+                            onChange={this.handleChange}
+                            value={name}
+                          />
+                        </InputWrapper>
 
-            {emailError && (
-              <ErrorWraper>
-                <Message>
-                  There was a problem sending your message. Make sure you've
-                  filled in all of the fields and try again.
-                </Message>
-              </ErrorWraper>
-            )}
+                        <InputWrapper>
+                          <Label htmlFor="email">Email</Label>
+                          <Input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            aria-required="true"
+                            onChange={this.handleChange}
+                            value={email}
+                          />
+                        </InputWrapper>
+
+                        <InputWrapper>
+                          <Label htmlFor="message">Message</Label>
+                          <Input
+                            as="textarea"
+                            name="message"
+                            id="message"
+                            required
+                            rows="10"
+                            onChange={this.handleChange}
+                            value={message}
+                          />
+                        </InputWrapper>
+                        <Button>Submit</Button>
+                      </div>
+                    )}
+                  {recaptcha}
+                </div>
+              )}
+            </NetlifyForm>
 
             <form
               name="contact"
@@ -204,67 +213,7 @@ class Template extends Component {
               netlify-honeypot="honey"
               data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
-            >
-              <InputWrapper hide={true}>
-                <Label htmlFor="honey">Please leave blank</Label>
-                <Input
-                  type="text"
-                  id="honey"
-                  name="honey"
-                  onChange={this.handleChange}
-                  value={honey}
-                />
-              </InputWrapper>
-              <InputWrapper>
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  aria-required="true"
-                  onChange={this.handleChange}
-                  value={name}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  aria-required="true"
-                  onChange={this.handleChange}
-                  value={email}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label htmlFor="message">Message</Label>
-                <Input
-                  as="textarea"
-                  name="message"
-                  id="message"
-                  required
-                  rows="10"
-                  onChange={this.handleChange}
-                  value={message}
-                />
-              </InputWrapper>
-
-              <InputWrapper hide>
-                <ReCAPTCHA
-                  ref={node => (this.recaptcha = node)}
-                  size="invisible"
-                  badge="inline"
-                  sitekey={RECAPTCHA_KEY}
-                />
-              </InputWrapper>
-
-              <Button>Submit</Button>
-            </form>
+            />
           </ContentWrapper>
         </PageWrapper>
       </Layout>
