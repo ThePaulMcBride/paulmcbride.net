@@ -4,7 +4,7 @@ module.exports = {
   siteUrl: 'https://paulmcbride.net',
   description:
     'I am Paul McBride. I help other people learn to code and I build things for the web. I currently live in Belfast, Northern Ireland.',
-  url: process.env.GATSBY_SITE_UR,
+  url: process.env.GATSBY_SITE_URL,
   logo: `${process.env.GATSBY_SITE_URL}/logo.png`,
   image: `${process.env.GATSBY_SITE_URL}/background.jpg`,
   twitter: '@ThePaulMcBride',
