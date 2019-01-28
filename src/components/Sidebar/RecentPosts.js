@@ -60,14 +60,19 @@ class RecentPosts extends Component {
       post.frontmatter.featuredImage.childImageSharp.thumbnail.src;
     return (
       <PostWrapper key={post.id}>
-        <PostThumbnailLink to={post.frontmatter.path}>
+        <PostThumbnailLink
+          to={post.frontmatter.path}
+          aria-label={post.frontmatter.title}
+        >
           <PostThumbnail thumbnailUrl={thumbnailUrl} />
         </PostThumbnailLink>
         <PostDate title={post.frontmatter.date}>
           {post.frontmatter.date}
         </PostDate>
         <PostTitle>
-          <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+          <Link to={post.frontmatter.path} aria-label={post.frontmatter.title}>
+            {post.frontmatter.title}
+          </Link>
         </PostTitle>
       </PostWrapper>
     );

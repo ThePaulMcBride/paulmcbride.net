@@ -46,6 +46,7 @@ class Newsletter extends Component {
             name="email"
             id="bd-email"
             placeholder="Email Address"
+            aria-label="Email Address"
             required
           />
           <input type="hidden" value="1" name="embed" />

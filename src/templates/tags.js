@@ -129,8 +129,8 @@ function Tags({ post, tag }) {
           frontmatter: {
             title,
             description,
-            path,
-          },
+            path
+          }
         }}
       />
       <TitleWrapper>
@@ -146,7 +146,10 @@ function Tags({ post, tag }) {
           return (
             <ItemWrapper key={post.id}>
               <Content>
-                <GatsbyLink to={post.frontmatter.path}>
+                <GatsbyLink
+                  to={post.frontmatter.path}
+                  aria-label={post.frontmatter.title}
+                >
                   <CoverImage coverImageUrl={coverImage} />
                 </GatsbyLink>
 
@@ -158,7 +161,10 @@ function Tags({ post, tag }) {
                     {post.frontmatter.date}
                   </PostDate>
                   <PostTitle>
-                    <GatsbyLink to={post.frontmatter.path}>
+                    <GatsbyLink
+                      to={post.frontmatter.path}
+                      aria-label={post.frontmatter.title}
+                    >
                       {post.frontmatter.title}
                     </GatsbyLink>
                   </PostTitle>
