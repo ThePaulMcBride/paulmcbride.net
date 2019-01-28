@@ -262,7 +262,7 @@ class HeaderComponent extends Component {
             </LogoHeading>
           </LogoContainer>
 
-          <NavToggle onClick={this.toggleNav}>
+          <NavToggle onClick={this.toggleNav} aria-label="Toggle Navigation">
             <span />
           </NavToggle>
 

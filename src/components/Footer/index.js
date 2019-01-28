@@ -195,6 +195,7 @@ class Footer extends Component {
                 id="bd-email"
                 placeholder="Email Address"
                 required
+                aria-label="Email Address"
               />
               <input type="hidden" value="1" name="embed" />
               <Button fullWidth>Subscribe</Button>

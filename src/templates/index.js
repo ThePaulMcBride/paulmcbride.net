@@ -179,7 +179,10 @@ const renderCard = (post, index) => {
       className={index === 0 && 'featured'}
     >
       <Content>
-        <GatsbyLink to={post.frontmatter.path}>
+        <GatsbyLink
+          to={post.frontmatter.path}
+          aria-label={post.frontmatter.title}
+        >
           <CoverImage coverImageUrl={coverImage} />
         </GatsbyLink>
 
@@ -191,7 +194,10 @@ const renderCard = (post, index) => {
             {post.frontmatter.date}
           </PostDate>
           <PostTitle>
-            <GatsbyLink to={post.frontmatter.path}>
+            <GatsbyLink
+              to={post.frontmatter.path}
+              aria-label={post.frontmatter.title}
+            >
               {post.frontmatter.title}
             </GatsbyLink>
           </PostTitle>
