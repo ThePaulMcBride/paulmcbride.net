@@ -1,8 +1,22 @@
 import { Link } from 'gatsby';
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Logo from '../images/paul-mcbride-logo.png';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+
+const FadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translate(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+`;
 
 const Header = styled.header`
   background-color: #ffffff;
@@ -180,10 +194,13 @@ const NavLink = styled(Link)`
   }
 
   .open & {
+    opacity: 0;
     margin-right: 0;
     margin-bottom: 1rem;
     font-size: 2rem;
     color: white;
+    animation: ${FadeIn} 0.2s 1 forwards;
+    animation-delay: ${props => `${props.index * 0.12}s`};
   }
 `;
 
@@ -222,7 +239,7 @@ const SocialLink = styled('a')`
 
 class HeaderComponent extends Component {
   state = {
-    navOpen: false,
+    navOpen: false
   };
 
   toggleNav = e => {
@@ -253,20 +270,21 @@ class HeaderComponent extends Component {
             <CloseIcon onClick={this.toggleNav} />
             <NavContainer>
               <Navigation>
-                <NavLink to="/" activeClassName="active">
+                <NavLink index={1} to="/" activeClassName="active">
                   Home
                 </NavLink>
-                <NavLink to="/about" activeClassName="active">
+                <NavLink index={2} to="/about" activeClassName="active">
                   About
                 </NavLink>
                 <NavLink
                   as="a"
+                  index={3}
                   href="https://paul-mcbride.teachable.com/"
                   activeClassName="active"
                 >
                   Courses
                 </NavLink>
-                <NavLink to="/contact" activeClassName="active">
+                <NavLink index={4} to="/contact" activeClassName="active">
                   Contact
                 </NavLink>
               </Navigation>
