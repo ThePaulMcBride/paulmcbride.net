@@ -217,7 +217,7 @@ export default function Index(props) {
 
   return (
     <Layout>
-      <Helmet title={config.title} />
+      <Helmet titleTemplate="%s" title={config.title} />
       <SEO />
       <Container>
         {posts
