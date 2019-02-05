@@ -279,7 +279,7 @@ class HeaderComponent extends Component {
                 <NavLink
                   as="a"
                   index={3}
-                  href="https://paul-mcbride.teachable.com/"
+                  href="https://egghead.io/search?query=paul%20mcbride"
                   activeClassName="active"
                 >
                   Courses
