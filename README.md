@@ -1,17 +1,6 @@
-# gatsby-blog-starter-kit
+# PaulMcbride.net Gatsby Site
 
-[![Build Status](https://travis-ci.org/DSchau/gatsby-blog-starter-kit.svg?branch=master)](https://travis-ci.org/DSchau/gatsby-blog-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/DSchau/gatsby-blog-starter-kit.svg)](https://greenkeeper.io/)
-
-Use this starter kit to jump start (or use as a reference) a great blog with [gatsby][gatsby]
-
-![Blog example](./assets/gatsby-blog-starter-kit.png)
-
-## Features
-
-1. Blog post listing with previews for each blog post
-1. Navigation between posts with a previous/next post button
-1. Tags and tag navigation
-1. Responsive images via [gatsby-remark-images][gatsby-remark-images]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e477625f-4eec-413a-aaff-cf280a7ef7af/deploy-status)](https://app.netlify.com/sites/paulmcbride/deploys)
 
 ## Set up
 
