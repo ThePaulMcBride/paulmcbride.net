@@ -7,33 +7,25 @@ import Footer from '../components/Footer';
 import GlobalStyles from '../components/GlobalStyles';
 import Header from '../components/Header';
 
-// import '../css/normalize.css';
-
 const MainContainer = styled('main')`
   margin: 0 auto;
   padding-top: 0;
 `;
 
-export default class Template extends React.Component {
-  state = {
-    navOpen: false,
-  };
+export default function Template({ children }) {
+  return (
+    <React.Fragment>
+      <Helmet titleTemplate="%s | Paul McBride" defaultTitle={config.title}>
+        <html lang="en" />
+      </Helmet>
 
-  render() {
-    return (
-      <React.Fragment>
-        <Helmet titleTemplate="%s | Paul McBride" defaultTitle={config.title}>
-          <html lang="en" />
-        </Helmet>
+      <GlobalStyles />
 
-        <GlobalStyles />
+      <Header />
 
-        <Header />
+      <MainContainer>{children}</MainContainer>
 
-        <MainContainer>{this.props.children}</MainContainer>
-
-        <Footer />
-      </React.Fragment>
-    );
-  }
+      <Footer />
+    </React.Fragment>
+  );
 }

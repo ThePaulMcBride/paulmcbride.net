@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Button from '../components/Button';
@@ -95,130 +95,124 @@ const Input = styled('input')`
   }
 `;
 
-class Template extends Component {
-  state = {
-    name: '',
-    email: '',
-    message: '',
-    honey: ''
+function useInput(inputName) {
+  const [value, setValue] = useState('');
+
+  const onChange = e => {
+    setValue(e.target.value);
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  return {
+    name: inputName,
+    value,
+    onChange
+  };
+}
 
-  render() {
-    const { page } = this.props.data;
-    const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src;
-    const { id } = page;
-    const { name, email, honey, message } = this.state;
+function Template(props) {
+  const nameProps = useInput('name');
+  const emailProps = useInput('email');
+  const messageProps = useInput('message');
+  const honeyProps = useInput('honey');
 
-    return (
-      <Layout {...this.props}>
-        <SEO key={`seo-${id}`} postImage={postImage} postData={page} />
-        <Helmet title={page.frontmatter.title} />
-        <ImageContainer imageSrc={postImage} />
-        <PageWrapper>
-          <ContentWrapper>
-            <h1>{page.frontmatter.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: page.html }} />
-            <Spacer />
+  const { page } = props.data;
+  const postImage = page.frontmatter.featuredImage.childImageSharp.resize.src;
+  const { id } = page;
 
-            <NetlifyForm
-              name="contact"
-              recaptcha={{
-                sitekey: RECAPTCHA_KEY,
-                size: 'invisible'
-              }}
-            >
-              {({ loading, error, recaptchaError, success, recaptcha }) => (
-                <div>
-                  {loading && <div>Loading...</div>}
-                  {(error || recaptchaError) && (
-                    <ErrorWraper>
-                      <Message>
-                        There was a problem sending your message. Make sure
-                        you've filled in all of the fields and try again.
-                      </Message>
-                    </ErrorWraper>
+  return (
+    <Layout {...props}>
+      <SEO key={`seo-${id}`} postImage={postImage} postData={page} />
+      <Helmet title={page.frontmatter.title} />
+      <ImageContainer imageSrc={postImage} />
+      <PageWrapper>
+        <ContentWrapper>
+          <h1>{page.frontmatter.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: page.html }} />
+          <Spacer />
+
+          <NetlifyForm
+            name="contact"
+            recaptcha={{
+              sitekey: RECAPTCHA_KEY,
+              size: 'invisible'
+            }}
+          >
+            {({ loading, error, recaptchaError, success, recaptcha }) => (
+              <div>
+                {loading && <div>Loading...</div>}
+                {(error || recaptchaError) && (
+                  <ErrorWraper>
+                    <Message>
+                      There was a problem sending your message. Make sure you've
+                      filled in all of the fields and try again.
+                    </Message>
+                  </ErrorWraper>
+                )}
+                {success && (
+                  <SuccessWraper>
+                    <Message>
+                      Thanks for getting in touch. I'll get back to you soon!
+                    </Message>
+                  </SuccessWraper>
+                )}
+                {!loading &&
+                  !success && (
+                    <div>
+                      <InputWrapper hidden>
+                        <Label htmlFor="honey">Please leave blank</Label>
+                        <Input
+                          type="text"
+                          id="__bf"
+                          name="__bf"
+                          {...honeyProps}
+                        />
+                      </InputWrapper>
+                      <InputWrapper>
+                        <Label htmlFor="name">Name</Label>
+                        <Input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          aria-required="true"
+                          {...nameProps}
+                        />
+                      </InputWrapper>
+
+                      <InputWrapper>
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          aria-required="true"
+                          {...emailProps}
+                        />
+                      </InputWrapper>
+
+                      <InputWrapper>
+                        <Label htmlFor="message">Message</Label>
+                        <Input
+                          as="textarea"
+                          name="message"
+                          id="message"
+                          required
+                          rows="10"
+                          {...messageProps}
+                        />
+                      </InputWrapper>
+                      <Button>Submit</Button>
+                    </div>
                   )}
-                  {success && (
-                    <SuccessWraper>
-                      <Message>
-                        Thanks for getting in touch. I'll get back to you soon!
-                      </Message>
-                    </SuccessWraper>
-                  )}
-                  {!loading &&
-                    !success && (
-                      <div>
-                        <InputWrapper hidden>
-                          <Label htmlFor="honey">Please leave blank</Label>
-                          <Input
-                            type="text"
-                            id="__bf"
-                            name="__bf"
-                            onChange={this.handleChange}
-                            value={honey}
-                          />
-                        </InputWrapper>
-                        <InputWrapper>
-                          <Label htmlFor="name">Name</Label>
-                          <Input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            aria-required="true"
-                            onChange={this.handleChange}
-                            value={name}
-                          />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                          <Label htmlFor="email">Email</Label>
-                          <Input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            aria-required="true"
-                            onChange={this.handleChange}
-                            value={email}
-                          />
-                        </InputWrapper>
-
-                        <InputWrapper>
-                          <Label htmlFor="message">Message</Label>
-                          <Input
-                            as="textarea"
-                            name="message"
-                            id="message"
-                            required
-                            rows="10"
-                            onChange={this.handleChange}
-                            value={message}
-                          />
-                        </InputWrapper>
-                        <Button>Submit</Button>
-                      </div>
-                    )}
-                  {recaptcha}
-                </div>
-              )}
-            </NetlifyForm>
-
-            <form
-              name="contact"
-              method="post"
-              data-netlify="true"
-              netlify-honeypot="honey"
-              data-netlify-recaptcha="true"
-              onSubmit={this.handleSubmit}
-            />
-          </ContentWrapper>
-        </PageWrapper>
-      </Layout>
-    );
-  }
+                {recaptcha}
+              </div>
+            )}
+          </NetlifyForm>
+        </ContentWrapper>
+      </PageWrapper>
+    </Layout>
+  );
 }
 
 export const query = graphql`
