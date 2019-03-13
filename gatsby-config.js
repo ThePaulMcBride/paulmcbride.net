@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Blog Starter',
-        short_name: 'Blog',
+        name: 'PaulMcBride.net',
+        short_name: 'PaulMcBride.net',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#663399',
