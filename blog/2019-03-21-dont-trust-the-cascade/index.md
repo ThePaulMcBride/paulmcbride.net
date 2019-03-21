@@ -3,7 +3,7 @@ path: "/dont-trust-the-cascade"
 date: "2019-03-21T09:00:00.000Z"
 title: "Don't Trust the Cascade"
 featuredImage: "./images/dont-trust-the-cascade.jpg"
-description: "CSS in it's current form is not a good fit for how we build websites. I now write CSS in JavaScript and I think you should to."
+description: "CSS in it's current form is not a good fit for how we build websites. I now write CSS in JavaScript and I think you should too."
 tags: ["tools", "javascript"]
 ---
 
