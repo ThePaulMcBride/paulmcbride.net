@@ -38,7 +38,7 @@
     "react-typography": "^0.16.19",
     "styled-components": "^4.2.0",
     "typography": "^0.16.17",
-    "typography-theme-grand-view": "^0.15.10"
+    "typography-theme-grand-view": "^0.16.19"
   },
   "devDependencies": {
     "gatsby-cli": "^2.6.2",
