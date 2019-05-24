@@ -41,7 +41,7 @@
     "typography-theme-grand-view": "^0.15.10"
   },
   "devDependencies": {
-    "gatsby-cli": "^2.4.2",
+    "gatsby-cli": "^2.6.2",
     "gh-pages": "1.1.0",
     "prettier": "1.10.2"
   },
