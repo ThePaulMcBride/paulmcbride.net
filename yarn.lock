@@ -4921,10 +4921,10 @@ gatsby-plugin-markdown-pages@^1.0.3:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-netlify@^2.0.1:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.9.tgz#32758e29042f1bae7c355557ca2d9e7b33f4de75"
-  integrity sha512-BxcGX33KDRT9kbp33+/gpiTBvXXvKsT4Eb0j4AQVnIyCMAFqTgnvlrmUGS8CRUC5Ii+odS5svBWnAmFpQGRGNQ==
+gatsby-plugin-netlify@^2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.17.tgz#05954942041f55d1e37af2c064bbcdb61d143821"
+  integrity sha512-eMh4SKBImqbMK3jlkETYKhkVjCfaSfQtcbYFAloomnBfq9CJxW/Hne0a33uErU+cm4b03M7ngl6D8UinrOJnLA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^4.0.2"
