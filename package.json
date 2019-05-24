@@ -35,7 +35,7 @@
     "react-helmet": "~5.2.0",
     "react-icons": "~2.2.5",
     "react-netlify-form": "^2.1.5",
-    "react-typography": "^0.16.13",
+    "react-typography": "^0.16.19",
     "styled-components": "^4.2.0",
     "typography": "^0.16.17",
     "typography-theme-grand-view": "^0.15.10"
