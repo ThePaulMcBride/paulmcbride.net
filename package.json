@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "gatsby-cli": "^2.6.2",
-    "gh-pages": "1.1.0",
+    "gh-pages": "2.0.1",
     "prettier": "1.17.1"
   },
   "keywords": [
