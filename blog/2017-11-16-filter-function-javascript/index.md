@@ -14,7 +14,7 @@ The filter function is part of the array object. It is used for filtering elemen
 
 An example of how `filter` can be used to remove elements from an array.
 
-```language-javascript
+```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 const newArray = array.map(value => value % 2 == 0); // 2, 4, 6, 8
