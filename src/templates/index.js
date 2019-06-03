@@ -212,8 +212,8 @@ export default function Index(props) {
   const pageNumber = props.pageContext.index;
   const pageCount = props.pageContext.pageCount;
   const prevPageLink =
-    pageNumber > 1 && (pageNumber === 2 ? '/' : `/${pageNumber - 1}`);
-  const nextPageLink = pageNumber < pageCount && `/${pageNumber + 1}`;
+    pageNumber > 1 && (pageNumber === 2 ? '/' : `/page/${pageNumber - 1}`);
+  const nextPageLink = pageNumber < pageCount && `/page/${pageNumber + 1}`;
 
   return (
     <Layout>

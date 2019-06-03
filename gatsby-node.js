@@ -1,81 +1,79 @@
 const path = require('path');
-const createPaginatedPages = require("gatsby-paginate");
-
+const createPaginatedPages = require('gatsby-paginate');
 
 const createTagPages = (createPage, edges) => {
   const tagTemplate = path.resolve(`src/templates/tags.js`);
   const posts = {};
 
-  edges
-    .forEach(({ node }) => {
-      if (node.frontmatter.tags) {
-        node.frontmatter.tags
-          .forEach(tag => {
-            if (!posts[tag]) {
-              posts[tag] = [];
-            }
-            posts[tag].push(node);
-          });
+  edges.forEach(({ node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (!posts[tag]) {
+          posts[tag] = [];
+        }
+        posts[tag].push(node);
+      });
+    }
+  });
+
+  Object.keys(posts).forEach(tagName => {
+    const post = posts[tagName];
+    createPage({
+      path: `/tags/${tagName}`,
+      component: tagTemplate,
+      context: {
+        posts,
+        post,
+        tag: tagName
       }
     });
-
-  Object.keys(posts)
-    .forEach(tagName => {
-      const post = posts[tagName];
-      createPage({
-        path: `/tags/${tagName}`,
-        component: tagTemplate,
-        context: {
-          posts,
-          post,
-          tag: tagName
-        }
-      })
-    });
+  });
 };
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  const query = await graphql(`{
-    pages: allMarkdownRemark(
-      filter: {fileAbsolutePath: { regex: "/pages/" }}
-    ) {
-      edges {
-        node {
-          html
-          id
-          frontmatter {
-            path
-            templatePath
+  const query = await graphql(`
+    {
+      pages: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/pages/" } }
+      ) {
+        edges {
+          node {
+            html
+            id
+            frontmatter {
+              path
+              templatePath
+            }
           }
         }
       }
-    }
-    posts: allMarkdownRemark(
-      filter:{fileAbsolutePath: { regex: "/blog/" }}
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          html
-          id
-          timeToRead
-          frontmatter {
-            date(formatString: "DD MMM YYYY")
-            path
-            tags
-            title
-            featuredImage {
-              childImageSharp {
-                thumbnail: resize(width: 600, cropFocus: CENTER) {
-                  src
-                }
-                hires: resize(width: 1500, cropFocus: CENTER) {
-                  src
+      posts: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/blog/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 250)
+            html
+            id
+            timeToRead
+            frontmatter {
+              date(formatString: "DD MMM YYYY")
+              path
+              tags
+              title
+              featuredImage {
+                childImageSharp {
+                  thumbnail: resize(width: 600, cropFocus: CENTER) {
+                    src
+                  }
+                  hires: resize(width: 1500, cropFocus: CENTER) {
+                    src
+                  }
                 }
               }
             }
@@ -83,19 +81,20 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     }
-  }`)
+  `);
 
   if (query.errors) {
-    return Promise.reject(query.errors)
+    return Promise.reject(query.errors);
   }
 
   createPaginatedPages({
     edges: query.data.posts.edges,
     createPage: createPage,
-    pageTemplate: "src/templates/index.js",
-    pageLength: 12, // This is optional and defaults to 10 if not used
-    pathPrefix: "", // This is optional and defaults to an empty string if not used
-    context: {} // This is optional and defaults to an empty object if not used
+    pageTemplate: 'src/templates/index.js',
+    pageLength: 12,
+    pathPrefix: '/',
+    buildPath: (index, pathPrefix) =>
+      index > 1 ? `${pathPrefix}page/${index}` : `${pathPrefix}`
   });
 
   const posts = query.data.posts.edges;
@@ -109,11 +108,11 @@ exports.createPages = async ({ actions, graphql }) => {
   posts.forEach(({ node }, index) => {
     const prev = index === 0 ? null : posts[index - 1].node;
     const next = index === posts.length - 1 ? null : posts[index + 1].node;
-    const currentPageId = node.id
+    const currentPageId = node.id;
 
     const recentPosts = newestPosts
-      .filter((post) => currentPageId !== post.node.id)
-      .slice(0, 3)
+      .filter(post => currentPageId !== post.node.id)
+      .slice(0, 3);
 
     createPage({
       path: node.frontmatter.path,
@@ -132,9 +131,9 @@ exports.createPages = async ({ actions, graphql }) => {
 
     createPage({
       path: node.frontmatter.path,
-      component: template,
+      component: template
     });
-  })
+  });
 
   return posts;
 };
