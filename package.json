@@ -36,7 +36,7 @@
     "react-icons": "~3.7.0",
     "react-netlify-form": "^2.1.5",
     "react-typography": "^0.16.19",
-    "styled-components": "^4.2.1",
+    "styled-components": "^4.3.1",
     "typography": "^0.16.19",
     "typography-theme-grand-view": "^0.16.19"
   },
