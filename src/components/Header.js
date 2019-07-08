@@ -274,7 +274,7 @@ function HeaderComponent() {
               <NavLink
                 as="a"
                 index={3}
-                href="https://egghead.io/search?query=paul%20mcbride"
+                href="https://egghead.io/instructors/paul-mcbride"
                 activeClassName="active"
               >
                 Courses
