@@ -5093,10 +5093,10 @@ gatsby-paginate@^1.1.0:
   dependencies:
     path "^0.12.7"
 
-gatsby-plugin-catch-links@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.1.2.tgz#f7e04e2b390341ba4b1f8f0e12d4bcf78b1e542d"
-  integrity sha512-ur17fNloBJItWH1CtADFyPDqBHfe2NKV0OenuVpCEIHq4mKdWjPO1Q7cC+0/ZKN1GikpsTAabwXy4JwWIKUSew==
+gatsby-plugin-catch-links@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.1.4.tgz#862c81579e00665733d25b795473c6cb3bafc23d"
+  integrity sha512-CFOFVVg4wAjA+Muwmp6rBNBwHTF5hB65hZuL0Oty1Ifc/RhklpjymKjcHL+wsbXcgdqcci0L1CP8q4TtooRx4g==
   dependencies:
     "@babel/runtime" "^7.0.0"
     escape-string-regexp "^1.0.5"
