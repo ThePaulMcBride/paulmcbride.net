@@ -859,10 +859,10 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.5":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.1.tgz#51b56e216e87103ab3f7d6040b464c538e242888"
-  integrity sha512-g+hmPKs16iewFSmW57NkH9xpPkuYD1RV3UE2BCkXx9j+nhhRb9hsiSxPmEa67j35IecTQdn4iyMtHMbt5VoREg==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5":
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
+  integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
   dependencies:
     regenerator-runtime "^0.13.2"
 
@@ -5093,12 +5093,12 @@ gatsby-paginate@^1.1.0:
   dependencies:
     path "^0.12.7"
 
-gatsby-plugin-catch-links@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.1.2.tgz#f7e04e2b390341ba4b1f8f0e12d4bcf78b1e542d"
-  integrity sha512-ur17fNloBJItWH1CtADFyPDqBHfe2NKV0OenuVpCEIHq4mKdWjPO1Q7cC+0/ZKN1GikpsTAabwXy4JwWIKUSew==
+gatsby-plugin-catch-links@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.1.5.tgz#de84abd4a1dc60958ef9fa9e64438bbaea65b8a0"
+  integrity sha512-YL4heo4WtELBRDGejERNfDOSNZzXFnjQAbEwYk09vkTczWd0NO3BUeVpfK3bJY0Md+5ELiCxQSV0xDBle8ddeQ==
   dependencies:
-    "@babel/runtime" "^7.0.0"
+    "@babel/runtime" "^7.5.5"
     escape-string-regexp "^1.0.5"
 
 gatsby-plugin-google-analytics@^2.1.7:
