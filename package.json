@@ -2,8 +2,8 @@
   "name": "paul-mcbride-blog",
   "description": "Paulmcbride.net Website",
   "version": "1.0.0",
-  "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
-  "repository": "https://github.com/dschau/gatsby-blog-starter-kit",
+  "author": "Paul McBride <hello@paulmcbride.net> (https://paulmcbride.net)",
+  "repository": "https://github.com/thepaulmcbride/paulmcbride.net",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.50",
