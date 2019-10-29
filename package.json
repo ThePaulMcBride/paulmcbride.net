@@ -14,7 +14,7 @@
     "gatsby-plugin-heap": "^1.0.0",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-markdown-pages": "^1.0.3",
-    "gatsby-plugin-netlify": "^2.1.22",
+    "gatsby-plugin-netlify": "^2.1.23",
     "gatsby-plugin-offline": "^3.0.16",
     "gatsby-plugin-react-helmet": "^3.1.8",
     "gatsby-plugin-sharp": "^2.2.32",
