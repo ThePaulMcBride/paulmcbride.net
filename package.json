@@ -5,7 +5,7 @@
   "author": "Paul McBride <hello@paulmcbride.net> (https://paulmcbride.net)",
   "repository": "https://github.com/thepaulmcbride/paulmcbride.net",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-paginate": "^1.1.1",
