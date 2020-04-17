@@ -5499,12 +5499,12 @@ gatsby-paginate@^1.1.1:
   dependencies:
     path "^0.12.7"
 
-gatsby-plugin-catch-links@^2.1.27:
-  version "2.1.27"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.1.27.tgz#c89fdaa631a3618520f5b978522c35d1852d23a0"
-  integrity sha512-OOujJiiI0F0YtGUq5lDWNqjccBpn+5h253xgqHCaimyy25SUyL/ApL1CBY/mRuPCw+53JYQBpI8hTNAW77wnzA==
+gatsby-plugin-catch-links@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.2.2.tgz#bb7f85c62eb75f1b119c023cb70f0e32982b4c18"
+  integrity sha512-m+o/JtjaPMEDj0Yb8dTjN9Y1lFabo337KJ/fOuKHgvlIWGobLE23qlu8QqCgmXAwqxwc2OzvJz7OixWaTTQSCw==
   dependencies:
-    "@babel/runtime" "^7.7.6"
+    "@babel/runtime" "^7.8.7"
     escape-string-regexp "^1.0.5"
 
 gatsby-plugin-google-analytics@^2.2.2:
