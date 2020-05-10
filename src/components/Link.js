@@ -1,10 +1,22 @@
-import { Link as GatsbyLink } from 'gatsby';
-import React from 'react';
+import React from 'react'
+import GatsbyLink from 'gatsby-link'
 
-export default function Link({ children, className, to }) {
+const Link = ({ children, to, ...other }) => {
+  const internal = /^\/(?!\/)/.test(to)
+
+  if (internal) {
+    return (
+      <GatsbyLink to={to} {...other}>
+        {children}
+      </GatsbyLink>
+    )
+  }
+
   return (
-    <GatsbyLink className={[`link`].concat(className || []).join(' ')} to={to}>
+    <a href={to} {...other}>
       {children}
-    </GatsbyLink>
-  );
+    </a>
+  )
 }
+
+export default Link

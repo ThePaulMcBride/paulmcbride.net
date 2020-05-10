@@ -1,104 +1,155 @@
-const { name } = require('./package.json');
-const config = require('./config');
+const config = require('./config/website')
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
-  pathPrefix: process.env.CI ? `/${name}` : `/`,
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    author: 'Paul McBride',
-    title: config.title,
-    tagline: config.tagline,
-    siteUrl: config.siteUrl
+    siteUrl: config.siteUrl + pathPrefix,
+    title: config.siteTitle,
+    twitterHandle: config.twitterHandle,
+    description: config.siteDescription,
+    keywords: ['Web Development', 'Software', 'Coding', 'Programming'],
+    canonicalUrl: config.siteUrl,
+    image: config.siteLogo,
+    author: {
+      name: config.author,
+      minibio: `
+        <strong>PaulMcBride</strong> is a software developer and egghead instructor who loves making things with code and helping others do the same.
+      `,
+    },
+    organization: {
+      name: config.organization,
+      url: config.siteUrl,
+      logo: config.siteLogo,
+    },
+    social: {
+      twitter: config.twitterHandle,
+      fbAppID: '',
+    },
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md', '.markdown'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              backgroundColor: '#fafafa',
+              maxWidth: 1035,
+            },
+          },
+        ],
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'PaulMcBride.net',
-        short_name: 'PaulMcBride.net',
-        start_url: '/',
-        background_color: '#fff',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'assets/favicon.png'
-      }
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'standalone',
+        icons: [
+          {
+            src: '/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-52944793-3',
-        cookieDomain: 'paulmcbride.net'
-      }
+        trackingId: `GOOGLE_ID`,
+      },
     },
     {
-      resolve: 'gatsby-plugin-heap',
+      resolve: `gatsby-plugin-feed`,
       options: {
-        appId: '3164637077'
-      }
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.fields.date,
+                  url: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + '/' + edge.node.fields.slug,
+                })
+              })
+            },
+            query: `
+              {
+                allMdx(
+                  limit: 1000,
+                  filter: { frontmatter: { published: { ne: false } } }
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  edges {
+                    node {
+                      excerpt(pruneLength: 250)
+                      fields {
+                        slug
+                        date
+                      }
+                      frontmatter {
+                        title
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'Blog RSS Feed',
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
+        pathToConfigModule: `src/lib/typography`,
+      },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/blog`,
-        name: 'blog'
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/pages`,
-        name: 'pages'
-      }
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          'gatsby-remark-copy-linked-files',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              withWebp: true,
-              maxWidth: 800,
-              linkImagesToOriginal: false,
-              backgroundColor: 'transparent'
-            }
-          },
-          {
-            resolve: 'gatsby-remark-embed-video',
-            options: {
-              ratio: 1.77,
-              related: false,
-              noIframeBorder: true
-            }
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false
-            }
-          },
-          `gatsby-remark-responsive-iframe`
-        ]
-      }
-    },
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-netlify'
-  ]
-};
+    'gatsby-plugin-offline',
+  ],
+}

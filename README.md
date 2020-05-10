@@ -1,13 +1,31 @@
-# PaulMcbride.net Gatsby Site
+# PaulMcBride.net
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/122eca289f68477ba8f9d9580c802501)](https://app.codacy.com/app/ThePaulMcBride/paulmcbride.net?utm_source=github.com&utm_medium=referral&utm_content=ThePaulMcBride/paulmcbride.net&utm_campaign=Badge_Grade_Dashboard)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e477625f-4eec-413a-aaff-cf280a7ef7af/deploy-status)](https://app.netlify.com/sites/paulmcbride/deploys)
+This is based on Robin Wieruch's https://github.com/rwieruch/gatsby-mdx-blog-starter-project
 
-## Set up
+## Features
 
-1. Clone this repo
-1. `yarn`
-1. `yarn start`
+- MDX: JavaScript/React in Markdown
+- Prism.js: Syntax Highlighting
+- Pagination
+- Emotion
+- Typography.js
+- Self-hosted fonts ([Inter UI](https://rsms.me/inter/))
+- Social media share buttons
+- Site & Theme config files
+- ConvertKit subscribe form (Formik and Yup)
 
-[gatsby]: https://www.gatsbyjs.org/
-[gatsby-remark-images]: https://www.gatsbyjs.org/packages/gatsby-remark-images/
+## Setup
+
+- `git clone git@github.com:thepaulmcbride/paulmcbride.net.git`
+- `cd paulmcbride.net`
+- `yarn`
+- `gatsby develop`
+- visit http://localhost:8000
+
+## Setup via Gatsby CLI
+
+- `gatsby new gatsby-starter-blog git@github.com:thepaulmcbride/paulmcbride.net.git`
+- `cd gatsby-starter-blog`
+- `yarn`
+- `gatsby develop`
+- visit http://localhost:8000

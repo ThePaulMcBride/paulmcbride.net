@@ -1,139 +1,205 @@
-const path = require('path');
-const createPaginatedPages = require('gatsby-paginate');
+const path = require('path')
 
-const createTagPages = (createPage, edges) => {
-  const tagTemplate = path.resolve(`src/templates/tags.js`);
-  const posts = {};
+const _ = require('lodash')
+const PAGINATION_OFFSET = 10
 
-  edges.forEach(({ node }) => {
-    if (node.frontmatter.tags) {
-      node.frontmatter.tags.forEach(tag => {
-        if (!posts[tag]) {
-          posts[tag] = [];
-        }
-        posts[tag].push(node);
-      });
+const createPosts = (createPage, createRedirect, edges) => {
+  edges.forEach(({ node }, i) => {
+    const prev = i === 0 ? null : edges[i - 1].node
+    const next = i === edges.length - 1 ? null : edges[i + 1].node
+    const pagePath = node.fields.slug
+
+    if (node.fields.redirects) {
+      node.fields.redirects.forEach(fromPath => {
+        createRedirect({
+          fromPath,
+          toPath: pagePath,
+          redirectInBrowser: true,
+          isPermanent: true,
+        })
+      })
     }
-  });
-
-  Object.keys(posts).forEach(tagName => {
-    const post = posts[tagName];
-    createPage({
-      path: `/tags/${tagName}`,
-      component: tagTemplate,
-      context: {
-        posts,
-        post,
-        tag: tagName
-      }
-    });
-  });
-};
-
-exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions;
-
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  const query = await graphql(`
-    {
-      pages: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/pages/" } }
-      ) {
-        edges {
-          node {
-            html
-            id
-            frontmatter {
-              path
-              templatePath
-            }
-          }
-        }
-      }
-      posts: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/blog/" } }
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 250)
-            html
-            id
-            timeToRead
-            frontmatter {
-              date(formatString: "DD MMM YYYY")
-              path
-              tags
-              title
-              featuredImage {
-                childImageSharp {
-                  thumbnail: resize(width: 600, cropFocus: CENTER) {
-                    src
-                  }
-                  hires: resize(width: 1500, cropFocus: CENTER) {
-                    src
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  if (query.errors) {
-    return Promise.reject(query.errors);
-  }
-
-  createPaginatedPages({
-    edges: query.data.posts.edges,
-    createPage: createPage,
-    pageTemplate: 'src/templates/index.js',
-    pageLength: 12,
-    pathPrefix: '/',
-    buildPath: (index, pathPrefix) =>
-      index > 1 ? `${pathPrefix}page/${index}` : `${pathPrefix}`
-  });
-
-  const posts = query.data.posts.edges;
-  const pages = query.data.pages.edges;
-
-  createTagPages(createPage, posts);
-
-  const newestPosts = posts.slice(0, 4);
-
-  // Create pages for each markdown file.
-  posts.forEach(({ node }, index) => {
-    const prev = index === 0 ? null : posts[index - 1].node;
-    const next = index === posts.length - 1 ? null : posts[index + 1].node;
-    const currentPageId = node.id;
-
-    const recentPosts = newestPosts
-      .filter(post => currentPageId !== post.node.id)
-      .slice(0, 3);
 
     createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
+      path: pagePath,
+      component: path.resolve(`./src/templates/post.js`),
       context: {
+        id: node.id,
         prev,
         next,
-        recentPosts
-      }
-    });
-  });
+      },
+    })
+  })
+}
 
-  pages.forEach(({ node }) => {
-    const templatePath = node.frontmatter.templatePath;
-    const template = path.resolve(`src/templates/${templatePath}.js`);
+exports.createPages = ({ actions, graphql }) =>
+  graphql(`
+    query {
+      allMdx(
+        filter: { frontmatter: { published: { ne: false } } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            id
+            parent {
+              ... on File {
+                name
+                sourceInstanceName
+              }
+            }
+            excerpt(pruneLength: 250)
+            fields {
+              title
+              slug
+              date
+            }
+          }
+        }
+      }
+    }
+  `).then(({ data, errors }) => {
+    if (errors) {
+      return Promise.reject(errors)
+    }
+
+    if (_.isEmpty(data.allMdx)) {
+      return Promise.reject('There are no posts!')
+    }
+
+    const { edges } = data.allMdx
+    const { createRedirect, createPage } = actions
+    createPosts(createPage, createRedirect, edges)
+    createPaginatedPages(actions.createPage, edges, '/blog', {
+      categories: [],
+    })
+  })
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      alias: {
+        'react-dom': '@hot-loader/react-dom',
+        $components: path.resolve(__dirname, 'src/components'),
+      },
+    },
+  })
+}
+
+const createPaginatedPages = (createPage, edges, pathPrefix, context) => {
+  const pages = edges.reduce((acc, value, index) => {
+    const pageIndex = Math.floor(index / PAGINATION_OFFSET)
+
+    if (!acc[pageIndex]) {
+      acc[pageIndex] = []
+    }
+
+    acc[pageIndex].push(value.node.id)
+
+    return acc
+  }, [])
+
+  pages.forEach((page, index) => {
+    const previousPagePath = `${pathPrefix}/${index + 1}`
+    const nextPagePath = index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
 
     createPage({
-      path: node.frontmatter.path,
-      component: template
-    });
-  });
+      path: index > 0 ? `${pathPrefix}/${index}` : `${pathPrefix}`,
+      component: path.resolve(`src/templates/blog.js`),
+      context: {
+        pagination: {
+          page,
+          nextPagePath: index === 0 ? null : nextPagePath,
+          previousPagePath:
+            index === pages.length - 1 ? null : previousPagePath,
+          pageCount: pages.length,
+          pathPrefix,
+        },
+        ...context,
+      },
+    })
+  })
+}
 
-  return posts;
-};
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `Mdx`) {
+    const parent = getNode(node.parent)
+    const titleSlugged = _.join(_.drop(parent.name.split('-'), 3), '-')
+
+    const slug =
+      parent.sourceInstanceName === 'legacy'
+        ? `blog/${node.frontmatter.date
+            .split('T')[0]
+            .replace(/-/g, '/')}/${titleSlugged}`
+        : node.frontmatter.slug || titleSlugged
+
+    createNodeField({
+      name: 'id',
+      node,
+      value: node.id,
+    })
+
+    createNodeField({
+      name: 'published',
+      node,
+      value: node.frontmatter.published,
+    })
+
+    createNodeField({
+      name: 'title',
+      node,
+      value: node.frontmatter.title,
+    })
+
+    createNodeField({
+      name: 'description',
+      node,
+      value: node.frontmatter.description,
+    })
+
+    createNodeField({
+      name: 'slug',
+      node,
+      value: slug,
+    })
+
+    createNodeField({
+      name: 'date',
+      node,
+      value: node.frontmatter.date ? node.frontmatter.date.split(' ')[0] : '',
+    })
+
+    createNodeField({
+      name: 'banner',
+      node,
+      value: node.frontmatter.banner,
+    })
+
+    createNodeField({
+      name: 'categories',
+      node,
+      value: node.frontmatter.categories || [],
+    })
+
+    createNodeField({
+      name: 'keywords',
+      node,
+      value: node.frontmatter.keywords || [],
+    })
+
+    createNodeField({
+      name: 'redirects',
+      node,
+      value: node.frontmatter.redirects,
+    })
+
+    createNodeField({
+      name: 'isPost',
+      node,
+      value: true,
+    })
+  }
+}
