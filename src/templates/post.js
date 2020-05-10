@@ -14,10 +14,11 @@ export default function Post({
   pageContext: { next, prev },
 }) {
   const title = mdx.frontmatter.title
+  const image = mdx.frontmatter.banner?.childImageSharp?.fluid?.src
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
-      <SEO frontmatter={mdx.frontmatter} isBlogPost />
+      <SEO frontmatter={mdx.frontmatter} isBlogPost postImage={image} />
       <article
         css={css`
           width: 100%;
