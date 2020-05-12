@@ -3,11 +3,12 @@ import { graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Layout from 'components/Layout'
-import Link from 'components/Link'
 import { useTheme } from 'emotion-theming'
 import Container from 'components/Container'
 import { rhythm } from 'lib/typography'
 import SEO from 'components/SEO'
+import Button from 'components/Button'
+import Home from './home.mdx'
 
 const Hero = () => {
   const theme = useTheme()
@@ -17,7 +18,7 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%;
         background: ${theme.colors.primary};
-        padding: 20px 0 30px 0;
+        padding: 20px 0 20px 0;
         display: flex;
       `}
     >
@@ -25,6 +26,7 @@ const Hero = () => {
         css={css`
           display: flex;
           flex-direction: column;
+          justify-content: center;
         `}
       >
         <h1
@@ -37,7 +39,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Hi, I'm Paul McBride. Let's write some code.
+          Hi, I'm Paul McBride. 👋🏼
         </h1>
       </Container>
       <div
@@ -50,61 +52,32 @@ const Hero = () => {
   )
 }
 
-const Description = styled.p`
-  margin-bottom: 10px;
-  display: inline-block;
+const Divider = styled.hr`
+  border-top: 1px solid ${props => props.theme.colors.offset};
 `
 
 export default function Index({ data: { site, allMdx } }) {
-  const theme = useTheme()
-
   return (
     <Layout site={site}>
       <SEO />
-      <Hero theme={theme} />
+      <Hero />
+
       <Container
         css={css`
           padding-bottom: 0;
         `}
       >
-        {allMdx.edges.map(({ node: post }) => (
-          <div
-            key={post.id}
-            css={css`
-              margin-bottom: 40px;
-            `}
-          >
-            <h2
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: 'all 150ms ease',
-                ':hover': {
-                  color: theme.colors.primary,
-                },
-              })}
-            >
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                {post.frontmatter.title}
-              </Link>
-            </h2>
-            <Description>
-              {post.excerpt}{' '}
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description>
-          </div>
-        ))}
-        <Link to="/blog" aria-label="Visit blog page">
+        <Home />
+        <Button
+          css={css`
+            margin-top: 3rem;
+          `}
+          to="/blog"
+          aria-label="Visit blog page"
+        >
           View all articles
-        </Link>
-        <hr />
+        </Button>
+        <Divider />
       </Container>
     </Layout>
   )
