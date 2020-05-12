@@ -16,9 +16,9 @@ export default () => {
       >
         Lessons
       </a>
-      <Link to="/about" activeClassName="active" aria-label="View about page">
-        About
-      </Link>
+      <a href="mailto:hello@paulmcbride.net" aria-label="Send me an email">
+        Get in touch
+      </a>
 
       <ThemeToggler
         css={{}}
