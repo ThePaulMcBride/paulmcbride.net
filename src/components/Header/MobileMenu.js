@@ -5,7 +5,6 @@ import Container from '../Container'
 
 import { bpMaxSM } from '../../lib/breakpoints'
 
-
 const Toggle = ({ children }) => {
   const [isToggledOn, setToggle] = useState(false)
   const toggle = () => setToggle(!isToggledOn)
@@ -15,7 +14,7 @@ const Toggle = ({ children }) => {
   return (
     <div
       css={css`
-        `display: none;`
+        display: none;
         visibility: hidden;
         ${bpMaxSM} {
           display: block;
