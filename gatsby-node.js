@@ -1,7 +1,7 @@
 const path = require('path')
 
 const _ = require('lodash')
-const PAGINATION_OFFSET = 10
+const PAGINATION_OFFSET = 200
 
 const createPosts = (createPage, createRedirect, edges) => {
   edges.forEach(({ node }, i) => {

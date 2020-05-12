@@ -10,11 +10,14 @@ export default () => {
       <Link to="/blog" activeClassName="active" aria-label="View blog page">
         Blog
       </Link>
-      <Link to="/about" activeClassName="active" aria-label="View blog page">
+      <a
+        href="https://egghead.io/instructors/paul-mcbride?af=auhexg"
+        aria-label="View blog page"
+      >
+        Lessons
+      </a>
+      <Link to="/about" activeClassName="active" aria-label="View about page">
         About
-      </Link>
-      <Link to="/contact" activeClassName="active" aria-label="View blog page">
-        Contact
       </Link>
 
       <ThemeToggler
