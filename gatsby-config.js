@@ -14,7 +14,7 @@ module.exports = {
     description: config.siteDescription,
     keywords: ['Web Development', 'Software', 'Coding', 'Programming'],
     canonicalUrl: config.siteUrl,
-    image: config.siteLogo,
+    image: config.siteCard,
     author: {
       name: config.author,
       minibio: `

@@ -37,6 +37,7 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
         frontmatter || postData.childMarkdownRemark.frontmatter || {}
       const title = isBlogPost ? postMeta.title : config.siteTitle
       const description = postMeta.description || seo.description
+      console.log(seo)
       const image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`

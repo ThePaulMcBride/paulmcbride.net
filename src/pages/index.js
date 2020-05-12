@@ -7,6 +7,7 @@ import Link from 'components/Link'
 import { useTheme } from 'emotion-theming'
 import Container from 'components/Container'
 import { rhythm } from 'lib/typography'
+import SEO from 'components/SEO'
 
 const Hero = () => {
   const theme = useTheme()
@@ -59,6 +60,7 @@ export default function Index({ data: { site, allMdx } }) {
 
   return (
     <Layout site={site}>
+      <SEO />
       <Hero theme={theme} />
       <Container
         css={css`
