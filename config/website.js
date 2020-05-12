@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: 'https://paulmcbride.net', // Domain of your site. No trailing slash!
   siteLanguage: 'en-gb', // Language Tag on <html> element
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteLogo: 'images/code.jpg', // Used for SEO and manifest, path to your image you placed in the 'static' folder
+  siteCard: 'images/code.jpg', // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription:
     "Hey, I'm Paul McBride. I make things with code and help others do the same!",
   author: 'Paul McBride', // Author for schemaORGJSONLD
