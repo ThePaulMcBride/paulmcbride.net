@@ -43,7 +43,7 @@ const Blog = ({
               .gatsby-image-wrapper {
               }
               ${bpMaxSM} {
-                padding: 20px;
+                /* padding: 20px; */
               }
               display: flex;
               flex-direction: column;

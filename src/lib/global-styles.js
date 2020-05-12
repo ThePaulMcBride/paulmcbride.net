@@ -16,9 +16,9 @@ export default function GlobalStyles() {
           color: ${theme.colors.text};
         }
 
-        &::selection {
+        ::selection {
           color: ${theme.colors.white};
-          background-color: ${theme.colors.primary};
+          background-color: ${theme.colors.link};
         }
 
         a {

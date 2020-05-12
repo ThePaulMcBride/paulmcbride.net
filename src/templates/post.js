@@ -6,6 +6,7 @@ import { css } from '@emotion/core'
 import Container from 'components/Container'
 import Layout from '../components/Layout'
 import { fonts } from '../lib/typography'
+import { bpMaxSM } from 'lib/breakpoints'
 import Share from '../components/Share'
 import config from '../../config/website'
 
@@ -31,6 +32,10 @@ export default function Post({
               font-size: 52px;
               text-align: left;
               margin-bottom: 20px;
+
+              ${bpMaxSM} {
+                font-size: 40px;
+              }
             `}
           >
             {title}

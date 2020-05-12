@@ -15,7 +15,7 @@ const Toggle = ({ children }) => {
   return (
     <div
       css={css`
-        display: none;
+        `display: none;`
         visibility: hidden;
         ${bpMaxSM} {
           display: block;
