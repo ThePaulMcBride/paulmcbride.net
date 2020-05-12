@@ -7,7 +7,7 @@ module.exports = {
   siteLanguage: 'en-gb', // Language Tag on <html> element
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription:
-    "Hey, I'm Paul McBride. I make things with code and help others do the same",
+    "Hey, I'm Paul McBride. I make things with code and help others do the same!",
   author: 'Paul McBride', // Author for schemaORGJSONLD
   organization: 'PaulMcBride.net',
 
