@@ -8,7 +8,7 @@ tags: ['javascript', 'tools', 'screencast', 'code']
 published: true
 ---
 
-import Video from 'components/video'
+import Video from 'components/Video'
 
 Today I am pleased to bring you what will be the first episode in a series of videos on Functional Programming in JavaScript. This episode covers the map function. To see more of my videos, check out my other screencasts
 

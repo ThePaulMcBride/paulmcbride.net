@@ -8,7 +8,7 @@ tags: ['javascript', 'tools', 'screencast', 'code']
 published: true
 ---
 
-import Video from 'components/video'
+import Video from 'components/Video'
 
 In today's episode, we'll learn how to use the filter function and how it can be chained with other array functions such as map. If you've not seen the previous episode, you can find it here. The Map Function
 
