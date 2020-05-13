@@ -1,6 +1,6 @@
 import path from 'path'
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import SchemaOrg from './SchemaOrg'
