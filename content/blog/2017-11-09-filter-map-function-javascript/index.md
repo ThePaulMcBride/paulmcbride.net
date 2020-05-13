@@ -8,6 +8,8 @@ tags: ['javascript', 'tools', 'screencast', 'code']
 published: true
 ---
 
+import Video from 'components/video'
+
 Today I am pleased to bring you what will be the first episode in a series of videos on Functional Programming in JavaScript. This episode covers the map function. To see more of my videos, check out my other screencasts
 
 The map function is part of the array object. It is used for transforming elements in an array. Map is also a pure function meaning that it does not change the original array, instead, it returns a new array.
@@ -26,7 +28,7 @@ const newArray = array.map(value => value * 2) // 2, 4, 6
 
 ## The Map function - Functional Programming in JavaScript
 
-`youtube: gazsGHcj7AE`
+<Video url="https://www.youtube.com/watch?v=gazsGHcj7AE" />
 
 ---
 

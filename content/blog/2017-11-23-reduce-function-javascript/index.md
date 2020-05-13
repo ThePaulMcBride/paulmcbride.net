@@ -8,6 +8,8 @@ tags: ['javascript', 'tools', 'screencast', 'code']
 published: true
 ---
 
+import Video from 'components/video'
+
 In this episode, we look at the reduce function and how to use it. Reduce is a massively flexible function. In this video, we use it to transform an array of data into an object and use it to recreate the filter function.
 
 ## How it's used
@@ -28,7 +30,7 @@ console.log(total) // 7
 
 ## Reduce - Functional Programming in JavaScript
 
-`youtube: iT8qyI3ZOuo`
+<Video url="https://www.youtube.com/watch?v=iT8qyI3ZOuo" />
 
 ---
 

@@ -8,6 +8,8 @@ tags: ['javascript', 'tools', 'screencast', 'code']
 published: true
 ---
 
+import Video from 'components/video'
+
 In today's episode, we'll learn how to use the filter function and how it can be chained with other array functions such as map. If you've not seen the previous episode, you can find it here. The Map Function
 
 The filter function is part of the array object. It is used for filtering elements out of an array. Like map, filter is a pure function. Below is an example of how it is used.
@@ -26,7 +28,7 @@ const newArray = array.map(value => value % 2 == 0) // 2, 4, 6, 8
 
 ## The Filter function - Functional Programming in JavaScript
 
-`youtube: 65Wifnpdg_U`
+<Video url="https://www.youtube.com/watch?v=65Wifnpdg_U" />
 
 ---
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
 import { useTheme } from 'emotion-theming'
-import { lighten } from 'polished'
+import { lighten, darken } from 'polished'
 import { bpMaxSM } from './breakpoints'
 import { fonts } from './typography'
 
@@ -66,7 +66,7 @@ export default function GlobalStyles() {
         hr {
           margin: 50px 0;
           border: none;
-          border-top: 1px solid ${theme.colors.gray};
+          border-top: 1px solid ${darken(0.1, theme.colors.gray)};
           background: none;
         }
 

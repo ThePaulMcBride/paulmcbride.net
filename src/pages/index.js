@@ -39,7 +39,10 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Hi, I'm Paul McBride. 👋🏼
+          Hi, I'm Paul McBride.{' '}
+          <span role="img" aria-label="Hi">
+            👋🏼
+          </span>
         </h1>
       </Container>
       <div
