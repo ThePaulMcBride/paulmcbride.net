@@ -2,7 +2,7 @@ import { React } from 'react'
 import { css } from '@emotion/core'
 import { Link } from 'gatsby'
 import { useTheme } from 'emotion-theming'
-import { rgba, darken, lighten } from 'polished'
+import { rgba, lighten } from 'polished'
 
 const Button = ({ to, children, secondary, ...restProps }) => {
   const theme = useTheme()
