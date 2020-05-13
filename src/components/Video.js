@@ -8,6 +8,8 @@ export default function Video({ url }) {
       css={css`
         position: relative;
         padding-top: 56.25%;
+        border-radius: 4px;
+        overflow: hidden;
       `}
     >
       <ReactPlayer

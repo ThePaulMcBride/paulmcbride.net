@@ -26,5 +26,6 @@ module.exports = {
   twitter: 'https://twitter.com/ThePaulMcBride/',
   twitterHandle: '@ThePaulMcBride',
   github: 'https://github.com/ThePaulMcBride/',
+  twitch: 'https://twitch.tv/ThePaulMcBride/',
   linkedin: '',
 }

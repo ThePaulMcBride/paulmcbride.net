@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { bpMaxSM } from '../lib/breakpoints'
 import SubscribeForm from './Forms/Subscribe'
-import { Twitter, GitHub } from './Social'
+import { Twitter, GitHub, Twitch } from './Social'
 import Container from './Container'
 
 const StyledContainer = styled(Container)`
@@ -39,6 +39,7 @@ const Footer = ({ author, noSubscribeForm }) => (
         </Author>
         <div>
           <Twitter />
+          <Twitch />
           <GitHub />
         </div>
       </FlexConteiner>

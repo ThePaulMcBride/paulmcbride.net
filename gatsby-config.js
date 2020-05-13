@@ -1,4 +1,5 @@
 const config = require('./config/website')
+const eggheadTransformer = require('./other/embedder-transformers/egghead')
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 require('dotenv').config({
@@ -49,6 +50,12 @@ module.exports = {
             options: {
               backgroundColor: '#fafafa',
               maxWidth: 1035,
+            },
+          },
+          {
+            resolve: `gatsby-remark-embedder`,
+            options: {
+              customTransformers: [eggheadTransformer],
             },
           },
         ],
