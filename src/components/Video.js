@@ -14,6 +14,8 @@ export default function Video({ url }) {
         url={url}
         width="100%"
         height="100%"
+        controls
+        light
         css={css`
           position: absolute;
           top: 0;

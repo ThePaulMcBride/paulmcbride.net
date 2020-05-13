@@ -1,4 +1,5 @@
 import React from 'react'
+import { css } from '@emotion/core'
 
 import Title from './Title'
 import Subtitle from './Subtitle'
@@ -13,4 +14,15 @@ export default {
   p: props => <Paragraph {...props} />,
   code: Code,
   pre: preProps => <pre {...preProps} />,
+  ul: ({ children, ...props }) => (
+    <ul
+      css={css`
+        margin-left: 1.55rem;
+        list-style: initial;
+      `}
+      {...props}
+    >
+      {children}
+    </ul>
+  ),
 }
