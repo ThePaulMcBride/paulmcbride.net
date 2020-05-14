@@ -2,7 +2,7 @@
 slug: 'rubber-duck-debugging'
 date: '2017-08-24'
 title: 'Rubber Duck Debugging'
-description: ''
+description: "Rubber duck debugging is the name given to the technique or explaing what your code does to a rubber duck. I use it all the time! Let's find out more."
 banner: './images/rubber-duck-debugging.jpg'
 tags: ['tools']
 published: true

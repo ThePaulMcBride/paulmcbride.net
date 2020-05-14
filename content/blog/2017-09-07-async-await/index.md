@@ -2,7 +2,7 @@
 slug: 'async-await'
 date: '2017-09-07'
 title: 'Async/Await – Wait, What?'
-description: ''
+description: 'JavaScript and promises go hand in hand. Find out how async/await can help make your asynchronous code easier to read and understand.'
 banner: './images/async-await.jpg'
 tags: ['code', 'javascript']
 published: true
@@ -14,7 +14,7 @@ Let's start by using the [Fetch API](/javascript-fetch-api/) to make a request t
 
 ```javascript
 const getData = () => {
-  fetch('http://example.com/data').then(response => {
+  fetch('http://example.com/data').then((response) => {
     console.log(response)
   })
 }
@@ -52,8 +52,8 @@ With a promise based approach this would look something like the code below.
 
 ```javascript
 const myFunction = async () => {
-  return requestA().then(valueA => {
-    return requestB(valueA).then(valueB => {
+  return requestA().then((valueA) => {
+    return requestB(valueA).then((valueB) => {
       return requestC(valueA, valueB)
     })
   })

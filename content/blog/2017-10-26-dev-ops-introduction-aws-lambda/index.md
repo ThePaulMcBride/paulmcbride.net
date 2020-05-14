@@ -2,7 +2,7 @@
 slug: 'dev-ops-introduction-aws-lambda'
 date: '2017-10-26'
 title: 'Dev Ops - An Introduction to AWS Lambda'
-description: ''
+description: "Deploying code to the cloud has never been easier. Let's learn how AWS Lambda can help you run fast scalable app around the globe."
 banner: './images/cloud-computing-aws-lambda.jpg'
 tags: ['devops']
 published: true

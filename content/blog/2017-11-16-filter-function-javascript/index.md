@@ -2,7 +2,7 @@
 slug: 'filter-function-javascript'
 date: '2017-11-16'
 title: 'The Filter Function - Functional Programming in JavaScript'
-description: ''
+description: 'The filter function is used for plucking elements from an array that match a predicate function in JavaScript. Check it out!'
 banner: './images/filter-function.jpg'
 tags: ['javascript', 'tools', 'screencast', 'code']
 published: true
@@ -21,7 +21,7 @@ An example of how `filter` can be used to remove elements from an array.
 ```javascript
 const array = [1, 2, 3, 4, 5, 6, 7, 8]
 
-const newArray = array.map(value => value % 2 == 0) // 2, 4, 6, 8
+const newArray = array.map((value) => value % 2 == 0) // 2, 4, 6, 8
 ```
 
 ---

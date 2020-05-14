@@ -2,7 +2,7 @@
 slug: 'javascript-fetch-api'
 date: '2017-09-14'
 title: 'JavaScript Fetch API'
-description: ''
+description: "The fetch API is used for making network requests in the browser. In this article we'll learn how it works"
 banner: './images/fetch-api.jpg'
 tags: ['code', 'javascript']
 published: true
@@ -20,7 +20,7 @@ myRequest.onload = () => {
   const response = JSON.parse(myRequest.response)
   console.log(response)
 }
-myRequest.onerror = function(err) {
+myRequest.onerror = function (err) {
   console.log('Fetch Error:', err)
 }
 myRequest.open('get', 'https://jsonplaceholder.typicode.com/posts/1')
@@ -33,15 +33,15 @@ As you can see we have to define a callback for both the error and success respo
 
 ```javascript
 fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(res => {
+  .then((res) => {
     if (!res.ok) {
       throw new Error('Whoops!')
     }
     return res
   })
-  .then(res => res.json())
-  .then(res => console.log(res))
-  .catch(e => console.log('Fetch Error:', err))
+  .then((res) => res.json())
+  .then((res) => console.log(res))
+  .catch((e) => console.log('Fetch Error:', err))
 ```
 
 Isn't that better? Fetch returns a promise that when resolves containes the response. From here we can access the headers of the response etc.
@@ -55,7 +55,7 @@ At the end of the promise chain, we call catch, which will handle any errors.
 As I mentioned, fetch resolves to a response which contains the response headers. Let's see what other useful information we can get.
 
 ```javascript
-fetch('https://jsonplaceholder.typicode.com/posts/1').then(res => {
+fetch('https://jsonplaceholder.typicode.com/posts/1').then((res) => {
   res.ok // Returns true if response status code is 200 - 299
   res.headers.get('Content-Type') // Returns the content type header
   res.status // Response status code

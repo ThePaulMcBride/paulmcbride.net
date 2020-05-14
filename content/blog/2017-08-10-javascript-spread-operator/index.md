@@ -2,7 +2,7 @@
 slug: 'javascript-spread-operator'
 date: '2017-08-10'
 title: 'JavaScript Spread Operator'
-description: ''
+description: "The keywords let and const are now part of Javascript. Let's explore what they do and how they differ from the var keyword."
 banner: './images/spread-operator.png'
 tags: ['javascript', 'code']
 published: true
