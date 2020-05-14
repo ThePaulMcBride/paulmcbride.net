@@ -16,7 +16,7 @@ module.exports = {
   userTwitter: '@ThePaulMcBride', // Twitter Username
   ogSiteName: 'PaulMcBride.net', // Facebook Site Name
   ogLanguage: 'en_GB',
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'UA-52944793-3',
 
   // Manifest and Progress color
   themeColor: '#5348FF',
