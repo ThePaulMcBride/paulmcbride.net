@@ -74,7 +74,7 @@ const NotificationFadeIn = keyframes`
   }
 `
 
-const Wrapper = styled.div`
+const Wrapper = styled('div')`
   .paper {
     animation: ${PaperRollOut} 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
     transform: translate(10px, 0);
@@ -280,7 +280,7 @@ const SlopeGrow = keyframes`
   }
 `
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled('div')`
   .sign {
     transform-origin: bottom center;
     animation: ${SlopeRollOut} 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
@@ -455,7 +455,7 @@ const LoadShredder = keyframes`
   }
 `
 
-const UnsubscribeWrapper = styled.div`
+const UnsubscribeWrapper = styled('div')`
   .pieces {
     rect {
       animation: ${PiecesSlide} 4s linear infinite;
@@ -490,83 +490,89 @@ const UnsubscribeWrapper = styled.div`
 `
 
 // SVG
-export const UnsubscribeIllustration = (
-  <UnsubscribeWrapper>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="85"
-      height="110"
-      viewBox="0 0 85 50"
-    >
-      <defs>
-        <rect id="unsubscribe-a" width="85" height="70" />
-        <radialGradient
-          className="shadow"
-          id="welcome-c"
-          r="80%"
-          fx="50%"
-          fy="50%"
-          gradientTransform="matrix(.52439 0 0 .30542 .238 .347)"
-        >
-          <stop offset="0%" stopOpacity=".13" />
-          <stop offset="100%" stopColor="#F0F0F0" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <g fill="none" fillRule="evenodd" transform="translate(0 -17)">
-        <mask id="unsubscribe-b" fill="#fff">
-          <use xlinkHref="#unsubscribe-a" />
-        </mask>
-        <g mask="url(#unsubscribe-b)">
-          <g className="mail" transform="translate(18 17)">
-            <path
-              fill="#B4BDDC"
-              d="M47.9347826,37 L1.06521739,37 C0.47691913,37 0,36.5127753 0,35.9117647 L0,1.08823529 C0,0.487224706 0.47691913,0 1.06521739,0 L47.9347826,0 C48.5230809,0 49,0.487224706 49,1.08823529 L49,35.9117647 C49,36.5127753 48.5230809,37 47.9347826,37 Z"
-            />
-            <path
-              fill="#9DA6C5"
-              d="M24.5000034,13 C24.7569448,13 25.0133642,13.0948109 25.2167358,13.2833855 L48.6515475,35.1015673 C48.9771422,35.4051891 49.0868917,35.8824618 48.9282593,36.3022109 C48.7696163,36.7230073 48.3748463,37 47.9348151,37 L1.06519171,37 C0.625160512,37 0.230390457,36.7230073 0.0717474343,36.3022 C-0.0868955885,35.8824509 0.0228538954,35.4051782 0.348459299,35.1015564 L23.783271,13.2833745 C23.9866425,13.0948109 24.243062,13 24.5000034,13 Z"
-            />
-            <path
-              fill="#CFD6E9"
-              d="M24.4999976,24 C24.2430563,24 23.9866368,23.9051891 23.7832653,23.7166145 L0.348454577,1.89843273 C0.0228491872,1.59481091 -0.0868896399,1.11753818 0.0717427241,0.6978 C0.23038574,0.276992727 0.625155778,0 1.06518696,0 L47.9348083,0 C48.3748395,0 48.7696096,0.276992727 48.9282526,0.6978 C49.0868956,1.11754909 48.9771461,1.59482182 48.6515407,1.89844364 L25.21673,23.7166255 C25.0133585,23.9051891 24.756939,24 24.4999976,24 Z"
-            />
+export const UnsubscribeIllustration = () => {
+  return (
+    <UnsubscribeWrapper>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="85"
+        height="110"
+        viewBox="0 0 85 50"
+      >
+        <defs>
+          <rect id="unsubscribe-a" width="85" height="70" />
+          <radialGradient
+            className="shadow"
+            id="welcome-c"
+            r="80%"
+            fx="50%"
+            fy="50%"
+            gradientTransform="matrix(.52439 0 0 .30542 .238 .347)"
+          >
+            <stop offset="0%" stopOpacity=".13" />
+            <stop offset="100%" stopColor="#F0F0F0" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        <g fill="none" fillRule="evenodd" transform="translate(0 -17)">
+          <mask id="unsubscribe-b" fill="#fff">
+            <use xlinkHref="#unsubscribe-a" />
+          </mask>
+          <g mask="url(#unsubscribe-b)">
+            <g className="mail" transform="translate(18 17)">
+              <path
+                fill="#B4BDDC"
+                d="M47.9347826,37 L1.06521739,37 C0.47691913,37 0,36.5127753 0,35.9117647 L0,1.08823529 C0,0.487224706 0.47691913,0 1.06521739,0 L47.9347826,0 C48.5230809,0 49,0.487224706 49,1.08823529 L49,35.9117647 C49,36.5127753 48.5230809,37 47.9347826,37 Z"
+              />
+              <path
+                fill="#9DA6C5"
+                d="M24.5000034,13 C24.7569448,13 25.0133642,13.0948109 25.2167358,13.2833855 L48.6515475,35.1015673 C48.9771422,35.4051891 49.0868917,35.8824618 48.9282593,36.3022109 C48.7696163,36.7230073 48.3748463,37 47.9348151,37 L1.06519171,37 C0.625160512,37 0.230390457,36.7230073 0.0717474343,36.3022 C-0.0868955885,35.8824509 0.0228538954,35.4051782 0.348459299,35.1015564 L23.783271,13.2833745 C23.9866425,13.0948109 24.243062,13 24.5000034,13 Z"
+              />
+              <path
+                fill="#CFD6E9"
+                d="M24.4999976,24 C24.2430563,24 23.9866368,23.9051891 23.7832653,23.7166145 L0.348454577,1.89843273 C0.0228491872,1.59481091 -0.0868896399,1.11753818 0.0717427241,0.6978 C0.23038574,0.276992727 0.625155778,0 1.06518696,0 L47.9348083,0 C48.3748395,0 48.7696096,0.276992727 48.9282526,0.6978 C49.0868956,1.11754909 48.9771461,1.59482182 48.6515407,1.89844364 L25.21673,23.7166255 C25.0133585,23.9051891 24.756939,24 24.4999976,24 Z"
+              />
+            </g>
           </g>
-        </g>
-        <ellipse
-          className="shadow"
-          cx="40"
-          cy="100"
-          fill="url(#welcome-c)"
-          fillRule="nonzero"
-          rx="60"
-          ry="60"
-        />
-        <g
-          className="pieces"
-          fill="#CFD6E9"
-          fillRule="nonzero"
-          transform="translate(18 77)"
-        >
-          <rect width="2.816" height="30" />
-          <rect width="2.816" height="30" x="20.184" />
-          <rect width="2.816" height="30" x="9.857" />
-          <rect width="2.816" height="24" x="4.694" />
-          <rect width="2.816" height="24" x="15.02" />
-          <g transform="translate(26)">
+          <ellipse
+            className="shadow"
+            cx="40"
+            cy="100"
+            fill="url(#welcome-c)"
+            fillRule="nonzero"
+            rx="60"
+            ry="60"
+          />
+          <g
+            className="pieces"
+            fill="#CFD6E9"
+            fillRule="nonzero"
+            transform="translate(18 77)"
+          >
             <rect width="2.816" height="30" />
             <rect width="2.816" height="30" x="20.184" />
             <rect width="2.816" height="30" x="9.857" />
             <rect width="2.816" height="24" x="4.694" />
             <rect width="2.816" height="24" x="15.02" />
+            <g transform="translate(26)">
+              <rect width="2.816" height="30" />
+              <rect width="2.816" height="30" x="20.184" />
+              <rect width="2.816" height="30" x="9.857" />
+              <rect width="2.816" height="24" x="4.694" />
+              <rect width="2.816" height="24" x="15.02" />
+            </g>
+          </g>
+
+          <g
+            className="shredder"
+            fillRule="nonzero"
+            transform="translate(0 64)"
+          >
+            <rect width="85" height="13" fill="#737794" rx="5" />
+            <circle className="light" cx="7" cy="6" r="3" fill="#CFD6E9" />
           </g>
         </g>
-
-        <g className="shredder" fillRule="nonzero" transform="translate(0 64)">
-          <rect width="85" height="13" fill="#737794" rx="5" />
-          <circle className="light" cx="7" cy="6" r="3" fill="#CFD6E9" />
-        </g>
-      </g>
-    </svg>
-  </UnsubscribeWrapper>
-)
+      </svg>
+    </UnsubscribeWrapper>
+  )
+}

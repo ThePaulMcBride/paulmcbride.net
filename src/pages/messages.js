@@ -14,7 +14,7 @@ export default ({ data: { site, allMdx, latestArticle } }) => {
       <div>
         <Message
           fullscreen
-          illustration={PleaseConfirmIllustration}
+          illustration={<PleaseConfirmIllustration />}
           title={`Great, one last thing...`}
           body={`I just sent you an email with the confirmation link.
           **Please check your inbox!**`}
@@ -25,7 +25,7 @@ export default ({ data: { site, allMdx, latestArticle } }) => {
           <Message
             fullscreen
             key={post.id}
-            illustration={ThankYouIllustration}
+            illustration={<ThankYouIllustration />}
             title={`Success! Thank you!`}
             body={`In case you haven’t seen already, here’s my latest article:`}
             articleTitle={post.frontmatter.title}
@@ -36,7 +36,7 @@ export default ({ data: { site, allMdx, latestArticle } }) => {
       <div>
         <Message
           fullscreen
-          illustration={UnsubscribeIllustration}
+          illustration={<UnsubscribeIllustration />}
           title={`You have been unsubscribed.`}
           body={`As per your request, you have been unsubscribed from all our mailings.`}
           note={`Changed your mind? [Click here to resubscribe](#)`}
