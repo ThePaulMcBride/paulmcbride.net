@@ -50,12 +50,12 @@ export default ({
 )
 
 const FadeIn = keyframes`
-from, 0% {
+  from, 0% {
     opacity: 0;
-}
-to, 100% {
+  }
+  to, 100% {
     opacity: 1;
-}
+  }
 `
 const Center = styled.div`
   width: 100vw;

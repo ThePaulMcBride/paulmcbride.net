@@ -16,7 +16,7 @@ export default ({ data: { site, allMdx, latestArticle } }) => {
           fullscreen
           illustration={PleaseConfirmIllustration}
           title={`Great, one last thing...`}
-          body={`We just sent you an email with the confirmation link. 
+          body={`I just sent you an email with the confirmation link.
           **Please check your inbox!**`}
         />
       </div>
