@@ -10,7 +10,7 @@ published: true
 
 After much anticipation, Webpack 4 has finally been released and it is pretty great! If you are looking for zero config JavaScript bundling, then Webpack 4 is the tool for you. In this article, we’ll talk about the changes made from version 3 and how to get up and running with Webpack 4.
 
-Before we dive too deeply into what’s new in Webpack 4, let’s quickly recap what Webpack actually is. Webpack is a module bundler. It takes care of care of compiling and transpiring code and assets into production-ready bundles. This includes transpiling JavaScript that uses modern ESNext features into a bundle that works in today’s browsers. It also includes processing Sass so that CSS is produced.
+Before we dive too deeply into what’s new in Webpack 4, let’s quickly recap what Webpack actually is. Webpack is a module bundler. It takes care of care of compiling and transpiring code and assets into production-ready bundles. This includes transpiling JavaScript that uses modern ESNext features into a bundle that works in today’s browsers. Webpack can bundle basically anything if you use the correct loader.
 
 ## What’s new in Webpack 4
 
@@ -22,7 +22,7 @@ A lot of work has been done under the hood in Webpack 4 and this has resulted in
 
 ### Mode Configuration
 
-In an attempt to simplify Webpack, a `mode` option has been introduced. This value can be set to Production or Development. In development mode Webpack does all the things you would expect; better tooling for debugging, useful error messaging and faster incremental builds. In production mode, the output bundle is minified and optimised for runtime performance. Development-only code is also omitted from the bundle to help reduce the overall size.
+In an attempt to simplify Webpack config, a `mode` option has been introduced. This value can be set to `production` or `development`. In development mode Webpack does all the things you would expect; better tooling for debugging, useful error messaging and faster incremental builds. In production mode, the output bundle is minified and optimised for runtime performance. Development-only code is also omitted from the bundle to help reduce the overall size.
 
 ### CommonsChunkPlugin has been deprecated
 
