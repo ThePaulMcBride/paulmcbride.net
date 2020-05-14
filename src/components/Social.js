@@ -4,10 +4,10 @@ import Link from './Link'
 import config from '../../config/website'
 
 const StyledLink = styled(Link)`
-  color: ${props => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   margin-left: 10px;
   &:hover {
-    color: ${props => props.theme.colors.link};
+    color: ${(props) => props.theme.colors.link};
   }
 `
 
@@ -48,7 +48,7 @@ export const LinkedIn = ({ url = `${config.linkedin}` }) => {
   )
 }
 
-export const Twitch = ({ url = `${config.twitch}` }) => {
+export const GitHub = ({ url = `${config.github}` }) => {
   return (
     <StyledLink to={url} aria-label="Visit my GitHub">
       <svg
@@ -67,9 +67,9 @@ export const Twitch = ({ url = `${config.twitch}` }) => {
   )
 }
 
-export const GitHub = ({ url = `${config.github}` }) => {
+export const Twitch = ({ url = `${config.twitch}` }) => {
   return (
-    <StyledLink to={url} aria-label="Visit my GitHub">
+    <StyledLink to={url} aria-label="Visit my Twitch channel">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
