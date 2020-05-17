@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { css } from '@emotion/core'
+import { lighten } from 'polished'
 import { withTheme } from '../Theming'
 import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
@@ -17,7 +18,7 @@ const SubscribeSchema = Yup.object().shape({
   first_name: Yup.string(),
 })
 
-const PostSubmissionMessage = ({ response }) => {
+const PostSubmissionMessage = () => {
   return (
     <div>
       <Message
@@ -71,20 +72,27 @@ function SignUp(props) {
     }
   }
 
-  const { theme } = props
+  const { theme, simple } = props
   const successful = response && response.status === 'success'
 
   return (
     <div>
-      {!successful && (
-        <h2
-          css={css`
-            margin-bottom: ${rhythm(1)};
-            margin-top: 0;
-          `}
-        >
-          Join the Newsletter
-        </h2>
+      {!successful && !simple && (
+        <>
+          <h2
+            css={css`
+              margin-bottom: ${rhythm(1)};
+              margin-top: 0;
+            `}
+          >
+            Join the Newsletter
+          </h2>
+          <p>
+            Want to hear more about my thoughts on software, the web and life?
+            Sign up to my newsletter and I'll let you know when I publish a new
+            article.
+          </p>
+        </>
       )}
 
       {!successful && (
@@ -179,6 +187,12 @@ function SignUp(props) {
             disabled={formik.isSubmitting}
             css={css`
               margin-bottom: 0.5rem;
+              background-color: ${theme.colors.link};
+              border: 1px solid ${theme.colors.link};
+              &:hover {
+                background-color: ${lighten(0.1, theme.colors.link)};
+                border: 1px solid ${theme.colors.link};
+              }
             `}
           >
             {!formik.isSubmitting && 'Submit'}
