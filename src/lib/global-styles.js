@@ -1,7 +1,7 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
 import { useTheme } from 'emotion-theming'
-import { lighten, darken } from 'polished'
+import { lighten, darken, transparentize } from 'polished'
 import { bpMaxSM } from './breakpoints'
 import { fonts } from './typography'
 
@@ -90,6 +90,12 @@ export default function GlobalStyles() {
           &::placeholder {
             opacity: 0.4;
           }
+        }
+
+        code {
+          background: ${transparentize(0.9, theme.colors.text)};
+          padding: 0.1em 0.3em 0;
+          border-radius: 2px;
         }
 
         .gatsby-resp-image-image {
