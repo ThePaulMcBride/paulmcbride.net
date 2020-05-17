@@ -109,6 +109,11 @@ function SignUp(props) {
               color: ${theme.colors.red};
               font-size: 80%;
             }
+            input {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
             input,
             label {
               width: 100%;
