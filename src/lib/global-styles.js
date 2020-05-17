@@ -8,6 +8,8 @@ import { fonts } from './typography'
 export default function GlobalStyles() {
   const theme = useTheme()
 
+  console.log(theme)
+
   return (
     <Global
       styles={css`
@@ -119,7 +121,9 @@ export default function GlobalStyles() {
         }
 
         pre {
-          background-color: #061526 !important;
+          background-color: ${theme.themeName === 'default'
+            ? '#061526'
+            : 'white'} !important;
           border-radius: 4px;
           font-size: 16px;
           padding: 10px;
