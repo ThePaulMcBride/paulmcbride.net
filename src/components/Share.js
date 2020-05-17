@@ -1,53 +1,72 @@
 import React from 'react'
-import styled from '@emotion/styled'
-import { TwitterShareButton, FacebookShareButton } from 'react-share'
+import { css } from '@emotion/core'
+import fonts from '../lib/typography'
+import { useTheme } from 'emotion-theming'
 
-const ShareWraper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+import { TwitterShareButton } from 'react-share'
+import Rocket from './Rocket'
 
-  div {
-    margin-right: 20px;
-    cursor: pointer;
-    :hover {
-      color: ${props => props.theme.colors.link};
-    }
-  }
-  span {
-    margin-right: 20px;
-    font-size: 70%;
-    text-transform: uppercase;
-    line-height: 2.5;
-    opacity: 0.7;
-  }
-`
-
-const Divider = styled.div`
-  flex-grow: 1;
-  border-top: 1px solid ${props => props.theme.colors.offset};
-`
+import colors from '../lib/colors'
 
 const Share = ({ url, title, twitterHandle }) => {
+  const theme = useTheme()
   return (
-    <ShareWraper>
-      <Divider />
-      <span>Share article</span>
-      <TwitterShareButton
-        url={url}
-        quote={title}
-        via={twitterHandle.split('@').join('')}
+    <div>
+      <div
+        css={{
+          margin: '3rem auto',
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          textAlign: 'center',
+          maxWidth: '25rem',
+        }}
       >
-        Twitter
-      </TwitterShareButton>
-      <FacebookShareButton
-        url={url}
-        quote={title}
-        via={twitterHandle.split('@').join('')}
-      >
-        Facebook
-      </FacebookShareButton>
-    </ShareWraper>
+        <Rocket />
+
+        <TwitterShareButton
+          url={url}
+          title={title}
+          via={twitterHandle.split('@').join('')}
+          css={css`
+            cursor: pointer;
+            :hover {
+              color: ${colors.primary};
+            }
+          `}
+        >
+          <h2
+            css={{
+              margin: '1rem 0',
+              fontFamily: fonts.semibold,
+              span: {
+                color: colors.primary,
+              },
+            }}
+          >
+            <span
+              css={css`
+                color: ${theme.colors.link};
+              `}
+            >
+              Click here
+            </span>{' '}
+            to share this article with your friends on Twitter.
+          </h2>
+        </TwitterShareButton>
+
+        <small>
+          <span
+            css={{
+              opacity: 0.7,
+            }}
+          >
+            I really appreciate it!
+          </span>
+        </small>
+      </div>
+    </div>
   )
 }
 
