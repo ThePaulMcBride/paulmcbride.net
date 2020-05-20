@@ -8,8 +8,6 @@ import { fonts } from './typography'
 export default function GlobalStyles() {
   const theme = useTheme()
 
-  console.log(theme)
-
   return (
     <Global
       styles={css`
