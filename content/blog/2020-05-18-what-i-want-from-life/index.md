@@ -8,8 +8,6 @@ banner: './images/success.jpg'
 published: true
 ---
 
-# What I want from life
-
 What success looks like will be different for each person. What someone wants out of life will depend on what they have now, how they grew up, and what stage of life they are at.
 
 In this article I’ll share what I want from life. By sharing these details, I hope I’m more likely to achieve the things I want and that I’m more likely to be held accountable for my goals.
