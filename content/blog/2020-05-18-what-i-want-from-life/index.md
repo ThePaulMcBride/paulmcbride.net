@@ -26,7 +26,7 @@ Steve was wrong. If you find a job you love, you’ll work a hell of a lot, but 
 
 ## I want the freedom to decide what I work on and when I work
 
-Essentially, I want to be able to decide how I spend my time. I want to be able to take downtime when I need it and get stuck into the work I enjoy. I genuinely love the work I do and I want to make sure it stays that way. My wife Ellie and I are working hard towards this goal. Basically, we need to save a lot of money and we need to build up some level of passive income. That way, a full time job is not a requirement. That’s not to say I won’t have a full time job when we reach that point, it just means it’ll be on my terms.
+Essentially, I want to be able to decide how I spend my time. I want to be able to take downtime when I need it and get stuck into the work I enjoy when I'm feeling motivated. I genuinely love the work I do and I want to make sure it stays that way. My wife Ellie and I are working hard towards this goal. Basically, we need to save a lot of money and we need to build up some level of passive income. That way, a full time job is not a requirement. That’s not to say I won’t have a full time job when we reach that point, it just means it’ll be on my terms.
 
 We still have some way to go before this becomes a reality but we’re on track. We have some student debt to pay off as a priority and we’re due to make the final payment in a few month.
 
@@ -34,19 +34,19 @@ The next goal of mine isn’t related to money or work.
 
 ## I want to build a life long habit of daily exercise
 
-This is just as important as financial freedom. What would be the point of having all the money and time in the world if you didn’t have the health to enjoy it. Throughout my life I’ve cycled through phases of training a lot to months where the only exercise I would do is walking to and from the office. Recently that has been changing though. I’m becoming more consistent. I’ve been following the “Two day rule”. Basically, I plan to work out everyday. I can skip a day whenever I like, but I can never miss two days in a row.
+This is just as important as financial freedom. What would be the point of having all the money and time in the world if you didn’t have the health to enjoy it. Throughout my life I’ve cycled through phases of training a lot, to months where the only exercise I would do is walking to and from the office. Recently that has been changing though. I’ve become more consistent by following the “two day rule”. Basically, I plan to work out everyday. I can skip a day whenever I like, but I can never miss two days in a row.
 
-When you want to make something a core part of your life, you need to do it everyday. At least at the start. When you do something every day, it becomes part of your routine. It’s not the exception or something that gets in the way, it’s just part of your day everyday. To make sure I would stick with this plan, I decided on a workout that would take less than 30 minutes and could be done at home. That way I could never make the excuse that the weather was bad or I didn’t have time. For me, the workout that fits my life best is kettlebell training.
+When you want to make something a core part of your life, you need to do it everyday. At least at the start. When you do something every day, it becomes part of your routine. It’s not the exception or something that gets in the way, it’s just part of your day, everyday. To make sure I would stick with this plan, I decided on a workout that would take less than 30 minutes and could be done at home. That way I could never make the excuse that the weather was bad or I didn’t have time. For me, the workout that fits my life best is kettlebell training.
 
 ## I want to live in a way that is sustainable and positive for the planet
 
-It is the responsibility of every person alive to leave the planet in a better state than it was when they arrived. I whole heartedly believe this. In practice this means I rarely eat meat, avoid air travel when I can and vote for political parties that support green initiatives. In a few years, when we move to Portland Or (where my wife is from), we plan on building or buying a tiny house and growing as much of our own food as we can.
+It is the responsibility of every person alive to leave the planet in a better state than it was when they arrived. I whole heartedly believe this. In practice this means I rarely eat meat, I avoid air travel when I can, and vote for political parties that support green initiatives. In a few years, when we move to Portland, Oregon (where my wife is from), we plan on building or buying a tiny house and growing as much of our own food as we can. We already have a small vegtable garden in Belfast, but there is only so much we can do in a city.
 
 Some people might look at my lifestyle choices and see them as sacrifices, but I don’t think of it like that. I like the slower pace of life that living like this encourages.
 
 ## I want to do work that matters
 
-This is a tricky one. What is work that matters? I think it is work that has a positive impact on the lives of other people. I’m not pretending I’m going to change the world, I just want to do work that moved the needle in the right direction. What I think this will mean for me is teaching.
+This is a tricky one. What is work that matters? I think it is work that has a positive impact on the lives of other people. I’m not pretending I’m going to change the world, I just want to do work that moves the needle in the right direction. What I think this will mean for me is teaching.
 
 I’ve been able to build a pretty comfortable life for myself through writing code. I want to help other people enjoy the same opportunities that I have. I’m already an [egghead instructor](https://egghead.io/instructors/paul-mcbride?af=auhexg) so I’m heading in the right direction.
 
