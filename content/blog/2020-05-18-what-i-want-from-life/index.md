@@ -26,7 +26,7 @@ Steve was wrong. If you find a job you love, you’ll work a hell of a lot, but 
 
 Essentially, I want to be able to decide how I spend my time. I want to be able to take downtime when I need it and get stuck into the work I enjoy when I'm feeling motivated. I genuinely love the work I do and I want to make sure it stays that way. My wife Ellie and I are working hard towards this goal. Basically, we need to save a lot of money and we need to build up some level of passive income. That way, a full time job is not a requirement. That’s not to say I won’t have a full time job when we reach that point, it just means it’ll be on my terms.
 
-We still have some way to go before this becomes a reality but we’re on track. We have some student debt to pay off as a priority and we’re due to make the final payment in a few month.
+We still have some way to go before this becomes a reality but we’re on track. We have some student debt to pay off as a priority and we’re due to make the final payment in a few months.
 
 The next goal of mine isn’t related to money or work.
 
