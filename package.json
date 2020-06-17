@@ -29,7 +29,7 @@
     "gatsby-plugin-manifest": "^2.4.3",
     "gatsby-plugin-mdx": "^1.2.15",
     "gatsby-plugin-meta-redirect": "^1.1.1",
-    "gatsby-plugin-offline": "^3.2.9",
+    "gatsby-plugin-offline": "^3.2.10",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.32",
     "gatsby-plugin-sitemap": "^2.4.2",
