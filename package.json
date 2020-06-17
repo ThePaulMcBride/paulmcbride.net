@@ -60,7 +60,7 @@
     "yup": "^0.28.5"
   },
   "devDependencies": {
-    "babel-preset-gatsby": "^0.4.2",
+    "babel-preset-gatsby": "^0.4.9",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9",
     "prettier": "2.0.5"
   },
