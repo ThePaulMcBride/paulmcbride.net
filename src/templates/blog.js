@@ -14,8 +14,8 @@ const Blog = ({
   const { page, nextPagePath, previousPagePath } = pagination
 
   const posts = page
-    .map(id => allMdx.edges.find(edge => edge.node.id === id))
-    .filter(post => post !== undefined)
+    .map((id) => allMdx.edges.find((edge) => edge.node.id === id))
+    .filter((post) => post !== undefined)
 
   return (
     <Layout site={site}>
@@ -140,13 +140,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
-            banner {
-              childImageSharp {
-                fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
+            banner
             slug
             keywords
           }

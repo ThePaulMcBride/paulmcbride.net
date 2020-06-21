@@ -10,7 +10,7 @@ const createPosts = (createPage, createRedirect, edges) => {
     const pagePath = node.fields.slug
 
     if (node.fields.redirects) {
-      node.fields.redirects.forEach(fromPath => {
+      node.fields.redirects.forEach((fromPath) => {
         createRedirect({
           fromPath,
           toPath: pagePath,

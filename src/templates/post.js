@@ -15,7 +15,7 @@ export default function Post({
   pageContext: { next, prev },
 }) {
   const title = mdx.frontmatter.title
-  const image = mdx.frontmatter.banner?.childImageSharp?.fluid?.src
+  const image = mdx.frontmatter.banner
 
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
@@ -83,13 +83,7 @@ export const pageQuery = graphql`
         title
         description
         date(formatString: "MMMM DD, YYYY")
-        banner {
-          childImageSharp {
-            fluid(maxWidth: 900) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+        banner
         slug
         keywords
       }

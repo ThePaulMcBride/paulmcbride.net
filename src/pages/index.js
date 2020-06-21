@@ -56,7 +56,7 @@ const Hero = () => {
 }
 
 const Divider = styled.hr`
-  border-top: 1px solid ${props => props.theme.colors.offset};
+  border-top: 1px solid ${(props) => props.theme.colors.offset};
 `
 
 export default function Index({ data: { site, allMdx } }) {
@@ -117,13 +117,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             description
-            banner {
-              childImageSharp {
-                sizes(maxWidth: 720) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
+            banner
             slug
             keywords
           }
