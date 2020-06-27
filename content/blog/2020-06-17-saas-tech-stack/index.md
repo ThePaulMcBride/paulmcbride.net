@@ -27,7 +27,7 @@ I use the Next.js API routes to power a GraphQL endpoint. This endpoint is what 
 
 Firebase is where all of my data lives. I use Firestore via the Firebase Admin SDK. I don’t use Firestore in the traditional way from the front end, it’s all handled from the server. Firebase has been a really great choice for the database as it’s quick and cheap to get started.
 
-## Authentication
+## Authentication
 
 Firebase handles my auth system too. It is a really great tool that supports social login from the likes of Google, Apple or Twitter and requires very little code to get started. I have intentionally not provided a login method that requires a password as that would be more for me to maintain. Instead users can log in with a social provider, or by using their email to get a magic login link.
 
