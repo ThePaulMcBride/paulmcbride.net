@@ -1,55 +1,45 @@
 ---
-slug: 'what-i-want-from-life'
-date: '2020-05-18'
-title: 'What I want from life'
-description: 'Success looks different to each person. This is what success looks like for me and what I want to get out of my time on earth.'
-tags: ['life']
-banner: './images/stack.jpg'
+slug: 'saas-tech-stack'
+date: '2020-06-17'
+title: 'My SaaS Tech Stack'
+description: 'A look into the tech choices I made when building the job boards, WeCode NI and WeCode Remote.'
+tags: ['tech', 'javascript']
+banner: './images/success.jpg'
 published: true
 ---
 
-What success looks like will be different for each person. What someone wants out of life will depend on what they have now, how they grew up, and what stage of life they are at.
+Building software involves a lot of compromise. Everything has pros and cons. In this article I’d like to share what I used to build [WeCode NI](https://wecodeni.com) and [weCode Remote](https://wecoderemote.com). Both job boards are essentially the same and use very similar tech.
 
-In this article I’ll share what I want from life. By sharing these details, I hope I’m more likely to achieve the things I want and that I’m more likely to be held accountable for my goals.
+## Hosting
 
-I’ve spent a lot of time thinking about what makes me happy but I don’t think I’ve ever really been able to put my finger on it. Like most people, the things I want have changed throughout my life. It wasn’t until recently I decided that happiness shouldn’t be my goal. Happiness comes and goes. That’s a normal part of being human. If I set my sights on permanent happiness I’d be setting myself up to fail.
+For hosting I use [Vercel](https://vercel.com). Vercel is a serverless hosting platform with a generous free tier. I can push my code to Github and a few minutes later, it’s live. My pull requests get deployed to staging urls for me to test and I can have multiple “environments”.
+The whole platform is backed by a smart CDN which helps static perform even better and ensures that my sites are always snappy and reliable.
 
-For me, finding purpose is more important.
+## Framework
 
-As Steve Jobs famously said:
+My framework of choice is [Next.js](https://nextjs.org). Next.js is a fullstack JavaScript framework from the same folks that make Vercel. It can be used to build dynamic sites, static sites, APIs and projects that mix them all together.
 
-> _If you love what you do, you’ll never work a day in your life_
+One of the reasons I use Next.js is for its static regeneration feature. I can create a static page at build time but ensure it is always up-to-date by rebuilding in the background. Next.js makes this really easy to do. Check out the homepage or any job page on weCode Remote or WeCode NI to see it in action.
 
-Steve was wrong. If you find a job you love, you’ll work a hell of a lot, but you’ll enjoy it. That’s kind of where I’m at right now. I love writing code and more importantly I love solving problems. Before I was getting paid to build things on the web, I was doing it for fun.
+I use the Next.js API routes to power a GraphQL endpoint. This endpoint is what powers the admin interface and is consumed by all of the job pages too.
 
-## I want the freedom to decide what I work on and when I work
+## Data
 
-Essentially, I want to be able to decide how I spend my time. I want to be able to take downtime when I need it and get stuck into the work I enjoy when I'm feeling motivated. I genuinely love the work I do and I want to make sure it stays that way. My wife Ellie and I are working hard towards this goal. Basically, we need to save a lot of money and we need to build up some level of passive income. That way, a full time job is not a requirement. That’s not to say I won’t have a full time job when we reach that point, it just means it’ll be on my terms.
+Firebase is where all of my data lives. I use Firestore via the Firebase Admin SDK. I don’t use Firestore in the traditional way from the front end, it’s all handled from the server. Firebase has been a really great choice for the database as it’s quick and cheap to get started.
 
-We still have some way to go before this becomes a reality but we’re on track. We have some student debt to pay off as a priority and we’re due to make the final payment in a few months.
+## Authentication
 
-The next goal of mine isn’t related to money or work.
+Firebase handles my auth system too. It is a really great tool that supports social login from the likes of Google, Apple or Twitter and requires very little code to get started. I have intentionally not provided a login method that requires a password as that would be more for me to maintain. Instead users can log in with a social provider, or by using their email to get a magic login link.
 
-## I want to build a life long habit of daily exercise
+## Payments
 
-This is just as important as financial freedom. What would be the point of having all the money and time in the world if you didn’t have the health to enjoy it. Throughout my life I’ve cycled through phases of training a lot, to months where the only exercise I would do is walking to and from the office. Recently that has been changing though. I’ve become more consistent by following the “two day rule”. Basically, I plan to work out everyday. I can skip a day whenever I like, but I can never miss two days in a row.
+You’ll not be surprised to hear that my payments are handled by Stripe. I use Stripe Checkout. This is a prebuilt UI for taking card payments. When a user is ready to pay, I redirect them to this checkout page on Stripe where the transaction occurs. This way a user never types payment details in on my site. I don’t want the responsibility of making sure that is as secure as it needs to be, so I’ve left that liability in Stripe’s capable hands.
+When Stripe successfully charges the user, they send me a webhook and the user’s draft job goes live.
 
-When you want to make something a core part of your life, you need to do it everyday. At least at the start. When you do something every day, it becomes part of your routine. It’s not the exception or something that gets in the way, it’s just part of your day, everyday. To make sure I would stick with this plan, I decided on a workout that would take less than 30 minutes and could be done at home. That way I could never make the excuse that the weather was bad or I didn’t have time. For me, the workout that fits my life best is kettlebell training.
+## Regrets
 
-## I want to live in a way that is sustainable and positive for the planet
+While I love all of the tools I’ve used for building [weCode Remote](https://wecoderemote.com) and [WeCode NI](https://wecodeni.com), there are some things that aren’t perfect. For me, the biggest pain point when working on these projects always come from Firebase. The client side auth library is 54kB gzipped, which is a lot of code for the relatively few users who need it. If I was to start over, I’d probably use Auth0.
 
-It is the responsibility of every person alive to leave the planet in a better state than it was when they arrived. I whole heartedly believe this. In practice this means I rarely eat meat, I avoid air travel when I can, and vote for political parties that support green initiatives. In a few years, when we move to Portland, Oregon (where my wife is from), we plan on building or buying a tiny house and growing as much of our own food as we can. We already have a small vegtable garden in Belfast, but there is only so much we can do in a city.
+Firestore is the other part of this tech stack that I would swap out of starting over. It is a noSQL type database which charges you per document read. This means pulling together reports based on the data can be expensive. It’s also difficult to export data from Firestore. I would like to move to a Postgres database sitting behind Prisma. I’d looked into this when I was first getting started, but Prisma was still in beta and the API was changing too regularly.
 
-Some people might look at my lifestyle choices and see them as sacrifices, but I don’t think of it like that. I like the slower pace of life that living like this encourages.
-
-## I want to do work that matters
-
-This is a tricky one. What is work that matters? I think it is work that has a positive impact on the lives of other people. I’m not pretending I’m going to change the world, I just want to do work that moves the needle in the right direction. What I think this will mean for me is teaching.
-
-I’ve been able to build a pretty comfortable life for myself through writing code. I want to help other people enjoy the same opportunities that I have. I’m already an [egghead instructor](https://egghead.io/instructors/paul-mcbride?af=auhexg) so I’m heading in the right direction.
-
-## Whats next?
-
-Things are on track for me right now. I need to keep reminding myself to enjoy the journey though. I have a bunch of goals I’m working on, but when I get there, I’ll probably have new ones. Remembering that enjoying the day to day is what makes for a good life and that work isn’t everything is something I want to get better at.
-
-I know this post isn’t at all tech related, but hopefully you found it interesting anyway. What about you? What do you want from life?
+What do you think? What tools would you use to build a job board like this?
