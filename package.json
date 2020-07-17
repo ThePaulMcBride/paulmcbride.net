@@ -55,7 +55,7 @@
     "react-share": "^4.1.0",
     "react-typography": "^0.16.19",
     "serve": "^11.3.2",
-    "typescript": "^3.6.4",
+    "typescript": "^3.9.7",
     "typography": "^0.16.19",
     "yup": "^0.28.5"
   },
