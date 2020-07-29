@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "babel-preset-gatsby": "^0.4.9",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "prettier": "2.0.5"
   },
   "keywords": [

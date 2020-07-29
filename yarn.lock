@@ -1752,7 +1752,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
+"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.3.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2", "@babel/runtime@^7.9.6":
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.5.tgz#303d8bd440ecd5a491eae6117fd3367698674c5c"
   integrity sha512-otddXKhdNn7d0ptoFRHtMLa8LqDxLYwTjB4nYgM1yy5N6gU/MUf8zqyyLltCH3yAVitBzmwK4us+DD0l/MauAg==
@@ -7568,13 +7568,13 @@ gatsby-plugin-typography@^2.3.14:
   dependencies:
     "@babel/runtime" "^7.9.6"
 
-gatsby-plugin-webpack-bundle-analyser-v2@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-webpack-bundle-analyser-v2/-/gatsby-plugin-webpack-bundle-analyser-v2-1.1.9.tgz#7dc70e8eb19237633bbf75a630be382f781fec86"
-  integrity sha512-WqLlGKtnmqRwQ8mLsV8Z9MrNa3B6eyUnxAjzpPmvRAmCze+7vF0tsaDCGoyN6t0ohRNTAPJoKepPRH93GCSeYA==
+gatsby-plugin-webpack-bundle-analyser-v2@^1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-webpack-bundle-analyser-v2/-/gatsby-plugin-webpack-bundle-analyser-v2-1.1.10.tgz#756ad6c7e01387d6044a26d7f7f6821a8e31f49a"
+  integrity sha512-VQtMIRcflAlMpauQZy/VnCb5SzTWhYw1jKZaVwAm+oaIdHav8xCAyg9hoQ849x46dUdk8/H3dnz5U6h+Z2MbLA==
   dependencies:
-    "@babel/runtime" "^7.8.4"
-    webpack-bundle-analyzer "^3.6.0"
+    "@babel/runtime" "^7.10.1"
+    webpack-bundle-analyzer "^3.8.0"
 
 gatsby-react-router-scroll@^3.0.12:
   version "3.0.12"
@@ -16131,7 +16131,7 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
 
-webpack-bundle-analyzer@^3.6.0:
+webpack-bundle-analyzer@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.8.0.tgz#ce6b3f908daf069fd1f7266f692cbb3bded9ba16"
   integrity sha512-PODQhAYVEourCcOuU+NiYI7WdR8QyELZGgPvB1y2tjbUpbmcQOt5Q7jEK+ttd5se0KSBKD9SXHCEozS++Wllmw==
