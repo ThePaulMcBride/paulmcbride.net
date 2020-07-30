@@ -5799,10 +5799,10 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
-dotenv-parse-variables@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/dotenv-parse-variables/-/dotenv-parse-variables-0.3.0.tgz#576e9519bf21317ca60920c1d815e0b4eddf5447"
-  integrity sha512-ZQ/KWhk7xpzjWjfljG/znfUqmelXQovEZvAZlzvSVB3aSXVjG3GUlR+DiwxHEKPr7BgqjVSmWacFLkQWpCZNBQ==
+dotenv-parse-variables@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/dotenv-parse-variables/-/dotenv-parse-variables-0.3.1.tgz#fa503e3faf8f8e5fac5949cbb83a25f0eb20e53f"
+  integrity sha512-FWFPAyTGTQeCEe8hy7/fL0YNwNkIzyoFfmX2KjQy1QBiYKU4fYFbVTjr0f7yqQuuUxY53AloLskAMbPBXqSFgw==
   dependencies:
     debug "^4.1.1"
 
