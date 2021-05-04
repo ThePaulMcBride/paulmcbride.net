@@ -5853,12 +5853,13 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
-dotenv-parse-variables@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/dotenv-parse-variables/-/dotenv-parse-variables-0.3.1.tgz#fa503e3faf8f8e5fac5949cbb83a25f0eb20e53f"
-  integrity sha512-FWFPAyTGTQeCEe8hy7/fL0YNwNkIzyoFfmX2KjQy1QBiYKU4fYFbVTjr0f7yqQuuUxY53AloLskAMbPBXqSFgw==
+dotenv-parse-variables@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv-parse-variables/-/dotenv-parse-variables-2.0.0.tgz#8bfd83842acdc9013c12d46b340df27ac6046a26"
+  integrity sha512-/Tezlx6xpDqR6zKg1V4vLCeQtHWiELhWoBz5A/E0+A1lXN9iIkNbbfc4THSymS0LQUo8F1PMiIwVG8ai/HrnSA==
   dependencies:
-    debug "^4.1.1"
+    debug "^4.3.1"
+    is-string-and-not-blank "^0.0.2"
 
 dotenv@^8.2.0:
   version "8.2.0"
@@ -9714,6 +9715,18 @@ is-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-2.0.0.tgz#bde9c32680d6fae04129d6ac9d921ce7815f78e3"
   integrity sha512-XCoy+WlUr7d1+Z8GgSuXmpuUFC9fOhRXglJMx+dwLKTkL44Cjd4W1Z5P+BQZpr+cR93aGP4S/s7Ftw6Nd/kiEw==
+
+is-string-and-not-blank@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/is-string-and-not-blank/-/is-string-and-not-blank-0.0.2.tgz#cd19eded2ca4a514f79ca528915f1fb28e5dd38a"
+  integrity sha512-FyPGAbNVyZpTeDCTXnzuwbu9/WpNXbCfbHXLpCRpN4GANhS00eEIP5Ef+k5HYSNIzIhdN9zRDoBj6unscECvtQ==
+  dependencies:
+    is-string-blank "^1.0.1"
+
+is-string-blank@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-string-blank/-/is-string-blank-1.0.1.tgz#866dca066d41d2894ebdfd2d8fe93e586e583a03"
+  integrity sha512-9H+ZBCVs3L9OYqv8nuUAzpcT9OTgMD1yAWrG7ihlnibdkbtB850heAmYWxHuXc4CHy4lKeK69tN+ny1K7gBIrw==
 
 is-string@^1.0.5:
   version "1.0.5"
