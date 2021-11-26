@@ -6,7 +6,7 @@
   "repository": "https://github.com/thepaulmcbrode/paulmcbride.net",
   "dependencies": {
     "@callstack/react-theme-provider": "^3.0.5",
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.3.0",
     "@emotion/styled": "^10.0.22",
     "@hot-loader/react-dom": "16.13.0",
     "@mdx-js/mdx": "^1.6.22",
