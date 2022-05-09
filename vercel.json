@@ -1,0 +1,89 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "https://paulmcbride.com" },
+    {
+      "source": "/what-programming-language-should-i-learn-first",
+      "destination": "https://paulmcbride.com/posts/what-programming-language-should-i-learn-first"
+    },
+    {
+      "source": "/javascript-arrow-functions",
+      "destination": "https://paulmcbride.com/posts/javascript-arrow-functions"
+    },
+    {
+      "source": "/javascript-spread-operator",
+      "destination": "https://paulmcbride.com/posts/javascript-spread-operator"
+    },
+    {
+      "source": "/var-let-const",
+      "destination": "https://paulmcbride.com/posts/var-let-const"
+    },
+    {
+      "source": "/rubber-duck-debugging",
+      "destination": "https://paulmcbride.com/posts/rubber-duck-debugging"
+    },
+    {
+      "source": "/tools-trade-frontend-developer",
+      "destination": "https://paulmcbride.com/posts/tools-trade-frontend-developer"
+    },
+    {
+      "source": "/async-await",
+      "destination": "https://paulmcbride.com/posts/async-await"
+    },
+    {
+      "source": "/javascript-fetch-api",
+      "destination": "https://paulmcbride.com/posts/javascript-fetch-api"
+    },
+    {
+      "source": "/using-node-cluster-module",
+      "destination": "https://paulmcbride.com/posts/using-node-cluster-module"
+    },
+    {
+      "source": "/module-caching-node",
+      "destination": "https://paulmcbride.com/posts/module-caching-node"
+    },
+    {
+      "source": "/5-reasons-to-learn-react",
+      "destination": "https://paulmcbride.com/posts/5-reasons-to-learn-react"
+    },
+    {
+      "source": "/dev-ops-introduction-aws-lambda",
+      "destination": "https://paulmcbride.com/posts/dev-ops-introduction-aws-lambda"
+    },
+    {
+      "source": "/map-function-javascript",
+      "destination": "https://paulmcbride.com/posts/map-function-javascript"
+    },
+    {
+      "source": "/filter-function-javascript",
+      "destination": "https://paulmcbride.com/posts/filter-function-javascript"
+    },
+    {
+      "source": "/reduce-function-javascript",
+      "destination": "https://paulmcbride.com/posts/reduce-function-javascript"
+    },
+    {
+      "source": "/pure-functions",
+      "destination": "https://paulmcbride.com/posts/pure-functions"
+    },
+    {
+      "source": "/webpack-4",
+      "destination": "https://paulmcbride.com/posts/webpack-4"
+    },
+    {
+      "source": "/things-i-dont-know-2019",
+      "destination": "https://paulmcbride.com/posts/things-i-dont-know-2019"
+    },
+    {
+      "source": "/dont-trust-the-cascade",
+      "destination": "https://paulmcbride.com/posts/dont-trust-the-cascade"
+    },
+    {
+      "source": "/what-i-want-from-life",
+      "destination": "https://paulmcbride.com/posts/what-i-want-from-life"
+    },
+    {
+      "source": "/saas-tech-stack",
+      "destination": "https://paulmcbride.com/posts/saas-tech-stack"
+    }
+  ]
+}
