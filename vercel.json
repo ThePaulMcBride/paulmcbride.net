@@ -1,6 +1,7 @@
 {
   "redirects": [
     { "source": "/", "destination": "https://paulmcbride.com" },
+    { "source": "/blog", "destination": "https://paulmcbride.com/posts" },
     {
       "source": "/what-programming-language-should-i-learn-first",
       "destination": "https://paulmcbride.com/posts/what-programming-language-should-i-learn-first"
