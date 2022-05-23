@@ -11,7 +11,7 @@
     "@hot-loader/react-dom": "16.13.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.16",
-    "core-js": "^3.3.3",
+    "core-js": "^3.22.6",
     "dotenv": "^8.5.1",
     "dotenv-parse-variables": "^2.0.0",
     "emotion": "^10.0.17",
